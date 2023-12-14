@@ -1475,6 +1475,9 @@ body {
         align-self: flex-start;
       }
     }
+    a {
+      color: inherit;
+    }
   }
   .wpcf7-spinner {
     position: absolute;
