@@ -2088,11 +2088,10 @@ body {
   text-transform: uppercase;
   color: #000;
   margin-top: 0;
-  margin-bottom: 48px;
+  margin-bottom: 1.5em;
 
   @include below(md) {
     font-size: 32px;
-    margin-bottom: 32px;
   }
 }
 
