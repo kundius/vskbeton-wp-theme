@@ -11,7 +11,6 @@ $args = array(
 );
 
 $productsQuery = new WP_Query($args);
-print_r($productsQuery->post_count);
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes();?> itemscope itemtype="http://schema.org/WebSite">

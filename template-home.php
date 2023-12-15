@@ -4,6 +4,13 @@ Template Name: Главная
 */
 $geography = get_field('geography');
 $partners = get_field('partners');
+
+$args = array(
+    'post_type' => 'page',
+    'post_parent' => 100,
+);
+
+$productsQuery = new WP_Query($args);
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes();?> itemscope itemtype="http://schema.org/WebSite">
@@ -88,67 +95,20 @@ $partners = get_field('partners');
             <?php endif ?>
 
             <?php if ($group = get_field('technologies')): ?>
-              <div class="technologies">
-                <div class="technologies__image">
-                  <?php if ($image = $group['image']): ?>
-                  <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-                  <?php endif ?>
-                </div>
-                <div class="technologies__content">
-                  <div class="technologies__title">
-                    <?php echo $group['title'] ?>
-                  </div>
-                </div>
-                <?php if ($link = $group['link']): ?>
-                <div class="technologies__section">
-                <a href="<?php echo $link['url'] ?>" class="technologies__section-link">
-                  <span><?php echo $link['title'] ?></span>
-                </a>
-                </div>
-                <?php endif ?>
-              </div>
-            <?php endif ?>
-
-            <?php if ($group = get_field('directions')): ?>
-            <div class="directions">
-              <?php foreach ($group as $item): ?>
-              <div class="directions-item">
-                <?php if ($image = $item['image']): ?>
-                <div class="directions-item__image">
-                  <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-                </div>
-                <?php endif ?>
-                <div class="directions-item__body">
-                  <div class="directions-item__title">
-                    <?php echo $item['title'] ?>
-                  </div>
-                  <div class="directions-item__description">
-                    <?php echo $item['description'] ?>
-                  </div>
-                </div>
-              </div>
-              <?php endforeach ?>
-            </div>
-            <?php endif ?>
-
-            <?php if ($group = get_field('escort')): ?>
-            <div class="escort">
-              <div class="escort__image">
+            <div class="technologies">
+              <div class="technologies__image">
                 <?php if ($image = $group['image']): ?>
                 <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
                 <?php endif ?>
               </div>
-              <div class="escort__content">
-                <div class="escort__title">
+              <div class="technologies__content">
+                <div class="technologies__title">
                   <?php echo $group['title'] ?>
-                </div>
-                <div class="escort__description">
-                  <?php echo $group['description'] ?>
                 </div>
               </div>
               <?php if ($link = $group['link']): ?>
-              <div class="escort__section">
-              <a href="<?php echo $link['url'] ?>" class="escort__section-link">
+              <div class="technologies__section">
+              <a href="<?php echo $link['url'] ?>" class="technologies__section-link">
                 <span><?php echo $link['title'] ?></span>
               </a>
               </div>
@@ -156,57 +116,81 @@ $partners = get_field('partners');
             </div>
             <?php endif ?>
 
-            <?php if ($group = get_field('geography')): ?>
-              <div class="geography">
-                <div class="geography__title">
-                  <?php echo $group['title'] ?>
-                </div>
-                <div class="geography-slideshow">
-                  <div class="swiper">
-                    <div class="swiper-wrapper">
-                      <?php foreach ($group['items'] as $item): ?>
-                      <div class="swiper-slide geography-slideshow__slide">
-                        <?php if ($link = $item['link']): ?>
-                        <a href="<?php echo $link ?>" class="geography-slideshow__link">
-                        <?php else: ?>
-                        <a href="<?php echo $item['image']['url'] ?>" data-fslightbox="geography-lightbox" class="geography-slideshow__link">
-                        <?php endif ?>
-                          <img class="geography-slideshow__image" src="<?php echo $item['image']['url'] ?>">
-                        </a>
-                        <?php if (!empty($item['description'])): ?>
-                        <div class="geography-slideshow__description">
-                          <?php echo $item['description'] ?>                    
-                        </div>
-                        <?php endif ?>
-                      </div>
-                      <?php endforeach ?>
+            <?php if ($productsQuery->have_posts()): ?>
+            <div class="products">
+              <div class="products-grid">
+                <?php $key = 0; while ($productsQuery->have_posts()): $productsQuery->the_post(); $key++; ?>
+                <div class="products-grid__cell<?php if (($productsQuery->post_count % 2) > 0 && $key === $productsQuery->post_count): ?> products-grid__cell_wide<?php endif ?>">
+                  <div class="products-item">
+                    <div class="products-item__image">
+                      <?php the_post_thumbnail('full') ?>
+                    </div>
+                    <div class="products-item__title">
+                      <?php echo (get_field('title_in_list') ?: get_the_title()) ?>
+                    </div>
+                    <div class="products-item__section">
+                      <a href="<?php the_permalink() ?>" class="products-item__section-link">
+                        <span>Подробнее</span>
+                      </a>
                     </div>
                   </div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
                 </div>
+                <?php endwhile; ?>
               </div>
+            </div>
+            <?php endif; wp_reset_postdata(); ?>
+
+            <?php if ($group = get_field('geography')): ?>
+            <div class="geography">
+              <div class="geography__title">
+                <?php echo $group['title'] ?>
+              </div>
+              <div class="geography-slideshow">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <?php foreach ($group['items'] as $item): ?>
+                    <div class="swiper-slide geography-slideshow__slide">
+                      <?php if ($link = $item['link']): ?>
+                      <a href="<?php echo $link ?>" class="geography-slideshow__link">
+                      <?php else: ?>
+                      <a href="<?php echo $item['image']['url'] ?>" data-fslightbox="geography-lightbox" class="geography-slideshow__link">
+                      <?php endif ?>
+                        <img class="geography-slideshow__image" src="<?php echo $item['image']['url'] ?>">
+                      </a>
+                      <?php if (!empty($item['description'])): ?>
+                      <div class="geography-slideshow__description">
+                        <?php echo $item['description'] ?>                    
+                      </div>
+                      <?php endif ?>
+                    </div>
+                    <?php endforeach ?>
+                  </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
             <?php endif ?>
 
             <?php if ($group = get_field('partners')): ?>
-              <div class="partners">
-                <div class="partners__title"><?php echo $group['title'] ?></div>
-                <div class="partners-slideshow">
-                  <div class="swiper">
-                    <div class="swiper-wrapper">
-                      <?php foreach ($group['items'] as $item): ?>
-                      <div class="swiper-slide partners-slideshow__slide">
-                        <a href="<?php echo $item['link'] ?>" class="partners-slideshow__link">
-                          <img class="partners-slideshow__image" src="<?php echo $item['logo']['url'] ?>">
-                        </a>
-                      </div>
-                      <?php endforeach ?>
+            <div class="partners">
+              <div class="partners__title"><?php echo $group['title'] ?></div>
+              <div class="partners-slideshow">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <?php foreach ($group['items'] as $item): ?>
+                    <div class="swiper-slide partners-slideshow__slide">
+                      <a href="<?php echo $item['link'] ?>" class="partners-slideshow__link">
+                        <img class="partners-slideshow__image" src="<?php echo $item['logo']['url'] ?>">
+                      </a>
                     </div>
+                    <?php endforeach ?>
                   </div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
                 </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
               </div>
+            </div>
             <?php endif ?>
         </div>
       </div>
