@@ -135,28 +135,28 @@ $partners = get_field('partners');
             <?php endif ?>
 
             <?php if ($group = get_field('escort')): ?>
-              <div class="escort">
-                <div class="escort__image">
-                  <?php if ($image = $group['image']): ?>
-                  <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-                  <?php endif ?>
-                </div>
-                <div class="escort__content">
-                  <div class="escort__title">
-                    <?php echo $group['title'] ?>
-                  </div>
-                  <div class="escort__description">
-                    <?php echo $group['description'] ?>
-                  </div>
-                </div>
-                <?php if ($link = $group['link']): ?>
-                <div class="escort__section">
-                <a href="<?php echo $link['url'] ?>" class="escort__section-link">
-                  <span><?php echo $link['title'] ?></span>
-                </a>
-                </div>
+            <div class="escort">
+              <div class="escort__image">
+                <?php if ($image = $group['image']): ?>
+                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
                 <?php endif ?>
               </div>
+              <div class="escort__content">
+                <div class="escort__title">
+                  <?php echo $group['title'] ?>
+                </div>
+                <div class="escort__description">
+                  <?php echo $group['description'] ?>
+                </div>
+              </div>
+              <?php if ($link = $group['link']): ?>
+              <div class="escort__section">
+              <a href="<?php echo $link['url'] ?>" class="escort__section-link">
+                <span><?php echo $link['title'] ?></span>
+              </a>
+              </div>
+              <?php endif ?>
+            </div>
             <?php endif ?>
 
             <?php if ($group = get_field('geography')): ?>

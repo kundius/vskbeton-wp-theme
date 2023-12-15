@@ -12,7 +12,12 @@
       <main class="main">
         <div class="container">
           <?php if (have_posts()): ?>
-          <?php the_content() ?>
+            <div class="document">
+              <h1 class="document__title"><?php the_title() ?></h1>
+              <div class="document__content">
+                <?php the_content() ?>
+              </div>
+            </div>
           <?php else : ?>
           Результатов не найдено
           <?php endif; ?>
