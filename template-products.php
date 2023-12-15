@@ -40,9 +40,9 @@ $productsQuery = new WP_Query($args);
                     </div>
                   </div>
                   <div class="products-item__section">
-                  <a href="<?php the_permalink() ?>" class="products-item__section-link">
-                    <span>Подробнее</span>
-                  </a>
+                    <a href="<?php the_permalink() ?>" class="products-item__section-link">
+                      <span>Подробнее</span>
+                    </a>
                   </div>
                 </div>
               </div>
