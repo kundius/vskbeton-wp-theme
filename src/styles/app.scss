@@ -334,12 +334,12 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 42px;
+  margin-top: 112px;
   margin-bottom: 142px;
   z-index: 1;
 
   @include below(lg) {
-    margin-top: 48px;
+    margin-top: 88px;
     margin-bottom: 116px;
   }
   @include below(md) {
@@ -366,14 +366,6 @@ body {
 .intro__content-logo {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-
-  @include below(lg) {
-    margin-top: 16px;
-  }
-  @include below(md) {
-    margin-top: 8px;
-  }
 }
 
 .intro__content-logo img {
@@ -394,15 +386,15 @@ body {
   color: #fff;
   font-weight: bold;
   line-height: 1.2;
-  margin-top: 26px;
+  margin-top: 64px;
 
   @include below(lg) {
     font-size: 32px;
-    margin-top: 20px;
+    margin-top: 48px;
   }
   @include below(md) {
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 32px;
   }
 }
 
@@ -414,7 +406,7 @@ body {
   margin-right: auto;
   text-decoration: none;
   display: block;
-  margin-top: 90px;
+  margin-top: 64px;
   text-align: left;
   line-height: 1.34;
   padding-left: 90px;
@@ -422,12 +414,12 @@ body {
 
   @include below(lg) {
     font-size: 28px;
-    margin-top: 74px;
+    margin-top: 48px;
     padding-left: 74px;
   }
   @include below(md) {
     font-size: 16px;
-    margin-top: 36px;
+    margin-top: 32px;
     padding-left: 36px;
   }
 }
@@ -586,8 +578,8 @@ body {
   aspect-ratio: 1.54;
   margin: 0 -48px;
 
-  @include below(lg) {
-    margin: 0 -36px;
+  @include below(xl) {
+    margin: 0 -24px;
   }
   @include below(md) {
     margin: 0 -16px;
@@ -859,8 +851,8 @@ body {
   position: relative;
   margin: 0 -48px;
 
-  @include below(lg) {
-    margin: 0 -36px;
+  @include below(xl) {
+    margin: 0 -24px;
   }
   @include below(md) {
     margin: 0 -16px;
@@ -1049,8 +1041,8 @@ body {
   position: relative;
   margin: 0 -48px;
 
-  @include below(lg) {
-    margin: 0 -36px;
+  @include below(xl) {
+    margin: 0 -24px;
   }
   @include below(md) {
     margin: 0 -16px;
@@ -1164,8 +1156,8 @@ body {
   position: relative;
   margin: 0 -48px;
 
-  @include below(lg) {
-    margin: 0 -36px;
+  @include below(xl) {
+    margin: 0 -24px;
   }
   @include below(md) {
     margin: 0 -16px;

@@ -43,9 +43,6 @@ $partners = get_field('partners');
           </div>
         </div>
         <div class="intro__content">
-          <div class="intro__content-before">
-            <?php echo $group['content']['before'] ?>
-          </div>
           <div class="intro__content-logo">
             <img src="<?php echo $group['content']['logo']['url'] ?>" alt="">
           </div>
