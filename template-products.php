@@ -34,10 +34,8 @@ $productsQuery = new WP_Query($args);
                   <div class="products-item__image">
                     <?php the_post_thumbnail('full') ?>
                   </div>
-                  <div class="products-item__content">
-                    <div class="products-item__title">
-                      <?php the_title() ?>
-                    </div>
+                  <div class="products-item__title">
+                    <?php the_title() ?>
                   </div>
                   <div class="products-item__section">
                     <a href="<?php the_permalink() ?>" class="products-item__section-link">

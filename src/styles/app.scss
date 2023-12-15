@@ -2224,6 +2224,7 @@ body {
   text-transform: uppercase;
   color: #fff;
   position: relative;
+  z-index: 20;
 
   @include below(lg) {
     font-size: 36px;
@@ -2240,6 +2241,7 @@ body {
 .products-item__section {
   align-self: flex-end;
   position: relative;
+  z-index: 20;
 }
 
 .products-item__section-link {
