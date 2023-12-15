@@ -2521,6 +2521,7 @@ body {
 
 .products-item {
   position: relative;
+  aspect-ratio: 1.6;
 }
 
 .products-item__image {
@@ -2555,8 +2556,7 @@ body {
 .products-item__content {
   position: relative;
   z-index: 20;
-  padding: 48px 48px 148px;
-  width: 720px;
+  padding: 48px 48px 88px;
   max-width: 100%;
 
   @include below(lg) {
@@ -2606,15 +2606,12 @@ body {
 .products-item__section {
   position: absolute;
   z-index: 20;
-  right: 30px;
-  bottom: 30px;
-  width: 450px;
-  max-width: 100%;
+  right: 32px;
+  bottom: 12px;
 
   @include below(lg) {
     right: 24px;
     bottom: 24px;
-    width: 360px;
   }
   @include below(md) {
     right: 0;
@@ -2627,7 +2624,7 @@ body {
 }
 
 .products-item__section-link {
-  font-size: 24px;
+  font-size: 20px;
   text-decoration: none;
   color: #fff;
   display: inline-flex;
@@ -2646,8 +2643,8 @@ body {
   content: '';
   background: url('../images/arrow-1.png') no-repeat 50% 50%;
   background-size: cover;
-  width: 40px;
-  height: 64px;
+  width: calc(40px * 0.6);
+  height: calc(64px * 0.6);
   margin-right: 16px;
   flex-shrink: 0;
   transition: all .3s ease;
