@@ -29,7 +29,7 @@ print_r($productsQuery->post_count);
           <?php if ($productsQuery->have_posts()): ?>
           <div class="products">
             <div class="products-grid">
-              <?php $key = 0; while ($productsQuery->have_posts()): $productsQuery->the_post(); $key++; echo $key; echo ' - '; echo $key === $productsQuery->post_count; ?>
+              <?php $key = 0; while ($productsQuery->have_posts()): $productsQuery->the_post(); $key++; ?>
               <div class="products-grid__cell<?php if (($productsQuery->post_count % 2) > 0 && $key === $productsQuery->post_count): ?> products-grid__cell_wide<?php endif ?>">
                 <div class="products-item">
                   <div class="products-item__image">
