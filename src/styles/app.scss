@@ -577,13 +577,8 @@ body {
 .technologies {
   position: relative;
   aspect-ratio: 1.54;
-  margin: 0 -48px;
 
-  @include below(xl) {
-    margin: 0 -24px;
-  }
   @include below(md) {
-    margin: 0 -16px;
     aspect-ratio: 1;
   }
 }
@@ -880,14 +875,6 @@ body {
 
 .geography-slideshow {
   position: relative;
-  margin: 0 -48px;
-
-  @include below(xl) {
-    margin: 0 -24px;
-  }
-  @include below(md) {
-    margin: 0 -16px;
-  }
 }
 
 .geography-slideshow .swiper-button-next,
@@ -995,14 +982,6 @@ body {
 
 .partners-slideshow {
   position: relative;
-  margin: 0 -48px;
-
-  @include below(xl) {
-    margin: 0 -24px;
-  }
-  @include below(md) {
-    margin: 0 -16px;
-  }
 }
 
 .partners-slideshow .swiper-wrapper {
@@ -1999,8 +1978,12 @@ body {
   }
 }
 
-.products {
-  // display: flex;
+* + .products {
+  margin-top: 64px;
+
+  @include below(md) {
+    margin-top: 48px;
+  }
 }
 
 .products-grid {
