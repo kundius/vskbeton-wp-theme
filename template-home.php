@@ -8,6 +8,15 @@ $partners = get_field('partners');
 $args = array(
     'post_type' => 'page',
     'post_parent' => 100,
+    'posts_per_page' => -1,
+    'meta_query' => array(
+      'relation' => 'AND',
+      array(
+        'key' => 'show_at_home',
+        'value' => '1',
+        'compare' => '=',
+      ),
+    ),
 );
 
 $productsQuery = new WP_Query($args);
