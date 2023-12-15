@@ -2201,7 +2201,7 @@ body {
 
 .products-item {
   position: relative;
-  aspect-ratio: 1.6;
+  min-height: 320px;
   padding: 48px 48px 24px;
   display: flex;
   flex-direction: column;
