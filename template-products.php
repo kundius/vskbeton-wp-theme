@@ -35,7 +35,7 @@ $productsQuery = new WP_Query($args);
                     <?php the_post_thumbnail('full') ?>
                   </div>
                   <div class="products-item__title">
-                    <?php the_title() ?>
+                    <?php echo (get_field('title_in_list') ?: get_the_title()) ?>
                   </div>
                   <div class="products-item__section">
                     <a href="<?php the_permalink() ?>" class="products-item__section-link">
