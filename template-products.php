@@ -11,15 +11,6 @@ $args = array(
 );
 
 $productsQuery = new WP_Query($args);
-
-if ($productsQuery->have_posts()):
-    while ($productsQuery->have_posts()):
-        $productsQuery->the_post();
-        // Здесь ваш код
-        echo $post->post_title; // Например, вывод названия страницы
-        // Вывод кастомных полей
-    endwhile;
-endif; wp_reset_postdata();
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes();?> itemscope itemtype="http://schema.org/WebSite">
@@ -46,9 +37,6 @@ endif; wp_reset_postdata();
                   <div class="products-item__content">
                     <div class="products-item__title">
                       <?php the_title() ?>
-                    </div>
-                    <div class="products-item__description">
-                      <?php the_excerpt() ?>
                     </div>
                   </div>
                   <div class="products-item__section">

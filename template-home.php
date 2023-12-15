@@ -46,9 +46,9 @@ $partners = get_field('partners');
           <div class="intro__content-logo">
             <img src="<?php echo $group['content']['logo']['url'] ?>" alt="">
           </div>
-          <div class="intro__content-after">
+          <h1 class="intro__content-after">
             <?php echo $group['content']['after'] ?>
-          </div>
+          </h1>
           <a href="<?php echo $group['content']['link'] ?>" class="intro__content-description">
             <?php echo $group['content']['description'] ?>
           </a>

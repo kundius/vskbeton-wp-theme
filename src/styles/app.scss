@@ -387,6 +387,7 @@ body {
   font-weight: bold;
   line-height: 1.2;
   margin-top: 64px;
+  margin-bottom: 0;
 
   @include below(lg) {
     font-size: 32px;
@@ -2520,14 +2521,6 @@ body {
 
 .products-item {
   position: relative;
-  margin: 0 -48px;
-
-  @include below(lg) {
-    margin: 0 -36px;
-  }
-  @include below(md) {
-    margin: 0 -16px;
-  }
 }
 
 .products-item__image {
@@ -2562,7 +2555,7 @@ body {
 .products-item__content {
   position: relative;
   z-index: 20;
-  padding: 60px 60px 148px;
+  padding: 48px 48px 148px;
   width: 720px;
   max-width: 100%;
 
@@ -2576,7 +2569,7 @@ body {
 }
 
 .products-item__title {
-  font-size: 42px;
+  font-size: 32px;
   line-height: 1.2;
   font-weight: bold;
   text-transform: uppercase;
