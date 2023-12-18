@@ -82,17 +82,17 @@ Template Name: Технологии качества
           <div class="documents">
             <div class="documents__cards">
               <?php if ($organization_card = get_field('organization_card')): ?>
-              <a href="<?php echo $organization_card['url'] ?>" class="documents__card">
+              <a href="<?php echo $organization_card['url'] ?>" class="documents__card documents__card_organization">
                 <span class="documents__card-title">Карточка организации</span>
               </a>
               <?php endif ?>
               <?php if ($evidence = get_field('evidence')): ?>
-              <a href="<?php echo $evidence['url'] ?>" class="documents__card">
+              <a href="<?php echo $evidence['url'] ?>" class="documents__card documents__card_evidence">
                 <span class="documents__card-title">Свидетельство об аккредитации испытательной лаборатории</span>
               </a>
               <?php endif ?>
               <?php if ($certificate = get_field('certificate')): ?>
-              <a href="<?php echo $certificate['url'] ?>" class="documents__card">
+              <a href="<?php echo $certificate['url'] ?>" class="documents__card documents__card_certificate">
                 <span class="documents__card-title">Сертификат о калибровке средства измерения</span>
               </a>
               <?php endif ?>
