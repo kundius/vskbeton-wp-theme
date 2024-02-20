@@ -34,9 +34,7 @@ $query = new WP_Query($query_params);
         <div class="container">
           <div class="articles-list">
             <?php while ($query->have_posts()): ?>
-                <div class="articles-list__item articles-list__item_large">
-                  <?php get_template_part('partials/article', 'large') ?>
-                </div>
+                1
             <?php endwhile ?>
           </div>
 
