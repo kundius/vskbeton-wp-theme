@@ -131,31 +131,31 @@ add_filter('stylesheet_uri', function (string $stylesheet_uri) {
         'url' => \admin_url('admin-ajax.php'),
     ]);
 }, 99);
-function get_attachment_callback()
-{
-    $id = intval($_POST['id']);
+// function get_attachment_callback()
+// {
+//     $id = intval($_POST['id']);
 
-    if (!$id) {
-        echo json_encode([
-            'success' => false,
-        ]);
+//     if (!$id) {
+//         echo json_encode([
+//             'success' => false,
+//         ]);
 
-        \wp_die();
-    }
+//         \wp_die();
+//     }
 
-    echo json_encode([
-        'success' => true,
-        'data' => [
-            'title' => \get_the_title($id),
-            'url' => \wp_get_attachment_url($id),
-            'caption' => \wp_get_attachment_caption($id),
-        ],
-    ]);
+//     echo json_encode([
+//         'success' => true,
+//         'data' => [
+//             'title' => \get_the_title($id),
+//             'url' => \wp_get_attachment_url($id),
+//             'caption' => \wp_get_attachment_caption($id),
+//         ],
+//     ]);
 
-    \wp_die();
-}
-\add_action('wp_ajax_get_attachment', 'get_attachment_callback');
-\add_action('wp_ajax_nopriv_get_attachment', 'get_attachment_callback');
+//     \wp_die();
+// }
+// \add_action('wp_ajax_get_attachment', 'get_attachment_callback');
+// \add_action('wp_ajax_nopriv_get_attachment', 'get_attachment_callback');
 
 add_filter('get_the_archive_title', function ($title) {
     return preg_replace('~^[^:]+: ~', '', $title);
@@ -163,46 +163,46 @@ add_filter('get_the_archive_title', function ($title) {
 
 
 // Archives.php only shows content of type 'post', but you can alter it to include custom post types.
-function namespace_add_custom_types($query)
-{
-    if (is_category()) {
-        $post_type = array(
-            'nav_menu_item',
-            'news',
-            'interview',
-            'analytics',
-            'partners',
-            'events' // 'post'
-        );
-        if (get_query_var('post_type')) {
-            $post_type = get_query_var('post_type');
-        }
-        if (isset($query->query_vars['post_type'])) {
-            $post_type = $query->query_vars['post_type'];
-        }
-        $query->set('post_type', $post_type);
-        return $query;
-    }
-}
-add_filter('pre_get_posts', 'namespace_add_custom_types');
+// function namespace_add_custom_types($query)
+// {
+//     if (is_category()) {
+//         $post_type = array(
+//             'nav_menu_item',
+//             'news',
+//             'interview',
+//             'analytics',
+//             'partners',
+//             'events' // 'post'
+//         );
+//         if (get_query_var('post_type')) {
+//             $post_type = get_query_var('post_type');
+//         }
+//         if (isset($query->query_vars['post_type'])) {
+//             $post_type = $query->query_vars['post_type'];
+//         }
+//         $query->set('post_type', $post_type);
+//         return $query;
+//     }
+// }
+// add_filter('pre_get_posts', 'namespace_add_custom_types');
 
 
-add_filter('nav_menu_css_class', 'current_type_nav_class', 10, 2);
-function current_type_nav_class($classes, $item)
-{
-    $post_type = get_query_var('post_type');
+// add_filter('nav_menu_css_class', 'current_type_nav_class', 10, 2);
+// function current_type_nav_class($classes, $item)
+// {
+//     $post_type = get_query_var('post_type');
 
-    if ($item->type === 'custom') {
-        if ($post_type === trim($item->url, '\/')) {
-            array_push($classes, 'current-menu-item');
-        }
-    }
+//     if ($item->type === 'custom') {
+//         if ($post_type === trim($item->url, '\/')) {
+//             array_push($classes, 'current-menu-item');
+//         }
+//     }
 
-    return $classes;
-}
+//     return $classes;
+// }
 
 
-add_filter('wpcf7_autop_or_not', '__return_false');
+// add_filter('wpcf7_autop_or_not', '__return_false');
 
 // remove_filter( 'sanitize_title', 'sanitize_title_with_dashes' );
 // add_filter( 'sanitize_title', 'wpse5029_sanitize_title_with_dashes' );
