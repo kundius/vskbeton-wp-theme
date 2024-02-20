@@ -33,19 +33,6 @@ $query = new WP_Query($query_params);
       <main class="main">
         <div class="container">
           <div class="articles-list">
-            <?php $idx = 0 ?>
-            <?php while ($query->have_posts()): ?>
-              <?php $idx++ ?>
-              <?php if ($idx === 1): ?>
-                <div class="articles-list__item articles-list__item_large">
-                  <?php get_template_part('partials/article', 'large') ?>
-                </div>
-              <?php else: ?>
-                <div class="articles-list__item">
-                  <?php get_template_part('partials/article', 'medium') ?>
-                </div>
-              <?php endif ?>
-            <?php endwhile ?>
           </div>
 
           <div class="articles-pagination">
