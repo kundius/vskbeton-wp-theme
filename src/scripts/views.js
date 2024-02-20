@@ -5,7 +5,10 @@ elements.forEach(async (el) => {
   if (el.dataset.viewsIncrease) {
     searchParams.set('increase', 1)
   }
-  const response = await fetch(`${theme_ajax.url}?${searchParams.toString()}`)
+  const response = await fetch(`${theme_ajax.url}?${searchParams.toString()}`, {
+    method: 'POST',
+    body: searchParams
+  })
   const data = await response.json()
   let count = 0
   if (response.ok && data.success) {
