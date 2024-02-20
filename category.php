@@ -33,13 +33,13 @@ $query = new WP_Query($query_params);
       <main class="main">
         <div class="container">
           <div class="articles-list">
-            <?php $idx = 0 ?>
+            <?php $idx = 0; ?>
             <?php while ($query->have_posts()): ?>
-              <?php $idx++ ?>
+              <?php $idx++; ?>
               <?php if ($idx === 1): ?>1
               <?php else: ?>2
-              <?php endif ?>
-            <?php endwhile ?>
+              <?php endif; ?>
+            <?php endwhile; ?>
           </div>
 
           <div class="articles-pagination">
