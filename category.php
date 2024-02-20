@@ -5,7 +5,7 @@ $query_params = [
   'posts_per_page' => 1,
   'order' => 'DESC',
   'orderby' => 'date',
-  'paged' => get_query_var('paged') ?: 1,
+  // 'paged' => get_query_var('paged') ?: 1,
   'tax_query' => [
     'relation' => 'OR',
     [
