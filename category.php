@@ -34,7 +34,7 @@ $query = new WP_Query($query_params);
         <div class="container">
           <div class="articles-list">
             <?php while ($query->have_posts()): ?>
-                1
+                11
             <?php endwhile ?>
           </div>
 
