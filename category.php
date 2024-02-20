@@ -28,42 +28,48 @@ $query = new WP_Query($query_params);
     <?php wp_body_open() ?>
 
     <div class="page">
-      <?php //get_template_part('partials/header')   ?>
+      <?php //get_template_part('partials/header')         ?>
 
       <main class="main">
         <div class="container">
 
-          <div class="projects-layout__list">
-            <div class="projects-list">
-              <?php foreach ($query->posts as $item): ?>
-                <div class="projects-list__item">
-                  <article class="projects-card">
-                    <figure class="projects-card__image">
-                      <img src="<?php echo get_the_post_thumbnail_url($item, 'theme-medium') ?>"
-                        alt="<?php echo get_the_title($item) ?>" />
-                    </figure>
-
-                    <?php if ($description = get_field('description', $item->ID)): ?>
-                      <div class="projects-card__date">
-                        <?php echo $description ?>
+          <div class="articles-list">
+            <?php while ($query->have_posts()): ?>
+              <div class="articles-list__item">
+                <article class="articles-card">
+                  <figure class="articles-card__image">
+                    <img src="<?php the_post_thumbnail_url('article-medium') ?>" alt="<?php the_title() ?>" />
+                    <?php if ($time = get_field('time')): ?>
+                      <div class="articles-card__time">
+                        <?php echo $time ?>
                       </div>
                     <?php endif ?>
+                  </figure>
 
-                    <div class="projects-card__title">
-                      <a href="<?php the_permalink($item->ID) ?>">
-                        <?php echo get_the_title($item) ?>
-                      </a>
+                  <div class="articles-card__meta">
+                    <div class="articles-card__date">
+                      <?php the_date('j.m.Y') ?>
                     </div>
-                  </article>
-                </div>
-              <?php endforeach; ?>
+                  </div>
+
+                  <div class="articles-card__title">
+                    <a href="<?php the_permalink() ?>">
+                      <?php the_title() ?>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            <?php endwhile;
+            wp_reset_postdata() ?>
+          </div>
+
+          <div class="articles-pagination">
+            <button class="articles-pagination__show-more">Показать еще</button>
+            <div class="articles-pagination__nav">
+              <?php wp_pagenavi(['query' => $query]) ?>
             </div>
           </div>
 
-          <div class="projects-layout__pagination">
-            <?php wp_pagenavi(['query' => $query]) ?>
-          </div>
-          
         </div>
       </main>
 

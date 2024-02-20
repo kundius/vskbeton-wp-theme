@@ -15,23 +15,16 @@ function load_template_part($template_name, $part_name = null) {
 }
 
 // THEME
-// \add_image_size('theme-medium', 600, 400, true);
 \add_theme_support('align-wide');
 \add_theme_support('responsive-embeds');
 \add_theme_support('editor-styles');
 \add_theme_support('wp-block-styles');
-// \add_theme_support('post-thumbnails');
-// \add_theme_support('html5', ['comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'script', 'style']);
 \add_post_type_support('page', ['excerpt']);
 add_filter( 'widget_text', 'do_shortcode' );
-
-
-// MENU
 add_theme_support('menus');
-// add_theme_support( 'automatic-feed-links' );
-// add_theme_support( 'title-tag' );
 add_theme_support('post-thumbnails');
-add_image_size('product-thumbnail', 9999, 600);
+add_image_size('article-medium', 600, 320);
+add_image_size('article-large', 1200, 600);
 register_nav_menus([
     'main' => 'Основное меню',
 ]);
