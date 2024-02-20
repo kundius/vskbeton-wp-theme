@@ -1,6 +1,7 @@
 const elements = document.querySelectorAll('[data-views]') || []
 elements.forEach(async (el) => {
   const searchParams = new URLSearchParams()
+  searchParams.set('action', 'views')
   searchParams.set('id', el.dataset.views)
   if (el.dataset.viewsIncrease) {
     searchParams.set('increase', 1)
