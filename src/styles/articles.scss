@@ -24,6 +24,9 @@
 .articles-medium__image {
   display: flex;
   position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  margin: 0;
 }
 
 .articles-medium__image img {
@@ -32,7 +35,6 @@
   width: 100%;
   height: auto;
   z-index: 10;
-  border-radius: 32px;
   transition: all 0.3s ease;
 
   .articles-medium:hover & {
@@ -118,6 +120,9 @@
 .articles-large__image {
   display: flex;
   position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  margin: 0;
 }
 
 .articles-large__image img {
@@ -126,7 +131,6 @@
   z-index: 10;
   width: 100%;
   height: auto;
-  border-radius: 32px;
   transition: all 0.3s ease;
 
   .articles-large:hover & {

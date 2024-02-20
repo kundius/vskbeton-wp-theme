@@ -23,8 +23,8 @@ function load_template_part($template_name, $part_name = null) {
 add_filter( 'widget_text', 'do_shortcode' );
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
-add_image_size('article-medium', 600, 320);
-add_image_size('article-large', 1200, 600);
+add_image_size('article-medium', 600, 320, true);
+add_image_size('article-large', 1200, 600, true);
 register_nav_menus([
     'main' => 'Основное меню',
 ]);

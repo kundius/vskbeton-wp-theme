@@ -1,7 +1,7 @@
 <article class="articles-large">
   <figure class="articles-large__image">
     <img src="<?php the_post_thumbnail_url('article-large') ?>" alt="<?php the_title() ?>" />
-    <?php if ($time = get_field('time')): ?>
+    <?php if ($time = get_field('reading_time')): ?>
       <div class="articles-large__time">
         <?php echo $time ?>
       </div>
@@ -16,7 +16,7 @@
     </div>
     <div class="articles-large__meta">
       <div class="articles-large__date">
-        <?php the_date('j.m.Y') ?>
+        <?php echo get_the_date('j.m.Y') ?>
       </div>
     </div>
   </div>
