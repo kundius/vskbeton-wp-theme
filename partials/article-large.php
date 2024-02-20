@@ -18,7 +18,7 @@
       <div class="articles-large__date">
         <?php echo get_the_date('j.m.Y') ?>
       </div>
-      <div class="articles-large__views" data-views="<?php echo get_the_ID() ?>" data-views-increase></div>
+      <div class="articles-large__views" data-views="<?php echo get_the_ID() ?>" data-views-increase>...</div>
     </div>
   </div>
 </article>

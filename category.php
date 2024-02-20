@@ -1,5 +1,6 @@
 <?php
 $category = get_queried_object();
+print_r(get_query_var('paged'));
 $query_params = [
   'post_type' => 'post',
   'posts_per_page' => 3,
@@ -53,7 +54,8 @@ $query = new WP_Query($query_params);
             <div class="articles-pagination__nav">
               <?php wp_pagenavi(['query' => $query]) ?>
             </div>
-          </div>
+          </div><?php the_posts_pagination(); ?>
+
 
           <?php wp_reset_postdata() ?>
         </div>

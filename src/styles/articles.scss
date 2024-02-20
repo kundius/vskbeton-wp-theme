@@ -97,7 +97,8 @@
 .articles-medium__views {
   font-size: 14px;
   color: rgb(175, 175, 175);
-  margin-right: 20px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .articles-medium__views::before {

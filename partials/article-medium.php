@@ -12,7 +12,7 @@
     <div class="articles-medium__date">
       <?php echo get_the_date('j.m.Y') ?>
     </div>
-    <div class="articles-medium__views" data-views="<?php echo get_the_ID() ?>"></div>
+    <div class="articles-medium__views" data-views="<?php echo get_the_ID() ?>">...</div>
   </div>
 
   <div class="articles-medium__title">
