@@ -40,6 +40,12 @@
   width: 100%;
   height: auto;
   z-index: 10;
+  transition: all 0.3s ease;
+
+  .articles-medium:hover & {
+    transform: scale(1.1);
+    filter: grayscale(1);
+  }
 }
 
 .articles-medium__image::after {
@@ -140,6 +146,11 @@
   z-index: 10;
   width: 100%;
   height: auto;
+
+  .articles-medium:hover & {
+    transform: scale(1.1);
+    // filter: grayscale(1);
+  }
 }
 
 .articles-large__image::before {
