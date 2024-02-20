@@ -3,7 +3,7 @@ elements.forEach(async (el) => {
   const searchParams = new URLSearchParams()
   searchParams.set('action', 'views')
   searchParams.set('id', el.dataset.views)
-  if (el.dataset.viewsIncrease) {
+  if ('viewsIncrease' in el.dataset) {
     searchParams.set('increase', 1)
   }
   const response = await fetch(`${theme_ajax.url}?${searchParams.toString()}`, {
