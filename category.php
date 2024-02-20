@@ -1,6 +1,7 @@
 <?php
 $category = get_queried_object();
 print_r(get_query_var('paged'));
+die();
 $query_params = [
   'post_type' => 'post',
   'posts_per_page' => 3,
