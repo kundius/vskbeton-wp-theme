@@ -32,11 +32,7 @@ $query = new WP_Query($query_params);
 
       <main class="main">
         <div class="container">
-          <div class="articles-list">
-            <?php while ($query->have_posts()): ?>
-                11
-            <?php endwhile ?>
-          </div>
+          <?php print_r($query) ?>
 
           <div class="articles-pagination">
             <button class="articles-pagination__show-more">Показать еще</button>
