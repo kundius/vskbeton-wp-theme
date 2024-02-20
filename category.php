@@ -28,15 +28,14 @@ $query = new WP_Query($query_params);
     <?php wp_body_open() ?>
 
     <div class="page">
-      <?php //get_template_part('partials/header')           ?>
+      <?php get_template_part('partials/header') ?>
 
       <main class="main">
         <div class="container">
-
           <div class="articles-list">
-            <?php $idx = 0;
-            while ($query->have_posts()):
-              $idx++ ?>
+            <?php $idx = 0 ?>
+            <?php while ($query->have_posts()): ?>
+              <?php $idx++ ?>
               <?php if ($idx === 1): ?>
                 <div class="articles-list__item articles-list__item_large">
                   <?php get_template_part('partials/article', 'large') ?>
@@ -46,8 +45,7 @@ $query = new WP_Query($query_params);
                   <?php get_template_part('partials/article', 'medium') ?>
                 </div>
               <?php endif ?>
-            <?php endwhile;
-            wp_reset_postdata() ?>
+            <?php endwhile ?>
           </div>
 
           <div class="articles-pagination">
@@ -57,6 +55,7 @@ $query = new WP_Query($query_params);
             </div>
           </div>
 
+          <?php wp_reset_postdata() ?>
         </div>
       </main>
 
