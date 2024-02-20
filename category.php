@@ -28,37 +28,24 @@ $query = new WP_Query($query_params);
     <?php wp_body_open() ?>
 
     <div class="page">
-      <?php //get_template_part('partials/header')         ?>
+      <?php //get_template_part('partials/header')           ?>
 
       <main class="main">
         <div class="container">
 
           <div class="articles-list">
-            <?php while ($query->have_posts()): ?>
-              <div class="articles-list__item">
-                <article class="articles-card">
-                  <figure class="articles-card__image">
-                    <img src="<?php the_post_thumbnail_url('article-medium') ?>" alt="<?php the_title() ?>" />
-                    <?php if ($time = get_field('time')): ?>
-                      <div class="articles-card__time">
-                        <?php echo $time ?>
-                      </div>
-                    <?php endif ?>
-                  </figure>
-
-                  <div class="articles-card__meta">
-                    <div class="articles-card__date">
-                      <?php the_date('j.m.Y') ?>
-                    </div>
-                  </div>
-
-                  <div class="articles-card__title">
-                    <a href="<?php the_permalink() ?>">
-                      <?php the_title() ?>
-                    </a>
-                  </div>
-                </article>
-              </div>
+            <?php $idx = 0;
+            while ($query->have_posts()):
+              $idx++ ?>
+              <?php if ($idx === 1): ?>
+                <div class="articles-list__item articles-list__item_large">
+                  <?php get_template_part('partials/article', 'large') ?>
+                </div>
+              <?php else: ?>
+                <div class="articles-list__item">
+                  <?php get_template_part('partials/article', 'medium') ?>
+                </div>
+              <?php endif ?>
             <?php endwhile;
             wp_reset_postdata() ?>
           </div>
