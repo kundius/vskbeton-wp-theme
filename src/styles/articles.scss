@@ -107,6 +107,7 @@
     top: 0;
     right: 0;
     bottom: 0;
+    z-index: 50;
   }
 }
 
@@ -170,6 +171,7 @@
   top: 0;
   right: 0;
   bottom: 0;
+  z-index: 50;
 }
 
 .articles-large__time {
@@ -225,7 +227,8 @@
     margin-right: 16px;
     flex-shrink: 0;
     position: absolute;
-    left: -40px;
+    left: 50px;
+    z-index: 50;
   }
   a::after {
     content: "";
@@ -234,6 +237,7 @@
     top: 0;
     right: 0;
     bottom: 0;
+    z-index: 50;
   }
 }
 
