@@ -2,7 +2,7 @@
 $category = get_queried_object();
 $query_params = [
   'post_type' => 'post',
-  'posts_per_page' => 1,
+  'posts_per_page' => 3,
   'order' => 'DESC',
   'orderby' => 'date',
   'paged' => get_query_var('paged') ?: 1,
