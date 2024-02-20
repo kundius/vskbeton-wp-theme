@@ -2,7 +2,7 @@
 $category = get_queried_object();
 $query_params = [
   'post_type' => 'post',
-  'posts_per_page' => 3,
+  'posts_per_page' => 1,
   'order' => 'DESC',
   'orderby' => 'date',
   'paged' => get_query_var('paged') ?: 1,
@@ -33,12 +33,6 @@ $query = new WP_Query($query_params);
       <main class="main">
         <div class="container">
 
-<div class="articles-pagination">
-  <button class="articles-pagination__show-more">Показать еще</button>
-  <div class="articles-pagination__nav">
-    <?php wp_pagenavi(['query' => $query, ]) ?>
-  </div>
-</div>
           <div class="articles-list">
             <?php $idx = 0;
             while ($query->have_posts()):
@@ -55,6 +49,12 @@ $query = new WP_Query($query_params);
               <?php endif; endwhile ?>
           </div>
 
+          <div class="articles-pagination">
+            <button class="articles-pagination__show-more">Показать еще</button>
+            <div class="articles-pagination__nav">
+              <?php wp_pagenavi(['query' => $query]) ?>
+            </div>
+          </div>
 
           <?php wp_reset_postdata() ?>
         </div>
