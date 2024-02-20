@@ -11,8 +11,9 @@
       
       <main class="main">
         <div class="container">
-          1234
-          <?php wp_reset_postdata(); if (have_posts()): ?>
+          123411
+          <?php $category= get_queried_object(); print_r($category);
+ if (have_posts()): ?>
             <div class="document">
               <h1 class="document__title"><?php the_title() ?></h1>
               <div class="document__content">
