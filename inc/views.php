@@ -16,7 +16,9 @@ function views_callback()
 
   $count = get_post_meta($id, $count_key, true);
 
-  $count = $count || 0;
+  if (!$count) {
+    $count = 0;
+  }
 
   if ($increase) {
     $count = $count + 1;
