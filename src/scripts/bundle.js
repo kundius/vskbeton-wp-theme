@@ -1,3 +1,5 @@
+import "./views"
+
 import Swiper, { Autoplay, EffectFade, Pagination, Navigation, Thumbs } from "swiper"
 // import HystModal from "hystmodal"
 import "fslightbox"

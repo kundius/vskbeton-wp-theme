@@ -5,8 +5,10 @@ require 'inc/pagination.php';
 require 'inc/shortcodes.php';
 require 'inc/sidebars.php';
 require 'inc/seo.php';
+require 'inc/views.php';
 
-function load_template_part($template_name, $part_name = null) {
+function load_template_part($template_name, $part_name = null)
+{
     ob_start();
     get_template_part($template_name, $part_name);
     $var = ob_get_contents();
@@ -20,7 +22,7 @@ function load_template_part($template_name, $part_name = null) {
 \add_theme_support('editor-styles');
 \add_theme_support('wp-block-styles');
 \add_post_type_support('page', ['excerpt']);
-add_filter( 'widget_text', 'do_shortcode' );
+add_filter('widget_text', 'do_shortcode');
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
 add_image_size('article-medium', 600, 320, true);
@@ -38,7 +40,7 @@ add_theme_support('html5', [
 ]);
 
 // ADMIN PANEL
-\add_action('admin_init', function() {
+\add_action('admin_init', function () {
     if (isset($_GET['post'])) {
         $post_ID = $_GET['post'];
     } else if (isset($_POST['post_ID'])) {
@@ -56,7 +58,7 @@ add_theme_support('html5', [
     // }
     \add_shortcode('template_part', function ($atts, $content = null) {
         $tp_atts = \shortcode_atts([
-            'path' =>  null,
+            'path' => null,
         ], $atts);
         ob_start();
         \get_template_part($tp_atts['path']);
@@ -129,7 +131,8 @@ add_filter('stylesheet_uri', function (string $stylesheet_uri) {
         'url' => \admin_url('admin-ajax.php'),
     ]);
 }, 99);
-function get_attachment_callback() {
+function get_attachment_callback()
+{
     $id = intval($_POST['id']);
 
     if (!$id) {
@@ -154,17 +157,22 @@ function get_attachment_callback() {
 \add_action('wp_ajax_get_attachment', 'get_attachment_callback');
 \add_action('wp_ajax_nopriv_get_attachment', 'get_attachment_callback');
 
-
-add_filter( 'get_the_archive_title', function( $title ){
-    return preg_replace('~^[^:]+: ~', '', $title );
+add_filter('get_the_archive_title', function ($title) {
+    return preg_replace('~^[^:]+: ~', '', $title);
 });
 
 
 // Archives.php only shows content of type 'post', but you can alter it to include custom post types.
-function namespace_add_custom_types($query) {
+function namespace_add_custom_types($query)
+{
     if (is_category()) {
         $post_type = array(
-            'nav_menu_item', 'news', 'interview', 'analytics', 'partners', 'events' // 'post'
+            'nav_menu_item',
+            'news',
+            'interview',
+            'analytics',
+            'partners',
+            'events' // 'post'
         );
         if (get_query_var('post_type')) {
             $post_type = get_query_var('post_type');
@@ -180,14 +188,15 @@ add_filter('pre_get_posts', 'namespace_add_custom_types');
 
 
 add_filter('nav_menu_css_class', 'current_type_nav_class', 10, 2);
-function current_type_nav_class($classes, $item) {
+function current_type_nav_class($classes, $item)
+{
     $post_type = get_query_var('post_type');
 
-		if ($item->type === 'custom') {
-			if ($post_type === trim($item->url, '\/')) {
-				array_push($classes, 'current-menu-item');
-			}
-		}
+    if ($item->type === 'custom') {
+        if ($post_type === trim($item->url, '\/')) {
+            array_push($classes, 'current-menu-item');
+        }
+    }
 
     return $classes;
 }
