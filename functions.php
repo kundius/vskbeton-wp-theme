@@ -236,3 +236,10 @@ add_filter('get_the_archive_title', function ($title) {
 
 //     return $title;
 // }
+
+add_filter('the_title', 'the_title_filter', 10, 2);
+
+function the_title_filter($post_title, $post_id)
+{
+    return str_replace('\n', '<br />', $post_title);
+}
