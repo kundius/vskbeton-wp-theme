@@ -56,12 +56,14 @@ $list_query = new WP_Query($list_query_params);
       <main class="main">
         <div class="container">
           <div class="articles-list" id="more-articles-list">
-            <?php while ($first_query->have_posts()):
-              $first_query->the_post(); ?>
-              <div class="articles-list__item articles-list__item_large">
-                <?php get_template_part('partials/article', 'large') ?>
-              </div>
-            <?php endwhile; ?>
+            <?php if (!get_query_var('paged')): ?>
+              <?php while ($first_query->have_posts()):
+                $first_query->the_post(); ?>
+                <div class="articles-list__item articles-list__item_large">
+                  <?php get_template_part('partials/article', 'large') ?>
+                </div>
+              <?php endwhile; ?>
+            <?php endif; ?>
             <?php while ($list_query->have_posts()):
               $list_query->the_post(); ?>
               <div class="articles-list__item">
