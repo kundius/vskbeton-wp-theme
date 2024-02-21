@@ -60,14 +60,14 @@ $list_query = new WP_Query($list_query_params);
               <?php while ($first_query->have_posts()):
                 $first_query->the_post(); ?>
                 <div class="articles-list__item articles-list__item_large">
-                  <?php get_template_part('partials/article', 'medium') ?>
+                  <?php get_template_part('partials/article', null, ['thumb' => 'article-large']) ?>
                 </div>
               <?php endwhile; ?>
             <?php endif; ?>
             <?php while ($list_query->have_posts()):
               $list_query->the_post(); ?>
               <div class="articles-list__item">
-                <?php get_template_part('partials/article', 'medium') ?>
+                <?php get_template_part('partials/article', null, ['thumb' => 'article-medium']) ?>
               </div>
             <?php endwhile; ?>
           </div>

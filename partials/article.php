@@ -1,6 +1,6 @@
 <article class="articles-card">
   <figure class="articles-card__image">
-    <img src="<?php the_post_thumbnail_url('article-medium') ?>" alt="<?php the_title() ?>" />
+    <img src="<?php the_post_thumbnail_url($args['thumb']) ?>" alt="<?php the_title() ?>" />
     <?php if ($time = get_field('reading_time')): ?>
       <div class="articles-card__time">
         <?php echo $time ?>
