@@ -321,6 +321,9 @@
   display: inline-block;
   border: none;
   color: #fff;
+  &[hidden] {
+    display: none;
+  }
   &:hover {
     border-radius: 12px;
     background-image: linear-gradient(
