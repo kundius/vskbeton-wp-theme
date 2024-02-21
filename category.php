@@ -56,8 +56,9 @@
                 var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
                 var max_pages = '<?php echo $wp_query->max_num_pages; ?>';
               </script>
-              <button id="more-articles-button" class="articles-pagination__loadmore">Показать ещё</button>
+              <button id="more-articles-button" class="articles-pagination__show-more">Показать ещё</button>
             <?php endif; ?>
+            <div class="articles-pagination__spacer"></div>
             <div class="articles-pagination__nav">
               <?php echo paginate_links([
                 'prev_text' => '<',
