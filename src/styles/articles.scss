@@ -407,6 +407,15 @@
   font-size: 18px;
   color: rgb(0, 0, 0);
   line-height: 1.333;
+  a {
+    background: #0035bb;
+    color: #fff;
+    padding: 0 4px;
+    text-decoration: none;
+    &:hover {
+      background: #f18b3a;
+    }
+  }
   h2 {
     font-size: 28px;
     color: rgb(0, 0, 0);
@@ -455,6 +464,16 @@
     &::first-line {
       color: rgb(0, 62, 192);
     }
+    * + & {
+      margin-top: 72px;
+    }
+  }
+  h3 {
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.364;
+    margin: 0 0 36px;
     * + & {
       margin-top: 72px;
     }
