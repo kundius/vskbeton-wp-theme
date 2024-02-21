@@ -51,7 +51,7 @@
           <div class="articles-pagination">
             <button class="articles-pagination__show-more">Показать еще</button>
             <div class="articles-pagination__nav">
-              <?php paginate_links([
+              <?php echo paginate_links([
                 'prev_text' => '<',
                 'next_text' => '>',
               ]) ?>
