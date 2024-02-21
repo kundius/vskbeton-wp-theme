@@ -426,9 +426,6 @@
     padding-left: 48px;
     margin: 0 0 48px;
     position: relative;
-    * + & {
-      margin-top: 96px;
-    }
     &::before {
       content: "";
       background: url("../images/arrow-1.png") no-repeat 50% 50%;
@@ -443,19 +440,19 @@
       top: -.5em;
     }
   }
+  * + h2 {
+    margin-top: 96px;
+  }
   p {
     margin: 0 0 24px;
-    * + & {
-      margin-top: 24px;
-    }
+  }
+  * + p {
+    margin-top: 24px;
   }
   ul {
     margin: 0 0 32px;
     padding: 0;
     list-style: none;
-    * + & {
-      margin-top: 32px;
-    }
     li {
       padding-left: 32px;
       position: relative;
@@ -468,10 +465,13 @@
         top: .5em;
         left: 0;
       }
-      * + li {
-        margin-top: 6px;
-      }
     }
+    * + li {
+      margin-top: 6px;
+    }
+  }
+  * + ul {
+    margin-top: 32px;
   }
   h3 {
     font-size: 24px;
@@ -483,9 +483,9 @@
     &::first-line {
       color: rgb(0, 62, 192);
     }
-    * + & {
-      margin-top: 72px;
-    }
+  }
+  * + h3 {
+    margin-top: 72px;
   }
   h4 {
     font-size: 22px;
@@ -493,16 +493,13 @@
     font-weight: bold;
     line-height: 1.364;
     margin: 0 0 36px;
-    * + & {
-      margin-top: 72px;
-    }
+  }
+  * + h4 {
+    margin-top: 54px;
   }
   .wp-block-image {
     position: relative;
     margin: 0 0 36px;
-    * + & {
-      margin-top: 36px;
-    }
     &:has(.wp-element-caption) {
       padding-top: 72px;
     }
@@ -520,6 +517,9 @@
       background-color: #0035bb;
       mix-blend-mode: multiply;
     }
+  }
+  * + .wp-block-image {
+    margin-top: 36px;
   }
 }
 
