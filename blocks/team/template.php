@@ -12,6 +12,7 @@ ffffffffffffffffffffffff
 					<?php foreach ($items as $key=>$item): ?>
 						<div class="swiper-slide team-slide team-slide_<?php echo $key + 1 ?>">
 							<div class="team-slide__figure">
+								<?php print_r($item['image']) ?>
 								<img class="team-slide__image" src="<?php echo $item['image']['url'] ?>">
 								<div class="team-slide__content">
 									<div class="team-slide__name">
