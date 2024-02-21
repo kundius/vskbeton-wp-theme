@@ -318,7 +318,7 @@
 
 .article-headline__content {
   background-color: rgb(0, 53, 187);
-  padding: 46px 40px;
+  padding: 48px 40px;
   mix-blend-mode: multiply;
   margin-left: -560px;
   transform: translateX(100%);
@@ -328,6 +328,14 @@
   max-width: 100%;
   flex-shrink: 0;
   margin-bottom: 105px;
+
+  @include below(md) {
+    font-size: 18px;
+    margin-bottom: 40px;
+    width: 280px;
+    margin-left: -280px;
+    padding: 24px 20px;
+  }
 }
 
 .article-headline__title {
@@ -336,6 +344,10 @@
   font-weight: bold;
   line-height: 1.368;
   margin: 0;
+
+  @include below(md) {
+    font-size: 18px;
+  }
 }
 
 .article-headline__title::first-line {
@@ -348,16 +360,28 @@
   margin-top: 36px;
   font-size: 14px;
   color: #d5d5d5;
+
+  @include below(md) {
+    margin-top: 24px;
+  }
 }
 
 .article-headline__date {
   margin-right: 60px;
+
+  @include below(md) {
+    margin-right: 20px;
+  }
 }
 
 .article-headline__views {
   margin-right: 40px;
   display: inline-flex;
   align-items: center;
+
+  @include below(md) {
+    margin-right: 20px;
+  }
 }
 
 .article-headline__views::before {
@@ -395,6 +419,12 @@
   width: calc(100% - 120px);
   margin-top: 105px;
   margin-bottom: 0;
+
+  @include below(md) {
+    margin-left: 40px;
+    width: calc(100% - 40px);
+    margin-top: 0;
+  }
 }
 
 .article-headline__image img {
@@ -408,6 +438,15 @@
   color: rgb(0, 0, 0);
   line-height: 1.333;
   padding-left: 120px;
+  @include below(lg) {
+    padding-left: 0;
+  }
+  .wp-block-columns {
+    margin-left: -120px;
+    @include below(lg) {
+      margin-left: 0;
+    }
+  }
   a {
     background: #0035bb;
     color: #fff;
@@ -424,7 +463,7 @@
     font-weight: bold;
     line-height: 1;
     padding-left: 48px;
-    margin: 0 0 48px;
+    margin: 96px 0 48px;
     position: relative;
     &::before {
       content: "";
@@ -440,17 +479,11 @@
       top: -.5em;
     }
   }
-  * + h2 {
-    margin-top: 96px;
-  }
   p {
-    margin: 0 0 24px;
-  }
-  * + p {
-    margin-top: 24px;
+    margin: 24px 0 24px;
   }
   ul {
-    margin: 0 0 32px;
+    margin: 32px 0 32px;
     padding: 0;
     list-style: none;
     li {
@@ -470,36 +503,27 @@
       margin-top: 6px;
     }
   }
-  * + ul {
-    margin-top: 32px;
-  }
   h3 {
     font-size: 24px;
     color: rgb(0, 0, 0);
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.25;
-    margin: 0 0 36px;
+    margin: 72px 0 36px;
     &::first-line {
       color: rgb(0, 62, 192);
     }
-  }
-  * + h3 {
-    margin-top: 72px;
   }
   h4 {
     font-size: 22px;
     color: rgb(0, 0, 0);
     font-weight: bold;
     line-height: 1.364;
-    margin: 0 0 36px;
-  }
-  * + h4 {
-    margin-top: 54px;
+    margin: 54px 0 36px;
   }
   .wp-block-image {
     position: relative;
-    margin: 0 0 36px;
+    margin: 36px 0 36px;
     &:has(.wp-element-caption) {
       padding-top: 72px;
     }
@@ -518,9 +542,6 @@
       mix-blend-mode: multiply;
     }
   }
-  * + .wp-block-image {
-    margin-top: 36px;
-  }
 }
 
 .article-nav {
@@ -531,7 +552,11 @@
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
   margin-top: 105px;
-  padding: 24px 0;
+  padding: 26px 0;
+
+  @include below(lg) {
+    margin-top: 64px;
+  }
 }
 
 .article-nav__previous,
@@ -541,7 +566,8 @@
   font-weight: bold;
   line-height: 1.2;
   display: inline-flex;
-  gap: 8px;
+  align-items: center;
+  gap: 14px;
   text-decoration: none;
   &:hover {
     color: #f18b3a;
@@ -551,8 +577,8 @@
 .article-nav__previous::before {
   content: "";
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-left: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   transform: rotate(45deg);
@@ -561,15 +587,19 @@
 .article-nav__next::after {
   content: "";
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   transform: rotate(-45deg);
 }
 
 .article-read-also {
-  margin-top: 80px;
+  margin-top: 84px;
+  
+  @include below(lg) {
+    margin-top: 64px;
+  }
 }
 
 .article-read-also__title {
@@ -578,5 +608,9 @@
   text-transform: uppercase;
   color: rgb(2, 2, 2);
   line-height: 1.25;
-  margin-bottom: 50px;
+  margin-bottom: 54px;
+  
+  @include below(lg) {
+    margin-bottom: 32px;
+  }
 }
