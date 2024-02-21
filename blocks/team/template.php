@@ -1,5 +1,4 @@
 <?php $items = get_field('items'); ?>
-ffffffffffffffffffffffff
 <?php if (count($items) > 0): ?>
 	<div class="wp-block-team">
 		<div class="team">
