@@ -5,8 +5,6 @@ function more_articles_get_posts()
   $args['paged'] = $_POST['page'] + 1;
   $args['post_status'] = 'publish';
 
-  print_r($args);
-
   query_posts($args);
 
   if (have_posts()) {
