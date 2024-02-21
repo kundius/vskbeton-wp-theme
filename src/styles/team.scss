@@ -1,7 +1,7 @@
 .team {
   position: relative;
   z-index: 1;
-  margin: 90px -32px 390px;
+  margin: 90px -40px 390px;
 }
 
 .team::after {
@@ -96,29 +96,28 @@
   height: auto;
 }
 
-.team-slide__figure {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.team-slide__wrapper {
   position: relative;
   z-index: 1;
 }
 
 .team-slide__image {
+  overflow: hidden;
+}
+
+.team-slide__image img {
   display: block;
   max-width: 100%;
   height: auto;
-  position: relative;
-  z-index: -1;
   transition: .5s ease;
   transform-origin: 50% 0;
 }
 
-.team-slide_2 .team-slide__image {
+.team-slide_2 .team-slide__image img {
   transform-origin: 50% 50%;
 }
 
-.team-slide:hover .team-slide__image {
+.team-slide:hover .team-slide__image img {
   // transform: scale(1.25);
   // box-shadow: 17.355px 20.683px 20.79px 0.21px rgba(25, 42, 70, 0.2);
   transform: scale(1.165);
