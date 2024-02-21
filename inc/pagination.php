@@ -12,7 +12,9 @@ function simple_pagination($args = []) {
     $links = [];
   }
 
-  $output = '<div class="siple-pagination">';
+  print_r($links);
+
+  $output = '<div class="pagination">';
 
   if (str_contains($links[count($links) - 1], 'class="next page-numbers"')) {
     $output .= $links[count($links) - 1];
