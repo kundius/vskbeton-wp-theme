@@ -6,7 +6,7 @@ elements.forEach(async (el) => {
   if ('viewsIncrease' in el.dataset) {
     searchParams.set('increase', 1)
   }
-  const response = await fetch(`${theme_ajax.url}?${searchParams.toString()}`, {
+  const response = await fetch(theme_ajax.url, {
     method: 'POST',
     body: searchParams
   })

@@ -5,7 +5,7 @@ async function init() {
   if (!(button && list)) return;
 
   const params = {
-    action: "more_articles",
+    action: "morearticles",
     query: posts_vars,
     page: current_page,
   };
