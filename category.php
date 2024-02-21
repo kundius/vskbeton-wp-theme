@@ -24,7 +24,7 @@ foreach ($first_query->posts as $post) {
 
 $list_query_params = [
   'post_type' => 'post',
-  'posts_per_page' => 2,
+  'posts_per_page' => 4,
   'order' => 'DESC',
   'orderby' => 'date',
   'paged' => get_query_var('paged') ?: 1,
