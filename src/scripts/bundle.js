@@ -67,7 +67,7 @@ new Swiper(".partners-slideshow .swiper", {
 
 new Swiper(".team .swiper", {
   modules: [Navigation],
-  spaceBetween: 16,
+  spaceBetween: 0,
   slidesPerView: 1,
   freeMode: true,
   loop: true,
@@ -77,11 +77,11 @@ new Swiper(".team .swiper", {
   },
   breakpoints: {
     767: {
-      spaceBetween: 16,
+      spaceBetween: 0,
       slidesPerView: 3,
     },
     1200: {
-      spaceBetween: 16,
+      spaceBetween: 0,
       slidesPerView: 3,
     },
   },
