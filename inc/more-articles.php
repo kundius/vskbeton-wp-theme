@@ -8,19 +8,11 @@ function more_articles_get_posts()
   query_posts($args);
 
   if (have_posts()) {
-    $idx = 0;
     while (have_posts()) {
       the_post();
-      $idx++;
-      if ($idx === 1) {
-        echo '<div class="articles-list__item articles-list__item_large">';
-        get_template_part('partials/article', 'large');
-        echo '</div>';
-      } else {
-        echo '<div class="articles-list__item">';
-        get_template_part('partials/article', 'medium');
-        echo '</div>';
-      }
+      echo '<div class="articles-list__item">';
+      get_template_part('partials/article', 'medium');
+      echo '</div>';
     }
   }
   die();
