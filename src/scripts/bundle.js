@@ -1,4 +1,5 @@
 import "./views"
+import "./more-articles"
 
 import Swiper, { Autoplay, EffectFade, Pagination, Navigation, Thumbs } from "swiper"
 // import HystModal from "hystmodal"

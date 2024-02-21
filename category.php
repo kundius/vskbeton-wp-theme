@@ -32,7 +32,7 @@
 
       <main class="main">
         <div class="container">
-          <div class="articles-list">
+          <div class="articles-list" id="more-articles-list">
             <?php $idx = 0;
             while (have_posts()):
               the_post();
@@ -49,7 +49,15 @@
           </div>
 
           <div class="articles-pagination">
-            <button class="articles-pagination__show-more">Показать еще</button>
+            <?php if ($wp_query->max_num_pages > 1): ?>
+              <script>
+                var ajaxurl = '<?php echo site_url(); ?>/wp-admin/admin-ajax.php';
+                var posts_vars = '<?php echo serialize($wp_query->query_vars); ?>';
+                var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
+                var max_pages = '<?php echo $wp_query->max_num_pages; ?>';
+              </script>
+              <button id="more-articles-button" class="articles-pagination__loadmore">Показать ещё</button>
+            <?php endif; ?>
             <div class="articles-pagination__nav">
               <?php echo paginate_links([
                 'prev_text' => '<',
