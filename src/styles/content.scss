@@ -12,6 +12,12 @@
       margin-left: 0;
     }
   }
+  .wp-block-team {
+    margin-left: -120px;
+    @include below(lg) {
+      margin-left: 0;
+    }
+  }
   a:not(.wp-element-button) {
     background: #0035bb;
     color: #fff;

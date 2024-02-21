@@ -49,6 +49,10 @@
   position: relative;
   background: transparent;
   padding: 0;
+  cursor: pointer;
+  &:hover {
+    color: rgb(241, 139, 58);
+  }
 }
 
 .team-nav__prev::before {
@@ -76,7 +80,7 @@
 
 .team-nav__next::after {
   content: "";
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
   display: inline-block;
   width: 10px;
   height: 10px;

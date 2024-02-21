@@ -70,6 +70,7 @@ new Swiper(".team .swiper", {
   spaceBetween: 20,
   slidesPerView: 1,
   freeMode: true,
+  loop: true,
   navigation: {
     nextEl: ".team .team-nav__next",
     prevEl: ".team .team-nav__prev",
