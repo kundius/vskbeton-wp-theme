@@ -5,7 +5,7 @@ async function init() {
   if (!(button && list)) return;
 
   const searchParams = new URLSearchParams();
-  searchParams.set("action", "morearticles");
+  searchParams.set("action", "more_articles");
   searchParams.set("query", posts_vars);
   searchParams.set("page", current_page);
 

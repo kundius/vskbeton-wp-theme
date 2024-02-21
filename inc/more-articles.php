@@ -1,5 +1,5 @@
 <?php
-function morearticles_get_posts()
+function more_articles_get_posts()
 {
   $args = unserialize(stripslashes($_POST['query']));
   $args['paged'] = $_POST['page'] + 1;
@@ -28,5 +28,5 @@ function morearticles_get_posts()
   die();
 }
 
-add_action('wp_ajax_morearticles', 'morearticles_get_posts');
-add_action('wp_ajax_nopriv_morearticles', 'morearticles_get_posts');
+add_action('wp_ajax_more_articles', 'more_articles_get_posts');
+add_action('wp_ajax_nopriv_more_articles', 'more_articles_get_posts');
