@@ -20,8 +20,8 @@ if (button && list) {
 
     if (response.ok) {
       button.innerHTML = text;
-      div.insertAdjacentHTML("beforeend", data);
-      list.current_page++;
+      list.insertAdjacentHTML("beforeend", data);
+      current_page++;
       if (current_page == max_pages) {
         button.setAttribute("hidden", true);
       }
