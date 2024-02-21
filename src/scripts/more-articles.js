@@ -16,7 +16,7 @@ if (button && list) {
       method: "POST",
       body: searchParams,
     });
-    const data = await response.json();
+    const data = await response.text();
 
     if (response.ok) {
       button.innerHTML = text;
