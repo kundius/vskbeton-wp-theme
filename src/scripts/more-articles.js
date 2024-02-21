@@ -4,18 +4,18 @@ async function init() {
 
   if (!(button && list)) return;
 
-  const params = {
-    action: "morearticles",
-    query: posts_vars,
-    page: current_page,
-  };
+  const searchParams = new URLSearchParams();
+  searchParams.set("action", "morearticles");
+  searchParams.set("query", posts_vars);
+  searchParams.set("page", current_page);
+
   let text = button.innerHTML;
 
   button.innerHTML = "Загрузка...";
 
   const response = await fetch(theme_ajax.url, {
     method: "POST",
-    body: JSON.stringify(params),
+    body: searchParams,
   });
   const data = await response.json();
 
