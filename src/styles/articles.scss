@@ -412,6 +412,7 @@
     color: #fff;
     padding: 0 4px;
     text-decoration: none;
+    text-transform: uppercase;
     &:hover {
       background: #f18b3a;
     }
@@ -423,8 +424,22 @@
     line-height: 1;
     padding-left: 50px;
     margin: 0 0 40px;
+    position: relative;
     * + & {
       margin-top: 40px;
+    }
+    &::before {
+      content: "";
+      background: url("../images/arrow-1.png") no-repeat 50% 50%;
+      background-size: cover;
+      width: 24px;
+      height: 38.4px;
+      margin-right: 16px;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+      position: absolute;
+      left: 0;
+      top: 0.5em;
     }
   }
   p {
