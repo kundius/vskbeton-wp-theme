@@ -9,8 +9,8 @@ ffffffffffffffffffffffff
 			</div>
 			<div class="swiper">
 				<div class="swiper-wrapper">
-					<?php foreach ($items as $key=>$item): ?>
-						<div class="swiper-slide team-slide team-slide_<?php echo $key + 1 ?>">
+					<?php foreach ($items as $key => $item): ?>
+						<div class="swiper-slide team-slide team-slide_<?php echo $key % 3 ?>">
 							<div class="team-slide__wrapper">
 								<div class="team-slide__image">
 									<img src="<?php echo $item['image']['url'] ?>">
