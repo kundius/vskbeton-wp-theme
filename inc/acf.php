@@ -5,7 +5,7 @@ function register_blocks()
     acf_register_block( array(
         'name' => 'team',
         'title' => 'Команда',
-        'render_template' => 'blocks/template.php',
+        'render_template' => 'blocks/team/template.php',
         'category' => 'formatting',
         'icon' => 'editor-ul',
         'mode' => 'edit'
