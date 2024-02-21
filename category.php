@@ -1,21 +1,21 @@
 <?php
-$category = get_queried_object();
-$query_params = [
-  'post_type' => 'post',
-  'posts_per_page' => 3,
-  'order' => 'DESC',
-  'orderby' => 'date',
-  'paged' => get_query_var('paged') ?: 1,
-  'tax_query' => [
-    'relation' => 'OR',
-    [
-      'taxonomy' => $category->taxonomy,
-      'field' => 'id',
-      'terms' => [$category->term_id]
-    ]
-  ]
-];
-$query = new WP_Query($query_params);
+// $category = get_queried_object();
+// $query_params = [
+//   'post_type' => 'post',
+//   'posts_per_page' => 3,
+//   'order' => 'DESC',
+//   'orderby' => 'date',
+//   'paged' => get_query_var('paged') ?: 1,
+//   'tax_query' => [
+//     'relation' => 'OR',
+//     [
+//       'taxonomy' => $category->taxonomy,
+//       'field' => 'id',
+//       'terms' => [$category->term_id]
+//     ]
+//   ]
+// ];
+// $query = new WP_Query($query_params);
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?> itemscope itemtype="http://schema.org/WebSite">
@@ -32,11 +32,10 @@ $query = new WP_Query($query_params);
 
       <main class="main">
         <div class="container">
-
           <div class="articles-list">
             <?php $idx = 0;
-            while ($query->have_posts()):
-              $query->the_post();
+            while (have_posts()):
+              the_post();
               $idx++;
               if ($idx === 1): ?>
                 <div class="articles-list__item articles-list__item_large">
@@ -52,11 +51,9 @@ $query = new WP_Query($query_params);
           <div class="articles-pagination">
             <button class="articles-pagination__show-more">Показать еще</button>
             <div class="articles-pagination__nav">
-              <?php wp_pagenavi(['query' => $query]) ?>
+              <?php simple_pagination() ?>
             </div>
           </div>
-
-          <?php wp_reset_postdata() ?>
         </div>
       </main>
 
