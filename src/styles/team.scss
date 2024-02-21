@@ -1,8 +1,7 @@
 .team {
   position: relative;
-  margin-top: 90px;
-  margin-bottom: 390px;
   z-index: 1;
+  margin: 90px -32px 390px;
 }
 
 .team::after {
@@ -93,6 +92,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 32px 32px 164px;
 }
 
 .team-slide__figure {
@@ -109,9 +109,8 @@
 }
 
 .team-slide__content {
-  background-color: #0035bb;
-  mix-blend-mode: multiply;
   position: absolute;
+  z-index: 1;
   right: -28px;
   top: 80%;
   width: 200px;
@@ -120,6 +119,18 @@
   line-height: 2;
   color: #fff;
   min-height: 80%;
+}
+
+.team-slide__content::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0035bb;
+  mix-blend-mode: multiply;
+  z-index: -1;
 }
 
 .team-slide__name {
