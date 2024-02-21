@@ -1,0 +1,131 @@
+.team {
+  position: relative;
+  margin-top: 90px;
+  margin-bottom: 390px;
+  z-index: 1;
+}
+
+.team::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 220px;
+  background: url("../images/partners-logo.png") no-repeat 0 0;
+  height: 154px;
+  width: 960px;
+  z-index: -1;
+}
+
+.team::before {
+  content: "";
+  background-color: rgb(241, 139, 58);
+  position: absolute;
+  left: calc(50% + 120px);
+  bottom: 40px;
+  width: 58px;
+  height: 54px;
+  z-index: -1;
+}
+
+.team-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 48px;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: -68px;
+}
+
+.team-nav__prev,
+.team-nav__next {
+  font-size: 14px;
+  color: rgb(116, 116, 116);
+  font-weight: bold;
+  line-height: 1.2;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  background: transparent;
+  padding: 0;
+}
+
+.team-nav__prev::before {
+  content: "";
+  transform: rotate(45deg);
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-left: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+  margin-right: 8px;
+}
+
+.team-nav__next::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 54px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: currentColor;
+}
+
+.team-nav__next::after {
+  content: "";
+  transform: rotate(-45deg);
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+  margin-left: 54px;
+}
+
+.team-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-slide__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.team-slide__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.team-slide__content {
+  background-color: #0035bb;
+  mix-blend-mode: multiply;
+  position: absolute;
+  right: -28px;
+  top: 80%;
+  width: 200px;
+  padding: 28px 28px 28px 58px;
+  font-size: 11px;
+  line-height: 2;
+  color: #fff;
+  min-height: 80%;
+}
+
+.team-slide__name {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.team-slide__job {
+}
+
+.team-slide__description {
+  margin-top: 20px;
+}

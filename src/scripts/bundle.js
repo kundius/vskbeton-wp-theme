@@ -1,9 +1,15 @@
-import "./views"
-import "./more-articles"
+import "./views";
+import "./more-articles";
 
-import Swiper, { Autoplay, EffectFade, Pagination, Navigation, Thumbs } from "swiper"
+import Swiper, {
+  Autoplay,
+  EffectFade,
+  Pagination,
+  Navigation,
+  Thumbs,
+} from "swiper";
 // import HystModal from "hystmodal"
-import "fslightbox"
+import "fslightbox";
 
 // const modal = new HystModal({
 //   linkAttributeName: "data-hystmodal",
@@ -21,7 +27,7 @@ new Swiper(".intro-slideshow.swiper", {
   },
   pagination: {
     el: ".swiper-pagination",
-    clickable: true
+    clickable: true,
   },
   slidesPerView: 1,
 });
@@ -55,8 +61,29 @@ new Swiper(".partners-slideshow .swiper", {
     767: {
       spaceBetween: 20,
       slidesPerView: 5,
-    }
-  }
+    },
+  },
+});
+
+new Swiper(".team .swiper", {
+  modules: [Navigation],
+  spaceBetween: 20,
+  slidesPerView: 1,
+  freeMode: true,
+  navigation: {
+    nextEl: ".team .team-nav__next",
+    prevEl: ".team .team-nav__prev",
+  },
+  breakpoints: {
+    767: {
+      spaceBetween: 40,
+      slidesPerView: 3,
+    },
+    1200: {
+      spaceBetween: 80,
+      slidesPerView: 3,
+    },
+  },
 });
 
 // document.addEventListener('wpcf7submit', function(event) {
@@ -67,16 +94,15 @@ new Swiper(".partners-slideshow .swiper", {
 //   modal.open('#success');
 // }, false);
 
-const headerToggle = document.querySelector('.header__toggle')
-const mainNav = document.querySelector('.main-nav')
-const mainNavClose = document.querySelector('.main-nav__close')
+const headerToggle = document.querySelector(".header__toggle");
+const mainNav = document.querySelector(".main-nav");
+const mainNavClose = document.querySelector(".main-nav__close");
 
 if (headerToggle && mainNav && mainNavClose) {
-  headerToggle.addEventListener('click', () => {
-    mainNav.classList.add('main-nav_opened')
-  })
-  mainNavClose.addEventListener('click', () => {
-    mainNav.classList.remove('main-nav_opened')
-  })
+  headerToggle.addEventListener("click", () => {
+    mainNav.classList.add("main-nav_opened");
+  });
+  mainNavClose.addEventListener("click", () => {
+    mainNav.classList.remove("main-nav_opened");
+  });
 }
-
