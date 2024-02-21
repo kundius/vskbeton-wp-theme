@@ -432,8 +432,8 @@
       content: "";
       background: url("../images/arrow-1.png") no-repeat 50% 50%;
       background-size: cover;
-      width: 24px;
-      height: 38.4px;
+      width: calc(107px * 0.3);
+      height: calc(176px * 0.3);
       margin-right: 16px;
       flex-shrink: 0;
       transition: all 0.3s ease;
