@@ -15,11 +15,10 @@ $first_query_params = [
     ]
   ]
 ];
-$first_query = new WP_Query;
-$first_posts = $first_query->query($first_query_params);
+$first_query = new WP_Query($first_query_params);
 
 $first_posts_ids = [];
-foreach ($first_posts as $post) {
+foreach ($first_query->posts as $post) {
   $first_posts_ids[] = $post->ID;
 }
 
@@ -57,6 +56,12 @@ $list_query = new WP_Query($list_query_params);
       <main class="main">
         <div class="container">
           <div class="articles-list" id="more-articles-list">
+            <?php while ($first_query->have_posts()):
+              $first_query->the_post(); ?>
+              <div class="articles-list__item articles-list__item_large">
+                <?php get_template_part('partials/article', 'large') ?>
+              </div>
+            <?php endwhile; ?>
             <?php while ($list_query->have_posts()):
               $list_query->the_post(); ?>
               <div class="articles-list__item">
