@@ -314,10 +314,13 @@
   letter-spacing: 0.05em;
   background: #a4bff2;
   border-radius: 12px;
-  left: 56px;
+  line-height: 56px;
   padding: 0 24px;
   min-width: 240px;
   transition: 0.3s ease;
+  display: inline-flex;
+  border: none;
+  color: #fff;
   &:hover {
     border-radius: 12px;
     background-image: linear-gradient(
