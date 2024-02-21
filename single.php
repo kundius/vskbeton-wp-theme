@@ -37,7 +37,7 @@ $previous_post = get_previous_post();
                 </div>
               </div>
               <figure class="article-headline__image">
-                <img src="<?php the_post_thumbnail_url($args['thumb']) ?>" alt="<?php the_title() ?>" />
+                <img src="<?php the_post_thumbnail_url('article-large') ?>" alt="<?php the_title() ?>" />
               </figure>
             </div>
 
