@@ -1,0 +1,124 @@
+
+.content {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  line-height: 1.333;
+  padding-left: 120px;
+  @include below(lg) {
+    padding-left: 0;
+  }
+  .wp-block-columns {
+    margin-left: -120px;
+    @include below(lg) {
+      margin-left: 0;
+    }
+  }
+  a {
+    background: #0035bb;
+    color: #fff;
+    padding: 0 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      background: #f18b3a;
+    }
+  }
+  h2 {
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1;
+    padding-left: 48px;
+    margin: 64px 0 48px;
+    position: relative;
+    @include below(md) {
+      font-size: 24px;
+    }
+    &::before {
+      content: "";
+      background: url("../images/arrow-1.png") no-repeat 50% 50%;
+      background-size: cover;
+      width: calc(107px * 0.3);
+      height: calc(176px * 0.3);
+      margin-right: 16px;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+      position: absolute;
+      left: 0;
+      top: -.5em;
+    }
+  }
+  p {
+    margin: 24px 0 24px;
+  }
+  ul {
+    margin: 32px 0 32px;
+    padding: 0;
+    list-style: none;
+    li {
+      padding-left: 32px;
+      position: relative;
+      &::before {
+        content: "";
+        width: 15px;
+        height: 3px;
+        background: #0036bb;
+        position: absolute;
+        top: .5em;
+        left: 0;
+      }
+    }
+    * + li {
+      margin-top: 6px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.25;
+    margin: 72px 0 36px;
+    @include below(md) {
+      font-size: 20px;
+    }
+    &::first-line {
+      color: rgb(0, 62, 192);
+    }
+  }
+  h4 {
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.364;
+    margin: 54px 0 36px;
+  }
+  .wp-block-image {
+    position: relative;
+    margin: 36px 0 36px;
+    &:has(.wp-element-caption) {
+      padding-top: 72px;
+      @include below(md) {
+        padding-top: 36px;
+      }
+    }
+    .wp-element-caption {
+      color: #fff;
+      font-size: 12px;
+      color: rgb(255, 255, 255);
+      line-height: 2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      margin: 0;
+      padding: 24px 32px;
+      background-color: #0035bb;
+      mix-blend-mode: multiply;
+      @include below(md) {
+        width: 80%;
+        padding: 16px 24px;
+      }
+    }
+  }
+}

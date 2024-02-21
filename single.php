@@ -41,7 +41,7 @@ $previous_post = get_previous_post();
               </figure>
             </div>
 
-            <div class="article-content">
+            <div class="article-content content">
               <?php the_content() ?>
             </div>
 

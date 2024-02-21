@@ -1,0 +1,18 @@
+.page-headline {
+  margin-bottom: 64px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.page-headline__title {
+  font-size: 38px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.368;
+  &::first-line {
+    color: rgb(212, 224, 255);
+  }
+}
+
+.page-content {
+}
