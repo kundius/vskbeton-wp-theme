@@ -136,12 +136,11 @@
   box-shadow: 12px 16px 12px rgba(25, 42, 70, 0.2);
 }
 
-.team-slide__wrapper:hover .team-slide__content {
+.team-slide__wrapper:hover .team-slide__content::before {
   opacity: 1;
 }
 
 .team-slide__content {
-  display: none;
   position: absolute;
   right: -30px;
   top: 75%;
@@ -151,8 +150,6 @@
   line-height: 2;
   color: #fff;
   min-height: 300px;
-  opacity: 0;
-  transition: 0.5s ease;
 }
 
 .team-slide__content::before {
@@ -165,6 +162,8 @@
   background-color: #0035bb;
   mix-blend-mode: multiply;
   z-index: -1;
+  opacity: 0;
+  transition: 0.5s ease;
 }
 
 .team-slide__name {
