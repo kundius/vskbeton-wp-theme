@@ -2,17 +2,34 @@
   position: relative;
   z-index: 1;
   margin: 64px -40px 154px;
+
+  @include below(lg) {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  @include below(md) {
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: 84px;
+  }
 }
 
 .team::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 76px;
+  bottom: 110px;
   background: url("../images/partners-logo.png") no-repeat 0 0;
-  height: 257px;
+  height: 154px;
   width: 1042px;
   z-index: -1;
+
+  @include below(lg) {
+    bottom: 40px;
+  }
+  @include below(md) {
+    display: none;
+  }
 }
 
 .team::before {
@@ -24,6 +41,11 @@
   width: 58px;
   height: 54px;
   z-index: -1;
+
+  @include below(md) {
+    left: calc(50% + 20px);
+    bottom: 0;
+  }
 }
 
 .team-nav {
@@ -34,6 +56,15 @@
   position: absolute;
   right: 40px;
   top: -46px;
+  
+  @include below(lg) {
+    right: 24px;
+  }
+  @include below(md) {
+    gap: 24px;
+    right: 16px;
+    top: -32px;
+  }
 }
 
 .team-nav__prev,
@@ -75,6 +106,10 @@
   right: 0;
   transform: translateY(-50%);
   background: currentColor;
+
+  @include below(md) {
+    display: none;
+  }
 }
 
 .team-nav__next::after {
@@ -86,6 +121,10 @@
   border-right: 2px solid currentColor;
   border-top: 2px solid currentColor;
   margin-left: 54px;
+  
+  @include below(md) {
+    margin-left: 8px;
+  }
 }
 
 .team-slide {
@@ -95,6 +134,16 @@
   align-items: flex-start;
   justify-content: center;
   height: auto;
+
+  @include below(lg) {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 145px;
+  }
+  @include below(md) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .team-slide_1 {
@@ -164,6 +213,10 @@
   color: #fff;
   min-height: 300px;
   pointer-events: none;
+
+  @include below(lg) {
+    min-height: 240px;
+  }
 }
 
 .team-slide__content::before {

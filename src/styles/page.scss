@@ -15,6 +15,10 @@
   &::first-line {
     color: rgb(212, 224, 255);
   }
+  @include below(md) {
+    font-size: 32px;
+    padding: 24px;
+  }
 }
 
 .page-content {
