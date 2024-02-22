@@ -27,7 +27,7 @@ Template Name: Контакты
                   <?php endif ?>
                 </div>
                 <div class="contacts__map">
-                  map
+                  <?php echo $group['map'] ?>
                 </div>
               </div>
               <div class="contacts__content">
