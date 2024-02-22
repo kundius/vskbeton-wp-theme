@@ -93,11 +93,12 @@ new Swiper(".partners .swiper", {
   modules: [Navigation, Grid],
   spaceBetween: 0,
   slidesPerView: 3,
+  loopAddBlankSlides: true,
   grid: {
     rows: 3
   },
   freeMode: true,
-  loop: false,
+  loop: true,
   navigation: {
     nextEl: ".partners .slider-nav__next",
     prevEl: ".partners .slider-nav__prev",
