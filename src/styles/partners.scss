@@ -4,6 +4,10 @@
 
   .swiper-wrapper {
     height: 480px;
+
+    @include below(md) {
+      height: 320px;
+    }
   }
 }
 
