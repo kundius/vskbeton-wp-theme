@@ -92,10 +92,10 @@ new Swiper(".team .swiper", {
 new Swiper(".block-partners .swiper", {
   modules: [Navigation, Grid],
   spaceBetween: 0,
-  slidesPerView: 3,
+  slidesPerView: 1,
   loopAddBlankSlides: true,
   grid: {
-    rows: 2,
+    rows: 3,
   },
   freeMode: true,
   // loop: true,
