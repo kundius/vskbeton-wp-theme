@@ -7,6 +7,7 @@ import Swiper, {
   EffectFade,
   Pagination,
   Navigation,
+  Grid,
   Thumbs,
 } from "swiper";
 // import HystModal from "hystmodal"
@@ -73,8 +74,8 @@ new Swiper(".team .swiper", {
   freeMode: true,
   loop: true,
   navigation: {
-    nextEl: ".team .team-nav__next",
-    prevEl: ".team .team-nav__prev",
+    nextEl: ".team .slider-nav__next",
+    prevEl: ".team .slider-nav__prev",
   },
   breakpoints: {
     767: {
@@ -85,6 +86,21 @@ new Swiper(".team .swiper", {
       spaceBetween: 0,
       slidesPerView: 3,
     },
+  },
+});
+
+new Swiper(".partners .swiper", {
+  modules: [Navigation, Grid],
+  spaceBetween: 0,
+  slidesPerView: 7,
+  grid: {
+    rows: 3
+  },
+  freeMode: true,
+  loop: true,
+  navigation: {
+    nextEl: ".partners .slider-nav__next",
+    prevEl: ".partners .slider-nav__prev",
   },
 });
 
