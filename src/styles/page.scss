@@ -2,6 +2,10 @@
   margin-bottom: 64px;
   display: flex;
   justify-content: flex-start;
+  
+  @include below(md) {
+    margin-bottom: 48px;
+  }
 }
 
 .page-headline__title {

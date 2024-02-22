@@ -11,6 +11,8 @@
     margin-left: -16px;
     margin-right: -16px;
     margin-bottom: 84px;
+    margin-top: 48px;
+    margin-bottom: 48px;
   }
 }
 
@@ -52,6 +54,16 @@
   position: absolute;
   right: 40px;
   top: -46px;
+
+  @include below(md) {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
 }
 
 .team-slide {
