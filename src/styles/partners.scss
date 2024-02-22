@@ -7,6 +7,15 @@
   }
 }
 
+.partners::after {
+  content: '';
+  display: block;
+  background-color: rgb(241, 139, 58);
+  position: absolute;
+  left: 100%;
+  top: 100%;
+}
+
 .partners__nav {
   position: absolute;
   right: 40px;
@@ -16,6 +25,7 @@
 .partners-slide {
   height: 33.33%;
   width: 33.33%;
+  padding: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
