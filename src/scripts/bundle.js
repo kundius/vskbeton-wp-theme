@@ -98,7 +98,7 @@ new Swiper(".block-partners .swiper", {
     rows: 3,
   },
   freeMode: true,
-  // loop: true,
+  loop: true,
   navigation: {
     nextEl: ".block-partners .slider-nav__next",
     prevEl: ".block-partners .slider-nav__prev",
