@@ -140,6 +140,18 @@
   opacity: 1;
 }
 
+.team-slide__wrapper:hover .team-slide__name {
+  opacity: 1;
+}
+
+.team-slide__wrapper:hover .team-slide__job {
+  opacity: 1;
+}
+
+.team-slide__wrapper:hover .team-slide__description {
+  opacity: 1;
+}
+
 .team-slide__content {
   position: absolute;
   right: -30px;
@@ -169,11 +181,17 @@
 .team-slide__name {
   text-transform: uppercase;
   font-weight: bold;
+  opacity: 0;
+  transition: 0.5s ease;
 }
 
 .team-slide__job {
+  opacity: 0;
+  transition: 0.5s ease;
 }
 
 .team-slide__description {
   margin-top: 20px;
+  opacity: 0;
+  transition: 0.5s ease;
 }
