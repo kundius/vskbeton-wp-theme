@@ -95,7 +95,7 @@ new Swiper(".partners .swiper", {
   slidesPerView: 1,
   loopAddBlankSlides: true,
   grid: {
-    rows: 2,
+    rows: 1,
   },
   freeMode: true,
   // loop: true,
