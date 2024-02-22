@@ -95,7 +95,7 @@ new Swiper(".block-partners .swiper", {
   slidesPerView: 1,
   loopAddBlankSlides: true,
   grid: {
-    rows: 1,
+    rows: 2,
   },
   freeMode: true,
   // loop: true,
