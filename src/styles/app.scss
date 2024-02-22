@@ -646,7 +646,7 @@ body {
 
 .main-nav ul li a {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: none;
   color: #fff;
   line-height: 36px;
@@ -1974,11 +1974,14 @@ body {
   }
 }
 
-.contacts__image {
+.contacts__side {
   margin-right: 64px;
   width: 40%;
   flex-shrink: 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
   @include below(lg) {
     margin-right: 48px;
@@ -1988,6 +1991,10 @@ body {
     margin: 24px 0 0;
     width: 100%;
   }
+}
+
+.contacts__image {
+  flex-grow: 1;
 }
 
 .contacts__image img {
