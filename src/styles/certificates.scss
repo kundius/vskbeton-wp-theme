@@ -21,6 +21,10 @@
   margin-left: auto;
   margin-right: auto;
   z-index: 1;
+
+  @include below(md) {
+    max-width: 100%;
+  }
 }
 
 .certificate-card__title {
@@ -31,6 +35,11 @@
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.333;
+  margin-right: 10px;
+
+  @include below(lg) {
+    font-size: 16px;
+  }
 }
 
 .certificate-card__title-inner {
@@ -40,14 +49,14 @@
   display: flex;
   transition: 0.3s ease;
   box-shadow: 0.927px 2.853px 5.94px 0.06px rgba(25, 42, 70, 0.11);
-  position: relative;
-  z-index: -1;
 }
 
 .certificate-card__image img {
   display: block;
   width: 100%;
   height: auto;
+  position: relative;
+  z-index: -1;
 }
 
 .certificate-card:hover .certificate-card__image {
@@ -61,7 +70,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 120px 24px 24px;
+  padding: 140px 18px 15px 22px;
+  width: 305px;
+  max-width: 90%;
 }
 
 .certificate-card__actions::before {
