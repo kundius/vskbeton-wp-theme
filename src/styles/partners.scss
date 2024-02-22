@@ -4,15 +4,20 @@
 
   .swiper-wrapper {
     height: 480px;
+  }
 
-    @include below(md) {
+  @include below(md) {
+    margin-left: -12px;
+    margin-right: -12px;
+
+    .swiper-wrapper {
       height: 320px;
     }
   }
 }
 
 .block-partners::after {
-  content: '';
+  content: "";
   display: block;
   background-color: rgb(241, 139, 58);
   position: absolute;
@@ -45,6 +50,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include below(md) {
+    padding: 12px;
+  }
 }
 
 .block-partners-slide_0 .block-partners-slide__inner {
@@ -123,7 +132,7 @@
 .block-partners-slide__image {
   display: block;
   filter: grayscale(1);
-  transition: .3s ease;
+  transition: 0.3s ease;
   max-width: 100%;
   max-height: 100%;
   height: auto;
