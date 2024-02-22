@@ -92,16 +92,24 @@ new Swiper(".team .swiper", {
 new Swiper(".partners .swiper", {
   modules: [Navigation, Grid],
   spaceBetween: 0,
-  slidesPerView: 3,
+  slidesPerView: 1,
   loopAddBlankSlides: true,
   grid: {
-    rows: 3
+    rows: 2,
   },
   freeMode: true,
   // loop: true,
   navigation: {
     nextEl: ".partners .slider-nav__next",
     prevEl: ".partners .slider-nav__prev",
+  },
+  breakpoints: {
+    767: {
+      grid: {
+        rows: 3,
+      },
+      slidesPerView: 3,
+    },
   },
 });
 
