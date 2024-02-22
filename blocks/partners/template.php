@@ -14,7 +14,7 @@ $items = get_field('items');
 			<div class="swiper">
 				<div class="swiper-wrapper">
 					<?php foreach ($items as $item): ?>
-						<div class="swiper-slide partners-slide partners-slide_<?php echo $key % 7 ?>">
+						<div class="swiper-slide partners-slide partners-slide_<?php echo ($key % 7) ?>">
 							<img class="partners-slide__image" src="<?php echo $item['image']['url'] ?>">
 						</div>
 					<?php endforeach ?>
