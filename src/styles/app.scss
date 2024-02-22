@@ -676,15 +676,27 @@ body {
 }
 
 .sub-menu {
+  display: none;
   margin: 0;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
+  margin-top: 12px;
+  transform: translateX(-50%);
   list-style: none;
-  padding: 12px 0;
-  border-radius: 24px;
+  padding: 16px 0;
+  border-radius: 16px;
   background: #fff;
   box-shadow: 4.225px 7.947px 10px 0 rgba(25,42,70,.24);
+}
+
+.sub-menu::before {
+  content: '';
+  height: 12px;
+  left: 0;
+  top: -12px;
+  right: 0;
+  position: absolute;
 }
 
 .sub-menu > li {
@@ -693,11 +705,12 @@ body {
 
 .sub-menu > li > a {
   display: block;
-  line-height: 1.2;
-  padding: 8px 24px;
+  line-height: 1.15;
+  padding: 12px 24px;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
+  color: #000;
 }
 
 .sub-menu > li > a:hover {
