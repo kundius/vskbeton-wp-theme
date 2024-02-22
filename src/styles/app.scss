@@ -1996,6 +1996,11 @@ body {
 .contacts__image {
   flex-grow: 1;
   position: relative;
+  height: 360px;
+  
+  @include below(md) {
+    order: 1;
+  }
 }
 
 .contacts__image img {
