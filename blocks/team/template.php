@@ -2,9 +2,11 @@
 <?php if (count($items) > 0): ?>
 	<div class="wp-block-team">
 		<div class="team">
-			<div class="team-nav">
-				<button class="team-nav__prev">Назад</button>
-				<button class="team-nav__next">Пролистать вперёд</button>
+			<div class="team__nav">
+				<div class="slider-nav">
+					<button class="slider-nav__prev">Назад</button>
+					<button class="slider-nav__next">Пролистать вперёд</button>
+				</div>
 			</div>
 			<div class="swiper">
 				<div class="swiper-wrapper">

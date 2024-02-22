@@ -10,6 +10,15 @@ function register_blocks()
         'icon' => 'editor-ul',
         'mode' => 'edit'
     ));
+
+    acf_register_block( array(
+        'name' => 'partners',
+        'title' => 'Партнеры',
+        'render_template' => 'blocks/partners/template.php',
+        'category' => 'formatting',
+        'icon' => 'editor-ul',
+        'mode' => 'edit'
+    ));
   }
 }
 add_action('acf/init', 'register_blocks');

@@ -48,83 +48,10 @@
   }
 }
 
-.team-nav {
-  display: flex;
-  justify-content: flex-end;
-  gap: 48px;
-  align-items: center;
+.team__nav {
   position: absolute;
   right: 40px;
   top: -46px;
-  
-  @include below(lg) {
-    right: 24px;
-  }
-  @include below(md) {
-    gap: 24px;
-    right: 16px;
-    top: -32px;
-  }
-}
-
-.team-nav__prev,
-.team-nav__next {
-  font-size: 14px;
-  color: rgb(116, 116, 116);
-  font-weight: bold;
-  line-height: 1.2;
-  border: none;
-  display: inline-flex;
-  align-items: center;
-  position: relative;
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
-  &:hover {
-    color: rgb(241, 139, 58);
-  }
-}
-
-.team-nav__prev::before {
-  content: "";
-  transform: rotate(-45deg);
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  border-left: 2px solid currentColor;
-  border-top: 2px solid currentColor;
-  margin-right: 8px;
-}
-
-.team-nav__next::before {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 54px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  background: currentColor;
-
-  @include below(md) {
-    display: none;
-  }
-}
-
-.team-nav__next::after {
-  content: "";
-  transform: rotate(45deg);
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid currentColor;
-  border-top: 2px solid currentColor;
-  margin-left: 54px;
-  
-  @include below(md) {
-    margin-left: 8px;
-  }
 }
 
 .team-slide {

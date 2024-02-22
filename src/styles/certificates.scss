@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: -180px;
+
+  @include below(md) {
+    margin-top: -120px;
+  }
 }
 
 .certificates-list__item {
@@ -10,6 +14,7 @@
 
   @include below(md) {
     width: 100%;
+    padding-top: 120px;
   }
 }
 
@@ -69,10 +74,17 @@
   right: 0;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 140px 18px 15px 22px;
   width: 305px;
   max-width: 90%;
+  gap: 16px;
+
+  @include below(md) {
+    padding-top: 80px;
+    bottom: -48px;
+  }
 }
 
 .certificate-card__actions::before {
