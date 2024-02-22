@@ -1054,21 +1054,15 @@ body {
   color: #000;
   font-weight: bold;
   text-transform: uppercase;
-  margin-left: 48px;
   margin-bottom: 48px;
-  margin-right: 48px;
 
   @include below(lg) {
     font-size: 36px;
-    margin-left: 36px;
     margin-bottom: 36px;
-    margin-right: 36px;
   }
   @include below(md) {
     font-size: 24px;
-    margin-left: 16px;
     margin-bottom: 16px;
-    margin-right: 16px;
   }
 }
 
