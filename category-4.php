@@ -61,19 +61,11 @@ $list_query = new WP_Query($list_query_params);
             </h1>
           </div>
 
-          <div class="articles-list" id="more-articles-list">
-            <?php if (!get_query_var('paged')): ?>
-              <?php while ($first_query->have_posts()):
-                $first_query->the_post(); ?>
-                <div class="articles-list__item articles-list__item_large">
-                  <?php get_template_part('partials/article', null, ['thumb' => 'article-large']) ?>
-                </div>
-              <?php endwhile; ?>
-            <?php endif; ?>
+          <div class="certificates-list" id="more-certificates-list">
             <?php while ($list_query->have_posts()):
               $list_query->the_post(); ?>
-              <div class="articles-list__item">
-                <?php get_template_part('partials/article', null, ['thumb' => 'article-medium']) ?>
+              <div class="certificates-list__item">
+                <?php get_template_part('partials/certificate') ?>
               </div>
             <?php endwhile; ?>
           </div>
@@ -86,7 +78,7 @@ $list_query = new WP_Query($list_query_params);
                 var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
                 var max_pages = '<?php echo $list_query->max_num_pages; ?>';
               </script>
-              <button id="more-articles-button" class="articles-pagination__show-more">Показать ещё</button>
+              <button id="more-certificates-button" class="articles-pagination__show-more">Показать ещё</button>
             <?php endif; ?>
             <div class="articles-pagination__spacer"></div>
             <div class="articles-pagination__nav">

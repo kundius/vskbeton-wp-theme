@@ -1,0 +1,116 @@
+.certificates-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -180px;
+}
+
+.certificates-list__item {
+  width: 50%;
+  padding-top: 180px;
+
+  @include below(md) {
+    width: 100%;
+  }
+}
+
+.certificate-card {
+  display: flex;
+  position: relative;
+  min-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.certificate-card__title {
+  writing-mode: vertical-rl;
+  transform: scale(-1);
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.333;
+}
+
+.certificate-card__title-inner {
+}
+
+.certificate-card__image {
+  display: flex;
+  transition: 0.3s ease;
+  box-shadow: 0.927px 2.853px 5.94px 0.06px rgba(25, 42, 70, 0.11);
+}
+
+.certificate-card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.certificate-card:hover .certificate-card__image {
+  box-shadow: 1.854px 5.706px 23.76px 0.24px rgba(25, 42, 70, 0.2);
+}
+
+.certificate-card__actions {
+  position: absolute;
+  bottom: -60px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.certificate-card__actions::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0035bb;
+  mix-blend-mode: multiply;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s ease;
+  transform: scale(1.05);
+}
+
+.certificate-card:hover .certificate-card__actions::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.certificate-card__action {
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+  line-height: 2;
+  display: inline-flex;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s ease;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.certificate-card:hover .certificate-card__action {
+  opacity: 1;
+}
+
+.certificate-card__action_download::before {
+  content: "";
+  display: inline-block;
+  margin-right: 6px;
+  width: 11px;
+  height: 17px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11px' height='17px'%3E%3Cpath fill-rule='evenodd' fill='rgb(255, 255, 255)' d='M9.179,15.993 C9.444,15.993 9.660,16.216 9.660,16.489 C9.660,16.763 9.444,16.986 9.179,16.986 L2.202,16.992 C1.936,16.992 1.721,16.770 1.721,16.496 C1.721,16.222 1.936,15.1000 2.202,15.1000 L9.179,15.993 L9.179,15.993 ZM5.018,13.360 L5.012,0.482 C5.012,0.208 5.228,-0.014 5.493,-0.014 C5.759,-0.014 5.974,0.208 5.974,0.482 L5.980,13.360 L9.407,9.900 C9.859,9.442 10.533,10.151 10.082,10.609 L5.907,14.825 C5.821,14.951 5.683,15.042 5.534,15.054 L5.532,15.054 L5.512,15.056 L5.510,15.056 L5.489,15.056 L5.488,15.056 L5.467,15.054 L5.465,15.054 C5.316,15.042 5.178,14.951 5.092,14.825 L0.917,10.609 C0.465,10.151 1.140,9.442 1.592,9.900 L5.018,13.360 L5.018,13.360 Z'/%3E%3C/svg%3E");
+}
+
+.certificate-card__action_view::before {
+  content: "";
+  display: inline-block;
+  margin-right: 6px;
+  width: 15px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15px' height='18px'%3E%3Cpath fill-rule='evenodd' fill='rgb(255, 255, 255)' d='M14.401,16.548 C14.574,16.764 14.546,17.087 14.339,17.266 C14.131,17.448 13.823,17.419 13.648,17.202 L7.945,10.129 C7.221,10.561 6.383,10.807 5.490,10.807 C4.123,10.807 2.885,10.230 1.988,9.296 C1.092,8.363 0.537,7.074 0.537,5.650 C0.537,4.228 1.093,2.938 1.988,2.005 L1.989,2.004 L1.990,2.003 C2.887,1.070 4.125,0.492 5.490,0.492 C6.857,0.492 8.096,1.069 8.992,2.003 C9.889,2.936 10.443,4.226 10.443,5.650 C10.443,7.072 9.889,8.361 8.992,9.294 L8.991,9.296 C8.911,9.379 8.830,9.458 8.745,9.535 L14.401,16.548 L14.401,16.548 ZM8.299,2.725 C7.580,1.977 6.587,1.514 5.490,1.514 C4.391,1.514 3.398,1.976 2.682,2.723 L2.680,2.725 C1.963,3.472 1.519,4.506 1.519,5.650 C1.519,6.792 1.963,7.826 2.682,8.574 C3.400,9.322 4.393,9.785 5.490,9.785 C6.587,9.785 7.581,9.322 8.300,8.575 C9.017,7.827 9.461,6.792 9.461,5.650 C9.461,4.508 9.017,3.473 8.299,2.725 L8.299,2.725 Z'/%3E%3C/svg%3E");
+}

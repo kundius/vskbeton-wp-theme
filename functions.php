@@ -7,6 +7,7 @@ require 'inc/sidebars.php';
 require 'inc/seo.php';
 require 'inc/views.php';
 require 'inc/more-articles.php';
+require 'inc/more-certificates.php';
 require 'inc/acf.php';
 
 function load_template_part($template_name, $part_name = null)
@@ -242,4 +243,11 @@ add_filter('the_title', 'the_title_filter', 10, 2);
 function the_title_filter($post_title, $post_id)
 {
     return str_replace('\n', '<br />', $post_title);
+}
+
+add_filter('single_cat_title', 'single_cat_title_filter');
+
+function single_cat_title_filter($term_name)
+{
+    return str_replace('\n', '<br />', $term_name);
 }

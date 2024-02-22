@@ -1,5 +1,6 @@
 import "./views";
 import "./more-articles";
+import "./more-certificates";
 
 import Swiper, {
   Autoplay,
