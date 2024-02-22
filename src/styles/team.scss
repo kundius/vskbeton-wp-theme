@@ -1,17 +1,17 @@
 .team {
   position: relative;
   z-index: 1;
-  margin: 90px -40px 390px;
+  margin: 64px -40px 154px;
 }
 
 .team::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 220px;
+  bottom: 76px;
   background: url("../images/partners-logo.png") no-repeat 0 0;
-  height: 154px;
-  width: 960px;
+  height: 257px;
+  width: 1042px;
   z-index: -1;
 }
 
@@ -20,7 +20,7 @@
   background-color: rgb(241, 139, 58);
   position: absolute;
   left: calc(50% + 120px);
-  bottom: 40px;
+  bottom: -105px;
   width: 58px;
   height: 54px;
   z-index: -1;
@@ -33,7 +33,7 @@
   align-items: center;
   position: absolute;
   right: 40px;
-  top: -68px;
+  top: -46px;
 }
 
 .team-nav__prev,
@@ -90,7 +90,7 @@
 
 .team-slide {
   display: flex;
-  padding: 40px 40px 175px;
+  padding: 24px 40px 205px;
   overflow: hidden;
   align-items: flex-start;
   justify-content: center;
