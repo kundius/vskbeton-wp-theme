@@ -89,19 +89,19 @@ new Swiper(".team .swiper", {
   },
 });
 
-new Swiper(".partners .swiper", {
+new Swiper(".block-partners .swiper", {
   modules: [Navigation, Grid],
   spaceBetween: 0,
   slidesPerView: 1,
   loopAddBlankSlides: true,
   grid: {
-    rows: 2,
+    rows: 1,
   },
   freeMode: true,
   // loop: true,
   navigation: {
-    nextEl: ".partners .slider-nav__next",
-    prevEl: ".partners .slider-nav__prev",
+    nextEl: ".block-partners .slider-nav__next",
+    prevEl: ".block-partners .slider-nav__prev",
   },
   breakpoints: {
     767: {
