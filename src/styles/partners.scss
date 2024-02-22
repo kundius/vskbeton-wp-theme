@@ -1,16 +1,25 @@
 .block-partners {
-  margin: 64px -24px;
+  margin-top: 64px;
+  margin-bottom: 64px;
   position: relative;
+
+  .swiper {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
 
   .swiper-wrapper {
     height: 480px;
   }
 
   @include below(md) {
-    margin-left: -12px;
-    margin-right: -12px;
     margin-top: 48px;
     margin-bottom: 48px;
+
+    .swiper {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
 
     .swiper-wrapper {
       height: 280px;
@@ -31,7 +40,7 @@
 
 .block-partners__nav {
   position: absolute;
-  right: 24px;
+  right: 0;
   top: -148px;
 
   @include below(md) {
