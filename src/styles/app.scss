@@ -67,6 +67,13 @@ body {
   &:hover {
     color: rgb(241, 139, 58);
   }
+  &.swiper-button-disabled {
+    display: none;
+    color: #d3d3d3;
+    &:hover {
+      color: #d3d3d3;
+    }
+  }
 }
 
 .slider-nav__prev::before {
