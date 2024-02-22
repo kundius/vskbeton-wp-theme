@@ -653,6 +653,7 @@ body {
   visibility: visible;
   opacity: 1;
   transform: translate(-50%, 0);
+  box-shadow: 4.225px 7.947px 10px 0 rgba(25,42,70,.24);
 }
 
 .main-nav > ul > li > a {
@@ -688,12 +689,21 @@ body {
   top: 100%;
   left: 50%;
   margin-top: 12px;
-  transform: translate(-50%, 12px);
+  transform: translate(-50%, 8px);
   list-style: none;
   padding: 16px 0;
   border-radius: 16px;
   background: #fff;
-  box-shadow: 4.225px 7.947px 10px 0 rgba(25,42,70,.24);
+
+  @include below(md) {
+    visibility: visible;
+    width: auto;
+    opacity: 1;
+    position: relative;
+    margin-top: 0;
+    background: transparent;
+    margin-bottom: 16px;
+  }
 }
 
 .sub-menu::before {
@@ -717,6 +727,10 @@ body {
   font-size: 18px;
   font-weight: 500;
   color: #000;
+  
+  @include below(md) {
+    color: #fff;
+  }
 }
 
 .sub-menu > li > a:hover {
