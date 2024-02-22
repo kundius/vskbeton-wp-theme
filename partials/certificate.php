@@ -12,6 +12,7 @@
 
   <div class="certificate-card__actions">
     <?php if ($document = get_field('document')): ?>
+      <?php print_r($document) ?>
       <a href="<?php $document['url'] ?>" class="certificate-card__action certificate-card__action_download" download>
         Скачать
       </a>

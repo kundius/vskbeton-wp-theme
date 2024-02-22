@@ -1,34 +1,11 @@
 <?php
 $category = get_queried_object();
-
-$first_query_params = [
-  'post_type' => 'post',
-  'posts_per_page' => 1,
-  'order' => 'DESC',
-  'orderby' => 'date',
-  'tax_query' => [
-    'relation' => 'OR',
-    [
-      'taxonomy' => $category->taxonomy,
-      'field' => 'id',
-      'terms' => [$category->term_id]
-    ]
-  ]
-];
-$first_query = new WP_Query($first_query_params);
-
-$first_posts_ids = [];
-foreach ($first_query->posts as $post) {
-  $first_posts_ids[] = $post->ID;
-}
-
 $list_query_params = [
   'post_type' => 'post',
   'posts_per_page' => 4,
   'order' => 'DESC',
   'orderby' => 'date',
   'paged' => get_query_var('paged') ?: 1,
-  'post__not_in' => $first_posts_ids,
   'tax_query' => [
     'relation' => 'OR',
     [
