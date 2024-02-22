@@ -650,7 +650,9 @@ body {
 }
 
 .main-nav > ul > li:hover > .sub-menu {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .main-nav > ul > li > a {
@@ -660,6 +662,7 @@ body {
   color: #fff;
   line-height: 36px;
   text-transform: uppercase;
+  display: inline-block;
 
   @include below(xl) {
     font-size: 18px;
@@ -676,13 +679,16 @@ body {
 }
 
 .sub-menu {
-  display: none;
+  width: 300px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s ease;
   margin: 0;
   position: absolute;
   top: 100%;
   left: 50%;
   margin-top: 12px;
-  transform: translateX(-50%);
+  transform: translate(-50%, 12px);
   list-style: none;
   padding: 16px 0;
   border-radius: 16px;
