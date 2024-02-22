@@ -117,6 +117,7 @@
   transform-origin: 50% 0;
   position: relative;
   z-index: -1;
+  filter: grayscale(1);
 }
 
 .team-slide_1 .team-slide__image img {
@@ -132,6 +133,7 @@
   // transform: scale(1.25);
   transform: scale(1.08);
   box-shadow: 12px 16px 12px rgba(25, 42, 70, 0.2);
+  filter: grayscale(0);
 }
 
 .team-slide__wrapper:hover .team-slide__content::before {
