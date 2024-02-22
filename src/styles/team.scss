@@ -138,6 +138,7 @@
 
 .team-slide__wrapper:hover .team-slide__content::before {
   opacity: 1;
+  transform: scale(1);
 }
 
 .team-slide__wrapper:hover .team-slide__name {
@@ -162,6 +163,7 @@
   line-height: 2;
   color: #fff;
   min-height: 300px;
+  pointer-events: none;
 }
 
 .team-slide__content::before {
@@ -176,6 +178,7 @@
   z-index: -1;
   opacity: 0;
   transition: 0.5s ease;
+  transform: scale(1.05);
 }
 
 .team-slide__name {
