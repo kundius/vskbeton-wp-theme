@@ -97,7 +97,7 @@ new Swiper(".partners .swiper", {
     rows: 4
   },
   freeMode: true,
-  loop: true,
+  loop: false,
   navigation: {
     nextEl: ".partners .slider-nav__next",
     prevEl: ".partners .slider-nav__prev",
