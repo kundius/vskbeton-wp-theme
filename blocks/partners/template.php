@@ -13,7 +13,7 @@ $items = get_field('items');
 			</div>
 			<div class="swiper">
 				<div class="swiper-wrapper">
-					<?php foreach ($items as $item): ?>
+					<?php foreach ($items as $key => $item): ?>
 						<div class="swiper-slide partners-slide partners-slide_<?php echo ($key % 7) ?>">
 							<img class="partners-slide__image" src="<?php echo $item['image']['url'] ?>">
 						</div>
