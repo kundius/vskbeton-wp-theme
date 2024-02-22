@@ -92,7 +92,7 @@ new Swiper(".team .swiper", {
 new Swiper(".partners .swiper", {
   modules: [Navigation, Grid],
   spaceBetween: 32,
-  slidesPerView: 7,
+  slidesPerView: 3,
   grid: {
     rows: 3
   },
