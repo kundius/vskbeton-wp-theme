@@ -6,6 +6,7 @@
 @import 'team';
 @import 'certificates';
 @import 'partners';
+@import 'home';
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -634,8 +635,11 @@ body {
 }
 
 .main-nav ul li {
-  margin: 0 12px;
+  margin: 0 16px;
 
+  @include below(xl) {
+    margin: 0 12px;
+  }
   @include below(lg) {
     margin: 0 8px;
   }
