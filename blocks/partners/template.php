@@ -19,7 +19,9 @@ $items = get_field('items');
 							</div>
 						<?php endif ?>
 						<div class="swiper-slide partners-slide partners-slide_<?php echo ($key % 7) ?>">
-							<img class="partners-slide__image" src="<?php echo $item['image']['url'] ?>">
+							<div class="partners-slide__inner">
+								<img class="partners-slide__image" src="<?php echo $item['image']['url'] ?>">
+							</div>
 						</div>
 						<?php if ($key % 7 === 0): ?>
 							<div class="swiper-slide partners-slide partners-slide_after-<?php echo ($key % 7) ?>">
