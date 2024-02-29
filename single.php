@@ -19,6 +19,9 @@ $previous_post = get_previous_post();
         <div class="container">
           <?php if (have_posts()): ?>
             <div class="article-headline">
+              <figure class="article-headline__image">
+                <img src="<?php the_post_thumbnail_url('article-large') ?>" alt="<?php the_title() ?>" />
+              </figure>
               <div class="article-headline__content">
                 <h1 class="article-headline__title">
                   <?php the_title() ?>
@@ -36,9 +39,6 @@ $previous_post = get_previous_post();
                   <?php endif ?>
                 </div>
               </div>
-              <figure class="article-headline__image">
-                <img src="<?php the_post_thumbnail_url('article-large') ?>" alt="<?php the_title() ?>" />
-              </figure>
             </div>
 
             <div class="article-content content">
