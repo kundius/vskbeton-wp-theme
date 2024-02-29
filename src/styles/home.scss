@@ -39,11 +39,26 @@
 
 .home-news__headline-all {
   font-size: 14px;
-  color: #000;
-  font-weight: 700;
+  color: rgb(116, 116, 116);
+  font-weight: bold;
   line-height: 1.2;
-  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  &:hover {
+    color: #f18b3a;
+  }
+}
+
+.home-news__headline-all::after {
+  content: "";
   display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
 }
 
 .home-news__list {
