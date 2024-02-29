@@ -337,6 +337,7 @@
 }
 
 .article-headline__content::before {
+  content: '';
   position: absolute;
   left: 0;
   top: 0;

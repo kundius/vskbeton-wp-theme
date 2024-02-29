@@ -210,9 +210,11 @@ $productsQuery = new WP_Query($args);
           $list_query = new WP_Query($list_query_params);
           ?>
           <div class="home-news">
-            <div class="home-news__title">Новости</div>
+            <div class="home-news__headline">
+              <div class="home-news__headline-title">Новости</div>
+              <a href="<?php echo get_category_link(3) ?>" class="home-news__headline-all">Смотреть все</a>
+            </div>
             <div class="home-news__list">
-
               <?php while ($list_query->have_posts()):
                 $list_query->the_post(); ?>
                 <div class="home-news__item">
