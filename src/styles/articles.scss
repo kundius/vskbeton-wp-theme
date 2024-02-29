@@ -318,6 +318,10 @@
   margin-left: 120px;
   margin-top: 105px;
 
+  @include below(lg) {
+    margin-left: 60px;
+    margin-top: 60px;
+  }
   @include below(md) {
     margin-left: 0;
     margin-top: 0;
@@ -335,12 +339,17 @@
   display: flex;
   flex-direction: column;
 
+  @include below(lg) {
+    left: -60px;
+    top: -60px;
+  }
   @include below(md) {
     font-size: 18px;
-    width: 280px;
+    width: 50%;
+    min-width: 280px;
     padding: 24px 20px;
-    left: 0;
-    top: 0;
+    left: -16px;
+    top: -16px;
   }
 }
 
