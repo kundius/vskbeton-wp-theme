@@ -2370,12 +2370,18 @@ body {
   @include below(lg) {
     gap: 12px;
   }
+  @include below(md) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 
 .products-grid__cell {}
 
 .products-grid__cell_span {
   grid-column: span 2 / span 2;
+  @include below(md) {
+    grid-column: span 1 / span 1;
+  }
 }
 
 .products-item {
@@ -2426,9 +2432,9 @@ body {
   flex-shrink: 0;
   margin: -15px 0;
   @include below(lg) {
-    width: 64px;
-    height: 64px;
-    margin: -12px 0;
+    width: 54px;
+    height: 54px;
+    margin: -10px 0;
   }
 }
 
