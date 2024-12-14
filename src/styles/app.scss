@@ -2434,6 +2434,17 @@ body {
   }
 }
 
+.products-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eb8a1c;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
 
 .geography-slideshow__description {
   background: #0b48b3cf!important;

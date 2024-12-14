@@ -131,9 +131,11 @@ $productsQuery = new WP_Query($args);
       <div class="products-grid__cell products-grid__cell_span">
 4
       </div>
-      
+
       <div class="products-grid__cell">
-5
+        <a href="/czeny/" class="products-price">
+          <span>Подробнее</span>
+        </a>
       </div>
     </div>
         
