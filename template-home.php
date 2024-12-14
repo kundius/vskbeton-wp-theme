@@ -86,9 +86,27 @@ $productsQuery = new WP_Query($args);
         <div class="container">
           
 			
-	<div class="prods">
+	<div class="products">
     <div class="section-title">
       <span>Наша</span> продукция
+    </div>
+
+    <div class="products-grid">
+      <div class="products-grid__cell">
+1
+      </div>
+      <div class="products-grid__cell">
+2
+      </div>
+      <div class="products-grid__cell">
+3
+      </div>
+      <div class="products-grid__cell products-grid__cell_span">
+4
+      </div>
+      <div class="products-grid__cell">
+5
+      </div>
     </div>
         
 		<div class="prods-grid">
@@ -220,7 +238,7 @@ $productsQuery = new WP_Query($args);
           <?php endif ?>
 
           <?php if ($productsQuery->have_posts()): ?>
-            <div class="products">
+            <div class="services">
 				<div class="section-title">
 					<span>НАШИ</span> УСЛУГИ
 				</div>

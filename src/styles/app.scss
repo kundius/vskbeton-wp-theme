@@ -134,9 +134,11 @@ body {
 }
 
 .advantages {
+  margin-top: 64px;
   margin-bottom: 64px;
 
   @include below(md) {
+    margin-top: 48px;
     margin-bottom: 48px;
   }
 }
@@ -2192,7 +2194,7 @@ body {
   }
 }
 
-* + .products {
+* + .services {
   margin-top: 64px;
 
   @include below(md) {
@@ -2355,6 +2357,20 @@ body {
   width: 100%;
   height: 100%;
   z-index: 20;
+}
+
+.products {}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.products-grid__cell {}
+
+.products-grid__cell_span {
+  grid-column: span 2 / span 2;
 }
 
 

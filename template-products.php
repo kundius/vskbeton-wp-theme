@@ -32,7 +32,7 @@ $productsQuery = new WP_Query($args);
 				</div>
 			
           <?php if ($productsQuery->have_posts()): ?>
-          <div class="products">
+          <div class="services">
             <div class="services-grid">
               <?php $key = 0; while ($productsQuery->have_posts()): $productsQuery->the_post(); $key++; ?>
               <div class="services-grid__cell<?php if (($productsQuery->post_count % 2) > 0 && $key === $productsQuery->post_count): ?> services-grid__cell_wide<?php endif ?>">
