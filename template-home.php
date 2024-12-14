@@ -95,7 +95,7 @@ $productsQuery = new WP_Query($args);
       <div class="products-grid__cell">
         <div class="products-item">
           <div class="products-item__title">
-            Товарный бетон
+            <strong>Товарный бетон</strong>
           </div>
           <a href="/czeny/#tovbet" class="products-item__section">
             <span>Подробнее</span>
@@ -107,7 +107,7 @@ $productsQuery = new WP_Query($args);
       <div class="products-grid__cell">
         <div class="products-item">
           <div class="products-item__title">
-            Пескобетон
+            <strong>Пескобетон</strong>
           </div>
           <a href="/czeny/#peskbet" class="products-item__section">
             <span>Подробнее</span>
@@ -119,7 +119,7 @@ $productsQuery = new WP_Query($args);
       <div class="products-grid__cell">
         <div class="products-item">
           <div class="products-item__title">
-            Цементный раствор
+            <strong>Цементный раствор</strong>
           </div>
           <a href="/czeny/#cemrast" class="products-item__section">
             <span>Подробнее</span>
@@ -129,7 +129,17 @@ $productsQuery = new WP_Query($args);
       </div>
 
       <div class="products-grid__cell products-grid__cell_span">
-4
+        <div class="products-item products-item_blue">
+          <div class="products-item__group">
+            <div class="products-item__title">
+              <strong>Калькулятор</strong> стоимости бетона
+            </div>
+            <a href="/kalkulyator/" class="products-item__section">
+              <span>Рассчитать онлайн</span>
+            </a>
+          </div>
+          <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/rast-img.png" class="products-item__image">
+        </div>
       </div>
 
       <div class="products-grid__cell">

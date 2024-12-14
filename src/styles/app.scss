@@ -2384,14 +2384,25 @@ body {
   padding: 24px;
 }
 
+.products-item_blue {
+  background: #0035bb;
+}
+
+.products-item__group {
+
+}
+
 .products-item__title {
   width: 100%;
   color: #000;
   font-size: 28px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.4;
   margin-bottom: 16px;
+  .products-item_blue & {
+    color: #fff;
+  }
 }
 
 .products-item__image {
@@ -2410,6 +2421,9 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 1.4;
+  .products-item_blue & {
+    color: #fff;
+  }
   &::before {
     content: "";
     background: url('../images/arrow-1.png') no-repeat 50% 50%;
@@ -2444,6 +2458,7 @@ body {
   font-weight: 700;
   line-height: 1.4;
   text-transform: uppercase;
+  padding: 24px;
 }
 
 .geography-slideshow__description {
