@@ -31,6 +31,8 @@ $productsQuery = new WP_Query($args);
   <body <?php body_class() ?>>
     <?php wp_body_open() ?>
 
+	<?wf_top_line()?>
+	  
     <div class="page">
       <?php if ($group = get_field('presentation')): ?>
         <div class="intro">
@@ -82,8 +84,99 @@ $productsQuery = new WP_Query($args);
 
       <div class="main">
         <div class="container">
-          <?php if ($items = get_field('advantages')): ?>
+          
+			
+	<div class="prods">
+		<div class="prods-title-line">
+			<div class="prods__title">
+				<span>Наша</span><br> продукция
+			</div>
+			<a href="/czeny/" class="prods-title-btn">Смотреть прайс</a>
+		</div>
+        
+		<div class="prods-grid">
+		
+            <div class="prods-left-side">
+			
+                <div class="prods-item">
+                    <div class="prods-item__title">
+                        Товарный бетон
+					</div>
+					<div class="prods-item__image">
+                        <img src="/wp-content/themes/vskbeton-wp-theme/dist/images/betn-img.png">
+					</div>
+					<div class="prods-item__section">
+                        <a href="/czeny/#tovbet" class="prods-item__section-link">
+							<span>Подробнее</span>
+                        </a>
+                    </div>
+                </div>
+				
+            </div>
+        
+
+			<div class="prods-right-side">
+			
+                <div class="prods-item half">
+                    <div class="prods-item__title">
+                        Пескобетон
+					</div>
+					<div class="prods-link-line">
+						<div class="prods-item__section">
+							<a href="/czeny/#peskbet" class="prods-item__section-link">
+								<span>Подробнее</span>
+							</a>
+						</div>
+						<div class="prods-item__image">
+							<img src="/wp-content/themes/vskbeton-wp-theme/dist/images/pesk-img.png">
+						</div>
+					</div>
+                </div>
+            
+                <div class="prods-item half">
+                    <div class="prods-item__title">
+                        Цементный раствор
+					</div>
+					<div class="prods-link-line">
+						<div class="prods-item__section">
+							<a href="/czeny/#cemrast" class="prods-item__section-link">
+								<span>Подробнее</span>
+							</a>
+						</div>
+						<div class="prods-item__image">
+							<img src="/wp-content/themes/vskbeton-wp-theme/dist/images/rast-img.png">
+						</div>
+					</div>
+                </div>
+            
+                <div class="prods-item full">
+					<div class="prods-link-line">
+						<div class="prods-item__title">
+							<span>Калькулятор</span> стоимости бетона
+						</div>
+						<div class="prods-item__section">
+							<a href="/kalkulyator/" class="prods-item__section-link">
+								<span>Рассчитать онлайн</span>
+							</a>
+						</div>
+					</div>
+					<div class="prods-item__image">
+                        <img src="/wp-content/themes/vskbeton-wp-theme/dist/images/calc-img.png">
+					</div>
+                </div>
+				
+            </div>
+			
+        </div>
+		
+    </div>
+			
+		<?php if ($items = get_field('advantages')): ?>
             <div class="advantages">
+				<div class="geography__title">
+					<span>НАШИ</span><br>
+					ПРЕИМУЩЕСТВА
+				</div>
               <div class="advantages-grid">
                 <?php foreach ($items as $key => $item): ?>
                   <div class="advantages-grid__cell">
@@ -132,6 +225,10 @@ $productsQuery = new WP_Query($args);
 
           <?php if ($productsQuery->have_posts()): ?>
             <div class="products">
+				<div class="geography__title">
+					<span>НАШИ</span><br>
+					УСЛУГИ
+				</div>
               <div class="products-grid">
                 <?php $key = 0;
                 while ($productsQuery->have_posts()):
@@ -146,6 +243,11 @@ $productsQuery = new WP_Query($args);
                       <div class="products-item__title">
                         <?php echo (get_field('title_in_list') ?: get_the_title()) ?>
                       </div>
+						<?if(get_field('czena') != ''):?>
+							<div class="products-item__price">
+								<span>Цена: </span><?php echo get_field('czena')?>
+							</div>
+						<?endif;?>
                       <div class="products-item__section">
                         <a href="<?php the_permalink() ?>" class="products-item__section-link">
                           <span>Подробнее</span>
@@ -170,7 +272,7 @@ $productsQuery = new WP_Query($args);
                     <?php foreach ($group['items'] as $item): ?>
                       <div class="swiper-slide geography-slideshow__slide">
                         <?php if ($link = $item['link']): ?>
-                          <a href="<?php echo $link ?>" class="geography-slideshow__link">
+                          <a href="<?php echo $link ?>" class="geography-slideshow__link" target="_blank">
                           <?php else: ?>
                             <a href="<?php echo $item['image']['url'] ?>" data-fslightbox="geography-lightbox"
                               class="geography-slideshow__link">

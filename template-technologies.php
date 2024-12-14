@@ -11,11 +11,17 @@ Template Name: Технологии качества
   <body <?php body_class() ?>>
     <?php wp_body_open() ?>
 
+	<?wf_top_line()?>  
+	  
     <div class="page">
       <?php get_template_part('partials/header') ?>
       
       <div class="main">
         <div class="container">
+			<div class="page-headline">
+					<h1 class="page-headline__title"><?php the_title(); ?></h1>
+				</div>
+			
           <?php if ($group = get_field('equipment')): ?>
           <div class="equipment">
             <h1 class="equipment__title">

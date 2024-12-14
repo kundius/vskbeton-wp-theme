@@ -12,6 +12,8 @@ $previous_post = get_previous_post();
   <body <?php body_class() ?>>
     <?php wp_body_open() ?>
 
+	<?wf_top_line()?>
+	  
     <div class="page">
       <?php get_template_part('partials/header') ?>
 

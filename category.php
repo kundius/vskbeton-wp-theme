@@ -47,14 +47,18 @@ $list_query = new WP_Query($list_query_params);
     <?php get_template_part('partials/head'); ?>
   </head>
 
+
   <body <?php body_class() ?>>
     <?php wp_body_open() ?>
 
+	<?wf_top_line()?>
+	  
     <div class="page">
       <?php get_template_part('partials/header') ?>
 
       <main class="main">
         <div class="container">
+			
           <div class="articles-list" id="more-articles-list">
             <?php if (!get_query_var('paged')): ?>
               <?php while ($first_query->have_posts()):

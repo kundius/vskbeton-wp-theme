@@ -41,7 +41,7 @@
       </div>
       <?php if ($privacy_policy = $data['privacy_policy']): ?>
       <div class="footer-secondary__rules">
-        <a href="<?php echo $privacy_policy['url'] ?>"><?php echo $privacy_policy['title'] ?></a>
+        <a href="<?php echo $privacy_policy['url'] ?>" target="_blank"><?php echo $privacy_policy['title'] ?></a>
       </div>
       <?php endif ?>
       <div class="footer-secondary__creator">
