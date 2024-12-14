@@ -123,13 +123,13 @@ return $stylesheet_uri;
 
 add_action( 'wp_enqueue_scripts', 'custom_css_add_scripts' );
 function custom_css_add_scripts() {
-	wp_enqueue_style( 'jquery_ui', get_stylesheet_directory_uri() . '/dist/styles/jquery-ui.css' );
- 	wp_enqueue_style( 'calc_css', get_stylesheet_directory_uri() . '/dist/styles/calc.css' );
+	wp_enqueue_style( 'jquery_ui', get_stylesheet_directory_uri() . '/vendor/styles/jquery-ui.css' );
+ 	wp_enqueue_style( 'calc_css', get_stylesheet_directory_uri() . '/vendor/styles/calc.css' );
 
-	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/dist/scripts/jquery-2.2.4.min.js', array(), '1.0', true );
-	wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/dist/scripts/jquery-ui.min.js', array(), '1.0', true );
-	wp_enqueue_script( 'jquery-mask', get_template_directory_uri() . '/dist/scripts/jquery.mask.min.js', array(), '1.0', true );
-    wp_enqueue_script( 'all-js', get_template_directory_uri() . '/dist/scripts/all.js', array(), '1.0', true );
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/vendor/scripts/jquery-2.2.4.min.js', array(), '1.0', true );
+	wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/vendor/scripts/jquery-ui.min.js', array(), '1.0', true );
+	wp_enqueue_script( 'jquery-mask', get_template_directory_uri() . '/vendor/scripts/jquery.mask.min.js', array(), '1.0', true );
+    wp_enqueue_script( 'all-js', get_template_directory_uri() . '/vendor/scripts/all.js', array(), '1.0', true );
 }
 
 add_filter('wpcf7_autop_or_not', '__return_false');
