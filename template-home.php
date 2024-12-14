@@ -224,27 +224,27 @@ $productsQuery = new WP_Query($args);
 				<div class="section-title">
 					<span>НАШИ</span> УСЛУГИ
 				</div>
-              <div class="products-grid">
+              <div class="services-grid">
                 <?php $key = 0;
                 while ($productsQuery->have_posts()):
                   $productsQuery->the_post();
                   $key++; ?>
                   <div
-                    class="products-grid__cell<?php if (($productsQuery->post_count % 2) > 0 && $key === $productsQuery->post_count): ?> products-grid__cell_wide<?php endif ?>">
-                    <div class="products-item">
-                      <div class="products-item__image">
+                    class="services-grid__cell<?php if (($productsQuery->post_count % 2) > 0 && $key === $productsQuery->post_count): ?> services-grid__cell_wide<?php endif ?>">
+                    <div class="services-item">
+                      <div class="services-item__image">
                         <?php the_post_thumbnail('full') ?>
                       </div>
-                      <div class="products-item__title">
+                      <div class="services-item__title">
                         <?php echo (get_field('title_in_list') ?: get_the_title()) ?>
                       </div>
 						<?if(get_field('czena') != ''):?>
-							<div class="products-item__price">
+							<div class="services-item__price">
 								<span>Цена: </span><?php echo get_field('czena')?>
 							</div>
 						<?endif;?>
-                      <div class="products-item__section">
-                        <a href="<?php the_permalink() ?>" class="products-item__section-link">
+                      <div class="services-item__section">
+                        <a href="<?php the_permalink() ?>" class="services-item__section-link">
                           <span>Подробнее</span>
                         </a>
                       </div>
