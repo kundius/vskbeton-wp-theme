@@ -2381,8 +2381,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  min-height: 180px;
+  padding: 30px 20px;
 }
 
 .products-item_blue {
@@ -2412,6 +2411,7 @@ body {
   height: 85px;
   object-fit: contain;
   flex-shrink: 0;
+  margin: -15px 0;
 }
 
 .products-item__section {
