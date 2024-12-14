@@ -87,12 +87,9 @@ $productsQuery = new WP_Query($args);
           
 			
 	<div class="prods">
-		<div class="prods-title-line">
-			<div class="prods__title">
-				<span>Наша</span><br> продукция
-			</div>
-			<a href="/czeny/" class="prods-title-btn">Смотреть прайс</a>
-		</div>
+    <div class="section-title">
+      <span>Наша</span> продукция
+    </div>
         
 		<div class="prods-grid">
 		
@@ -103,7 +100,7 @@ $productsQuery = new WP_Query($args);
                         Товарный бетон
 					</div>
 					<div class="prods-item__image">
-                        <img src="/wp-content/themes/vskbeton-wp-theme/dist/images/betn-img.png">
+                        <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/betn-img.png">
 					</div>
 					<div class="prods-item__section">
                         <a href="/czeny/#tovbet" class="prods-item__section-link">
@@ -128,7 +125,7 @@ $productsQuery = new WP_Query($args);
 							</a>
 						</div>
 						<div class="prods-item__image">
-							<img src="/wp-content/themes/vskbeton-wp-theme/dist/images/pesk-img.png">
+							<img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/pesk-img.png">
 						</div>
 					</div>
                 </div>
@@ -144,7 +141,7 @@ $productsQuery = new WP_Query($args);
 							</a>
 						</div>
 						<div class="prods-item__image">
-							<img src="/wp-content/themes/vskbeton-wp-theme/dist/images/rast-img.png">
+							<img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/rast-img.png">
 						</div>
 					</div>
                 </div>
@@ -161,7 +158,7 @@ $productsQuery = new WP_Query($args);
 						</div>
 					</div>
 					<div class="prods-item__image">
-                        <img src="/wp-content/themes/vskbeton-wp-theme/dist/images/calc-img.png">
+                        <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/calc-img.png">
 					</div>
                 </div>
 				
@@ -173,9 +170,8 @@ $productsQuery = new WP_Query($args);
 			
 		<?php if ($items = get_field('advantages')): ?>
             <div class="advantages">
-				<div class="geography__title">
-					<span>НАШИ</span><br>
-					ПРЕИМУЩЕСТВА
+				<div class="section-title">
+					<span>НАШИ</span> ПРЕИМУЩЕСТВА
 				</div>
               <div class="advantages-grid">
                 <?php foreach ($items as $key => $item): ?>
@@ -225,9 +221,8 @@ $productsQuery = new WP_Query($args);
 
           <?php if ($productsQuery->have_posts()): ?>
             <div class="products">
-				<div class="geography__title">
-					<span>НАШИ</span><br>
-					УСЛУГИ
+				<div class="section-title">
+					<span>НАШИ</span> УСЛУГИ
 				</div>
               <div class="products-grid">
                 <?php $key = 0;
@@ -263,7 +258,7 @@ $productsQuery = new WP_Query($args);
 
           <?php if ($group = get_field('geography')): ?>
             <div class="geography">
-              <div class="geography__title">
+              <div class="section-title">
                 <?php echo $group['title'] ?>
               </div>
               <div class="geography-slideshow">

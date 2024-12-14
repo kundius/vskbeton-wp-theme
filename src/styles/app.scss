@@ -1015,13 +1015,14 @@ body {
   }
 }
 
-.geography__title {
+.section-title {
   font-size: 42px;
   line-height: 1.2;
   color: #000;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 48px;
+  text-align: center;
 
   @include below(lg) {
     font-size: 36px;
@@ -1033,7 +1034,7 @@ body {
   }
 }
 
-.geography__title span {
+.section-title span {
   color: rgb(224, 111, 25);
 }
 
@@ -2522,41 +2523,6 @@ color: #e06f19;
 
 .prods {
 margin: 16px 0 64px 0;
-}
-.prods-title-line {
-display: flex;
-justify-content: space-between;
-align-items: end;
-margin-bottom: 48px;
-}
-.prods__title {
-  font-size: 42px;
-  line-height: 1.2;
-  color: #000;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.prods__title span {
-color: #e06f19;
-}
-.prods-title-btn {
-display: flex;
-  width: 280px;
-  height: 36px;
-  padding: 6px 37px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-  background: #EB8A1C;
-  color: #fff;
-  font-family: Montserrat;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-  text-transform: uppercase;
-text-decoration: none;
 }
 .prods-grid {
   display: flex;
