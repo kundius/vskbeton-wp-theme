@@ -138,7 +138,7 @@ $productsQuery = new WP_Query($args);
               <span>Рассчитать онлайн</span>
             </a>
           </div>
-          <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/rast-img.png" class="products-item__image">
+          <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/calc-img.png" class="products-item__image">
         </div>
       </div>
 
