@@ -2381,7 +2381,8 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 24px;
+  padding: 20px;
+  min-height: 180px;
 }
 
 .products-item_blue {
@@ -2395,11 +2396,12 @@ body {
 .products-item__title {
   width: 100%;
   color: #000;
-  font-size: 28px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.4;
-  margin-bottom: 16px;
+  line-height: 1.25;
+  margin-bottom: 24px;
+  white-space: nowrap;
   .products-item_blue & {
     color: #fff;
   }
