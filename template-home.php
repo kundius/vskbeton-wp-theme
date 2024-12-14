@@ -128,7 +128,7 @@ $productsQuery = new WP_Query($args);
           </div>
         </div>
 
-        <div class="products-grid__cell products-grid__cell_span">
+        <div class="products-grid__cell products-grid__cell_span products-grid__cell_no-mobile">
           <div class="products-item products-item_blue">
             <div class="products-item__group">
               <div class="products-item__title">
@@ -137,9 +137,20 @@ $productsQuery = new WP_Query($args);
               <a href="/kalkulyator/" class="products-item__section">
                 <span>Рассчитать онлайн</span>
               </a>
-              <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/calc-img.png" class="products-item__image products-item__image_on-mobile">
             </div>
-            <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/calc-img.png" class="products-item__image products-item__image_no-mobile">
+            <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/calc-img.png" class="products-item__image">
+          </div>
+        </div>
+
+        <div class="products-grid__cell products-grid__cell_on-mobile">
+          <div class="products-item products-item_blue">
+            <div class="products-item__title">
+              <strong>Калькулятор</strong> стоимости бетона
+            </div>
+            <a href="/kalkulyator/" class="products-item__section">
+              <span>Рассчитать онлайн</span>
+            </a>
+            <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/calc-img.png" class="products-item__image">
           </div>
         </div>
 
