@@ -93,7 +93,15 @@ $productsQuery = new WP_Query($args);
 
     <div class="products-grid">
       <div class="products-grid__cell">
-1
+        <div class="products-item">
+          <div class="products-item__title">
+            Товарный бетон
+          </div>
+          <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/betn-img.png" class="products-item__image">
+          <a href="/czeny/#tovbet" class="products-item__section">
+            <span>Подробнее</span>
+          </a>
+        </div>
       </div>
       <div class="products-grid__cell">
 2
