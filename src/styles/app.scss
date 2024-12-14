@@ -2367,6 +2367,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+  @include below(lg) {
+    gap: 12px;
+  }
 }
 
 .products-grid__cell {}
@@ -2384,6 +2387,10 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 30px 20px;
+  height: 100%;
+  @include below(lg) {
+    padding: 24px 12px;
+  }
 }
 
 .products-item_blue {
@@ -2405,6 +2412,10 @@ body {
   .products-item_blue & {
     color: #fff;
   }
+  @include below(lg) {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
 }
 
 .products-item__image {
@@ -2414,6 +2425,11 @@ body {
   object-fit: contain;
   flex-shrink: 0;
   margin: -15px 0;
+  @include below(lg) {
+    width: 64px;
+    height: 64px;
+    margin: -12px 0;
+  }
 }
 
 .products-item__section {
@@ -2424,7 +2440,7 @@ body {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.25;
   .products-item_blue & {
     color: #fff;
   }
@@ -2450,6 +2466,14 @@ body {
   &:hover::before {
     transform: translateX(4px);
   }
+  @include below(lg) {
+    font-size: 14px;
+    &::before {
+      width: calc(24px * 0.8);
+      height: calc(38.4px * 0.8);
+      margin-right: 12px;
+    }
+  }
 }
 
 .products-price {
@@ -2462,10 +2486,14 @@ body {
   font-weight: bold;
   line-height: 1.25;
   text-transform: uppercase;
-  padding: 24px;
+  padding: 30px 20px;
   width: 100%;
   height: 100%;
   text-decoration: none;
+  @include below(lg) {
+    font-size: 18px;
+    padding: 24px 12px;
+  }
 }
 
 .geography-slideshow__description {
