@@ -144,7 +144,7 @@ $productsQuery = new WP_Query($args);
 
       <div class="products-grid__cell">
         <a href="/czeny/" class="products-price">
-          <span>Подробнее</span>
+          <span>Смотреть прайс</span>
         </a>
       </div>
     </div>
