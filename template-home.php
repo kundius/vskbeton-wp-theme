@@ -97,21 +97,41 @@ $productsQuery = new WP_Query($args);
           <div class="products-item__title">
             Товарный бетон
           </div>
-          <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/betn-img.png" class="products-item__image">
           <a href="/czeny/#tovbet" class="products-item__section">
             <span>Подробнее</span>
           </a>
+          <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/betn-img.png" class="products-item__image">
         </div>
       </div>
+
       <div class="products-grid__cell">
-2
+        <div class="products-item">
+          <div class="products-item__title">
+            Пескобетон
+          </div>
+          <a href="/czeny/#peskbet" class="products-item__section">
+            <span>Подробнее</span>
+          </a>
+          <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/pesk-img.png" class="products-item__image">
+        </div>
       </div>
+
       <div class="products-grid__cell">
-3
+        <div class="products-item">
+          <div class="products-item__title">
+            Цементный раствор
+          </div>
+          <a href="/czeny/#cemrast" class="products-item__section">
+            <span>Подробнее</span>
+          </a>
+          <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/rast-img.png" class="products-item__image">
+        </div>
       </div>
+
       <div class="products-grid__cell products-grid__cell_span">
 4
       </div>
+      
       <div class="products-grid__cell">
 5
       </div>

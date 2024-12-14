@@ -2401,7 +2401,6 @@ body {
 }
 
 .products-item__section {
-  position: relative;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -2428,6 +2427,9 @@ body {
     width: 100%;
     height: 100%;
     z-index: 20;
+  }
+  &:hover::before {
+    transform: translateX(4px);
   }
 }
 
