@@ -882,11 +882,16 @@ body {
 
 .simple-card__image {
   width: 100%;
+  overflow: hidden;
+  border-radius: 32px;
   img {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 32px;
+    transition: ease .5s;
+    .simple-card:hover & {
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -2211,8 +2216,8 @@ body {
 .services-grid {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -48px;
-  margin-top: -48px;
+  margin-left: -64px;
+  margin-top: -64px;
 
   @include below(lg) {
     margin-left: -32px;
