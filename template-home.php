@@ -305,7 +305,7 @@ $productsQuery = new WP_Query($args);
 
           <?php if ($group = get_field('partners')): ?>
             <div class="partners">
-              <div class="partners__title">
+              <div class="section-title">
                 <?php echo $group['title'] ?>
               </div>
               <div class="partners-slideshow">

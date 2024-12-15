@@ -905,6 +905,13 @@ body {
   font-weight: bold;
   line-height: 1.25;
   margin-top: 8px;
+  @include below(lg) {
+    font-size: 24px;
+  }
+  @include below(md) {
+    font-size: 18px;
+    margin-top: 4px;
+  }
 }
 
 .simple-card__title::after {
@@ -1021,16 +1028,18 @@ body {
 }
 
 .geography {
-  margin-top: 64px;
+  margin-top: 74px;
+  margin-bottom: 74px;
 
   @include below(md) {
     margin-top: 48px;
+    margin-bottom: 48px;
   }
 }
 
 .section-title {
   font-size: 42px;
-  line-height: 1.2;
+  line-height: 1;
   color: #000;
   font-weight: bold;
   text-transform: uppercase;
@@ -1077,6 +1086,8 @@ body {
 .geography-slideshow__slide {
   display: flex;
   position: relative;
+  overflow: hidden;
+  border-radius: 32px;
 }
 
 .geography-slideshow__description {
@@ -1128,28 +1139,6 @@ body {
   @include below(md) {
     margin-top: 48px;
   }
-}
-
-.partners__title {
-  font-size: 42px;
-  line-height: 1.2;
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 48px;
-
-  @include below(lg) {
-    font-size: 36px;
-    margin-bottom: 36px;
-  }
-  @include below(md) {
-    font-size: 32px;
-    margin-bottom: 24px;
-  }
-}
-
-.partners__title span {
-  color: rgb(224, 111, 25);
 }
 
 .partners-slideshow {
@@ -2205,11 +2194,13 @@ body {
   }
 }
 
-* + .services {
-  margin-top: 64px;
+.services {
+  margin-top: 74px;
+  margin-bottom: 74px;
 
   @include below(md) {
     margin-top: 48px;
+    margin-bottom: 48px;
   }
 }
 
