@@ -200,13 +200,11 @@ $productsQuery = new WP_Query($args);
                 <?php echo $group['title'] ?>
               </div>
               <?php if ($link = $group['link']): ?>
-                <div class="technologies__section">
-                  <a href="<?php echo $link['url'] ?>" class="technologies__section-link">
-                    <span>
-                      <?php echo $link['title'] ?>
-                    </span>
-                  </a>
-                </div>
+                <a href="<?php echo $link['url'] ?>" class="technologies__section">
+                  <span>
+                    <?php echo $link['title'] ?>
+                  </span>
+                </a>
               <?php endif ?>
             </div>
           <?php endif ?>
