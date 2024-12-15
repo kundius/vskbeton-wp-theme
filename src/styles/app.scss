@@ -821,6 +821,7 @@ body {
   z-index: 20;
   right: 124px;
   bottom: 84px;
+  background: rgba(0, 0, 0, .64);
 
   @include below(lg) {
     font-size: 20px;
