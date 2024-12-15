@@ -313,7 +313,7 @@ $productsQuery = new WP_Query($args);
                   <div class="swiper-wrapper">
                     <?php foreach ($group['items'] as $item): ?>
                       <div class="swiper-slide partners-slideshow__slide">
-                        <a href="<?php echo $item['link'] ?>" class="partners-slideshow__link">
+                        <a href="<?php echo $item['link'] ?>" class="partners-slideshow__link" target="_blank">
                           <img class="partners-slideshow__image" src="<?php echo $item['logo']['url'] ?>">
                         </a>
                       </div>
