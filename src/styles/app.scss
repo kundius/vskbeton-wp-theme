@@ -877,6 +877,7 @@ body {
 }
 
 .simple-card {
+  position: relative;
 }
 
 .simple-card__image {
@@ -895,10 +896,19 @@ body {
   text-align: center;
   text-decoration: none;
   color: #e06f19;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: bold;
   line-height: 1.25;
-  margin-top: 12px;
+  margin-top: 8px;
+}
+
+.simple-card__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .directions {

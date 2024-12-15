@@ -224,7 +224,7 @@ $productsQuery = new WP_Query($args);
                   <div class="services-grid__cell<?php if (($productsQuery->post_count % 2) > 0 && $key === $productsQuery->post_count): ?> services-grid__cell_wide<?php endif ?>">
                     <div class="simple-card">
                       <div class="simple-card__image">
-                        <?php the_post_thumbnail('full') ?>
+                        <?php the_post_thumbnail('article-medium') ?>
                       </div>
                       <a href="<?php the_permalink() ?>" class="simple-card__title">
                         <?php echo (get_field('title_in_list') ?: get_the_title()) ?>
