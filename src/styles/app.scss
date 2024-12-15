@@ -884,13 +884,18 @@ body {
   width: 100%;
   overflow: hidden;
   border-radius: 32px;
+  transition: ease .5s;
+  .simple-card:hover & {
+    box-shadow: 4.225px 7.947px 10px 0 rgba(25, 42, 70, .24);
+  }
   img {
     display: block;
     width: 100%;
     height: auto;
     transition: ease .5s;
     .simple-card:hover & {
-      transform: scale(1.05);
+      transform: scale(1.1);
+      filter: grayscale(1);
     }
   }
 }
