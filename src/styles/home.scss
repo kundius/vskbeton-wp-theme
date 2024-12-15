@@ -23,6 +23,7 @@
   }
   @include below(md) {
     margin-bottom: 24px;
+    justify-content: flex-start;
   }
 }
 
