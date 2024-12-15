@@ -788,10 +788,13 @@ body {
   text-align: center;
   left: 0;
   bottom: 0;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   color: #fff;
   position: absolute;
+  z-index: 20;
+  background: rgba(11, 72, 179, .64);
+  border-radius: 0 0 32px 32px;
 
   @include below(lg) {
     font-size: 32px;
@@ -808,35 +811,16 @@ body {
 }
 
 .technologies__section {
-  position: absolute;
-  z-index: 20;
-  right: 30px;
-  bottom: 30px;
-  width: 450px;
-  max-width: 100%;
-
-  @include below(lg) {
-    right: 24px;
-    bottom: 24px;
-    width: 360px;
-  }
-  @include below(md) {
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 16px;
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-
-.technologies__section-link {
   font-size: 24px;
   text-decoration: none;
   color: #fff;
   display: inline-flex;
   align-items: center;
   line-height: 1.2;
+  position: absolute;
+  z-index: 20;
+  right: 124px;
+  bottom: 84px;
 
   @include below(lg) {
     font-size: 20px;
@@ -846,7 +830,7 @@ body {
   }
 }
 
-.technologies__section-link::before {
+.technologies__section::before {
   content: '';
   background: url('../images/arrow-1.png') no-repeat 50% 50%;
   background-size: cover;
@@ -868,7 +852,7 @@ body {
   }
 }
 
-.technologies__section-link:hover::before {
+.technologies__section:hover::before {
   transform: translateX(4px);
 
   @include below(lg) {
