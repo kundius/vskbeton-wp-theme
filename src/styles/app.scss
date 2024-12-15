@@ -909,7 +909,7 @@ body {
   font-size: 32px;
   font-weight: bold;
   line-height: 1.25;
-  margin-top: 8px;
+  margin-top: 6px;
   @include below(lg) {
     font-size: 24px;
   }
@@ -2200,8 +2200,8 @@ body {
 }
 
 .services {
-  margin-top: 74px;
-  margin-bottom: 74px;
+  margin-top: 78px;
+  margin-bottom: 78px;
 
   @include below(md) {
     margin-top: 48px;
