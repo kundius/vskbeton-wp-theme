@@ -876,6 +876,31 @@ body {
   }
 }
 
+.simple-card {
+}
+
+.simple-card__image {
+  width: 100%;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 32px;
+  }
+}
+
+.simple-card__title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #e06f19;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.25;
+  margin-top: 12px;
+}
+
 .directions {
   margin-top: 64px;
   margin-bottom: 64px;
