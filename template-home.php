@@ -196,10 +196,8 @@ $productsQuery = new WP_Query($args);
                   <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
                 <?php endif ?>
               </div>
-              <div class="technologies__content">
-                <div class="technologies__title">
-                  <?php echo $group['title'] ?>
-                </div>
+              <div class="technologies__title">
+                <?php echo $group['title'] ?>
               </div>
               <?php if ($link = $group['link']): ?>
                 <div class="technologies__section">

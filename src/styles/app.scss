@@ -752,12 +752,13 @@ body {
 .technologies::before {
   content: '';
   position: absolute;
-  left: -100px;
-  right: -100px;
+  left: 50%;
+  width: 100vw;
   top: 0;
   bottom: 0;
   background: url('../images/technologies-bg.jpg') no-repeat 50% 50%;
   background-size: cover;
+  transform: translateX(-50%);
 }
 
 .technologies__image {
@@ -779,27 +780,18 @@ body {
   border-radius: 32px;
 }
 
-.technologies__content {
-  position: relative;
-  z-index: 20;
-  padding: 83px 52px 133px;
-
-  @include below(lg) {
-    padding: 64px 40px 116px;
-  }
-  @include below(md) {
-    padding: 20px;
-  }
-}
-
 .technologies__title {
-  font-size: 42px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.25;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  bottom: 0;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  position: relative;
-  padding-left: 110px;
+  position: absolute;
 
   @include below(lg) {
     font-size: 32px;
@@ -813,25 +805,6 @@ body {
 
 .technologies__title span {
   color: rgb(224, 111, 25);
-}
-
-.technologies__title::before {
-  content: '';
-  background: url('../images/arrow-1.png') no-repeat 50% 50%;
-  background-size: cover;
-  width: 90px;
-  height: 150px;
-  position: absolute;
-  left: 0;
-  top: 0;
-
-  @include below(lg) {
-    width: calc(90px * 0.8);
-    height: calc(150px * 0.8);
-  }
-  @include below(md) {
-    display: none;
-  }
 }
 
 .technologies__section {
