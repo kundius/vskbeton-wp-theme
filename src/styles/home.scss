@@ -1,14 +1,13 @@
 .home-news {
-  margin-top: 74px;
-  margin-bottom: 74px;
+  margin-top: 68px;
+  margin-bottom: 68px;
   padding-bottom: 36px;
   border-bottom: 1px solid #e5e5e5;
 
   @include below(md) {
     margin-top: 48px;
-    margin-bottom: 64px;
+    margin-bottom: 48px;
     padding-bottom: 24px;
-    padding-top: 64px;
   }
 }
 
@@ -16,14 +15,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 48px;
+  margin-bottom: 36px;
   &::before {
     content: '';
     display: block;
   }
 
   @include below(lg) {
-    margin-bottom: 36px;
+    margin-bottom: 32px;
   }
   @include below(md) {
     margin-bottom: 24px;
