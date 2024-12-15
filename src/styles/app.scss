@@ -2503,12 +2503,12 @@ body {
 
 @keyframes headlineButtonGlare {
   0% {
-    left: -50%;
+    left: -100%;
     transform: translate(-100%, -50%) rotate(35deg);
   }
 
   100% {
-    left: 150%;
+    left: 200%;
     transform: translate(0, -50%) rotate(35deg);
   }
 }
