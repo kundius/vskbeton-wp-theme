@@ -14,7 +14,7 @@
 .home-news__headline {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   margin-bottom: 36px;
 
@@ -56,6 +56,9 @@
   transform: translateY(-50%);
   &:hover {
     color: #f18b3a;
+  }
+  @include below(md) {
+    gap: 8px;
   }
 }
 
