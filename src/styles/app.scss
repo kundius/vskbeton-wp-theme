@@ -780,29 +780,35 @@ body {
   border-radius: 32px;
 }
 
+.technologies__content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .technologies__title {
   font-size: 24px;
   line-height: 1.25;
-  padding: 18px;
+  padding: 20px;
   width: 100%;
   text-align: center;
-  left: 0;
-  bottom: 0;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
-  position: absolute;
-  z-index: 20;
   background: rgba(11, 72, 179, .64);
   border-radius: 0 0 32px 32px;
 
   @include below(lg) {
     font-size: 32px;
-    padding-left: 88px;
   }
   @include below(md) {
     font-size: 24px;
-    padding-left: 0;
   }
 }
 
@@ -816,14 +822,13 @@ body {
   color: #fff;
   display: inline-flex;
   align-items: center;
+  align-self: flex-end;
   line-height: 1.2;
-  position: absolute;
   z-index: 20;
-  right: 124px;
-  bottom: 84px;
+  margin: 16px 132px;
   background: rgba(0, 0, 0, .4);
   border-radius: 32px;
-  padding: 12px;
+  padding: 12px 24px;
 
   @include below(lg) {
     font-size: 20px;

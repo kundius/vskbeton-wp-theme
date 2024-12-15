@@ -47,17 +47,13 @@ Template Name: Технологии качества
               <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
               <?php endif ?>
             </div>
-            <div class="technologies__content">
-              <div class="technologies__title">
-                <?php echo $group['title'] ?>
-              </div>
+            <div class="technologies__title">
+              <?php echo $group['title'] ?>
             </div>
             <?php if ($link = $group['link']): ?>
-            <div class="technologies__section">
-            <a href="<?php echo $link['url'] ?>" class="technologies__section-link">
+            <a href="<?php echo $link['url'] ?>" class="technologies__section">
               <span><?php echo $link['title'] ?></span>
             </a>
-            </div>
             <?php endif ?>
           </div>
           <?php endif ?>
