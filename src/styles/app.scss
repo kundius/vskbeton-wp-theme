@@ -2503,18 +2503,13 @@ body {
 
 @keyframes headlineButtonGlare {
   0% {
-      left: -30px;
-      margin-left: 0
-  }
-
-  30% {
-      left: 110%;
-      margin-left: 80px
+    left: 0;
+    transform: translate(-100%);
   }
 
   100% {
-      left: 110%;
-      margin-left: 80px
+    left: 100%;
+    transform: translate(0);
   }
 }
 
@@ -2536,14 +2531,14 @@ body {
   overflow: hidden;
   &::after {
     content: "";
-    margin-left: 60px;
-    width: 30px;
-    height: 300px;
-    background: #ffecec;
+    width: 10%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
     animation-delay: 50ms;
     position: absolute;
-    left: -40px;
-    top: -150px;
+    top: 0;
+    left: 0;
+    transform: translate(-100%);
     animation-timing-function: ease-in-out;
     animation-name: headlineButtonGlare;
     animation-duration: 6s;
