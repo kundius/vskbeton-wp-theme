@@ -883,6 +883,7 @@ body {
 .simple-card__image {
   width: 100%;
   overflow: hidden;
+  position: relative;
   border-radius: 32px;
   transition: all .3s ease;
   .simple-card:hover & {
