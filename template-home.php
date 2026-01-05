@@ -100,7 +100,7 @@ $productsQuery = new WP_Query($args);
           <div class="intro__text intro__text_6">
             <div class="intro__text-content">
               Измерение сохранности свойств бетонной смеси во времени<br>
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/icon-wave.svg" alt="<?php bloginfo('name') ?>">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/icon-clock.svg" alt="<?php bloginfo('name') ?>">
             </div>
           </div>
         </div>
