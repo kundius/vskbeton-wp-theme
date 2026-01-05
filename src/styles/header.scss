@@ -20,8 +20,12 @@
   transition: 0.3s ease;
 }
 
-body:has(.intro) .header::before {
+body:has(.intro) .header:not([data-sticky-header="active"])::before {
   display: none;
+}
+
+body:has(.intro) .header:not([data-sticky-header="active"])::after {
+  opacity: 0;
 }
 
 .header::after {
@@ -35,10 +39,6 @@ body:has(.intro) .header::before {
   background: #0c3057;
   opacity: 0.75;
   transition: 0.3s ease;
-}
-
-body:has(.intro) .header::after {
-  opacity: 0;
 }
 
 .header-anchor {
