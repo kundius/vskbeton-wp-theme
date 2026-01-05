@@ -44,7 +44,7 @@
 
     <div class="header-secondary">
       <a href="/" class="header-logo">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/logo.svg" alt="<?php bloginfo('name') ?>" width="119" height="28" class="header-logo__image">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/logo.png" alt="<?php bloginfo('name') ?>" width="120" height="28" class="header-logo__image">
       </a>
 
       <?php wp_nav_menu([
