@@ -34,7 +34,7 @@
   top: 0;
   bottom: 0;
   left: calc(50% - 84px);
-  background: #0035bb;
+  background: rgba(0, 53, 187, 0.5);
   z-index: -1;
   mix-blend-mode: color-burn;
 }
@@ -42,13 +42,13 @@
 .intro__logo::after {
   content: "";
   position: absolute;
-  right: -222px;
+  right: -116px;
   top: 0;
   bottom: 0;
   left: calc(50% - 84px);
-  background: #0035bb;
+  background: rgba(0, 53, 187, 0.5);
   z-index: -1;
-  mix-blend-mode: color-burn;
+  backdrop-filter: blur(20px);
 }
 
 .intro__logo-img {
