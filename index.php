@@ -6,28 +6,26 @@ $previous_post = get_previous_post();
 <html class="no-js" <?php language_attributes(); ?> itemscope itemtype="http://schema.org/WebSite">
 
   <head>
-    <?php get_template_part('partials/head'); ?>
+    <?php get_template_part("partials/head"); ?>
   </head>
 
-  <body <?php body_class() ?>>
-    <?php wp_body_open() ?>
+  <body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
 
-	<?wf_top_line()?>
-	  
     <div class="page">
-      <?php get_template_part('partials/header') ?>
+      <?php get_template_part("partials/header"); ?>
 
       <main class="main">
         <div class="container">
           <?php if (have_posts()): ?>
             <div class="page-headline">
               <h1 class="page-headline__title">
-                <?php the_title() ?>
+                <?php the_title(); ?>
               </h1>
             </div>
 
             <div class="page-content content">
-              <?php the_content() ?>
+              <?php the_content(); ?>
             </div>
           <?php else: ?>
             Результатов не найдено
@@ -35,10 +33,10 @@ $previous_post = get_previous_post();
         </div>
       </main>
 
-      <?php get_template_part('partials/footer') ?>
+      <?php get_template_part("partials/footer"); ?>
     </div>
 
-    <?php wp_footer() ?>
+    <?php wp_footer(); ?>
   </body>
 
 </html>

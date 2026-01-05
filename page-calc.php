@@ -7,16 +7,14 @@ Template Name: Калькулятор
 <html class="no-js" <?php language_attributes(); ?> itemscope itemtype="http://schema.org/WebSite">
 
 <head>
-	<?php get_template_part('partials/head'); ?>
+	<?php get_template_part("partials/head"); ?>
 </head>
 
-<body <?php body_class() ?>>
-    <?php wp_body_open() ?>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
 
-	<?wf_top_line()?>
-	
     <div class="page">
-		<?php get_template_part('partials/header') ?>
+		<?php get_template_part("partials/header"); ?>
 
 		<main class="main">
 			<div class="container">
@@ -56,13 +54,13 @@ Template Name: Калькулятор
                                                 <option value="7300" data-tip="b1">М 400 (В 30) Фр. 5-20 мм</option>
                                                 <option value="7500" data-tip="b1">М 450 (В 35) Фр. 5-20 мм</option>
                                                 <option value="8100" data-tip="b1">М 500 (В 40) Фр. 5-20 мм</option>
-                                                
+
                                                 <option value="3700" data-tip="p1">М 100 (В 7,5)</option>
                                                 <option value="4500" data-tip="p1">М 150 (В 12,5)</option>
                                                 <option value="5200" data-tip="p1">М 200 (В 15)</option>
                                                 <option value="5600" data-tip="p1">М 250 (В 20)</option>
                                                 <option value="5900" data-tip="p1">М 300 (В 22,5)</option>
-                                                
+
                                                 <option value="4000" data-tip="r1">М 100</option>
                                                 <option value="4600" data-tip="r1">М 150</option>
                                                 <option value="5400" data-tip="r1">М 200</option>
@@ -117,7 +115,7 @@ Template Name: Калькулятор
 							<div class="calc-title">Сделать заказ просто — оставьте контактный <br>номер телефона, и мы Вам перезвоним</div>
 						</div>
 						<div class="calc-bottom">
-							<?=do_shortcode('[contact-form-7 id="1fe6012" title="Форма калькулятора"]')?>
+							<?= do_shortcode('[contact-form-7 id="1fe6012" title="Форма калькулятора"]') ?>
 						</div>
 					</div>
 					<div class="calc-info">
@@ -128,13 +126,13 @@ Template Name: Калькулятор
 
 			</div>
 		</main>
-                
+
 	</div>
 
-	<?php get_template_part('partials/footer') ?>    
+	<?php get_template_part("partials/footer"); ?>
 
-    <?php wp_footer() ?>
-	
+    <?php wp_footer(); ?>
+
 </body>
 
 </html>
