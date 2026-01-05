@@ -15,7 +15,7 @@
   bottom: 0;
   z-index: -1;
   background: url("../images/header.jpg") no-repeat 50% 50%;
-  opacity: 0.5;
+  opacity: 0.25;
 }
 
 .header-primary {
@@ -152,7 +152,19 @@
   position: relative;
 }
 
-.header-menu li a::after {
+.header-menu li.current-menu-item a::after {
+  content: "";
+  height: 2px;
+  width: 36px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  background: #e2fbff;
+  transition: 0.3s ease;
+}
+
+.header-menu li a:hover::after {
   content: "";
   height: 2px;
   width: 50px;
