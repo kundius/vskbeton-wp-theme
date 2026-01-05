@@ -25,10 +25,6 @@ body {
   text-wrap: pretty;
 }
 
-.page {
-  overflow-x: hidden;
-}
-
 .main {
   padding: 64px 0;
 
@@ -2245,9 +2241,6 @@ body {
   }
 }
 
-.page {
-  margin-top: 40px;
-}
 .main-nav > ul {
   background: none;
 }
@@ -2301,40 +2294,6 @@ body {
   .geography-slideshow .swiper-button-next,
   .geography-slideshow .swiper-button-prev {
     color: #fff;
-  }
-  .uptop {
-    position: fixed;
-    z-index: 101;
-    top: 0px;
-    left: 0;
-    right: 0;
-    height: 40px;
-    width: 100%;
-    overflow: hidden;
-    /*background: rgba(0, 0, 0, .77);*/
-    /*background: rgba(0, 0, 0, 0.9);*/
-    background: #f18b3a;
-  }
-  .uptop .phones {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 0;
-    width: 100%;
-  }
-  .uptop a {
-    margin: 0;
-  }
-  .uptop a span {
-    display: none;
-  }
-  .uptop .adrs,
-  .uptop .wrkt {
-    display: none;
-  }
-  .page {
-    overflow-x: hidden;
-    margin-top: 40px;
   }
   .ui-selectmenu-button {
     z-index: 1;

@@ -2,6 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  background: url("../images/header.jpg") no-repeat 50% 50%;
+  background-size: cover;
 }
 
 .header-primary {
@@ -31,7 +33,7 @@
 
 .header-contacts__address .icon {
   font-size: 24px;
-  margin: -2px 2px;
+  margin: -5px 0;
 }
 
 .header-phones {
@@ -42,6 +44,7 @@
 .header-phones__item {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .header-phones__item-ico {
@@ -60,6 +63,9 @@
 
 .header-callback {
   font-size: 14px;
+  background: transparent;
+  border: none;
+  padding: 0;
   text-align: center;
   display: block;
   line-height: 32px;
@@ -114,6 +120,7 @@
 
 .header-menu {
   display: flex;
+  gap: 24px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -130,6 +137,7 @@
   display: block;
   white-space: nowrap;
   font-weight: 500;
+  position: relative;
 }
 
 .header-menu li a::after {
