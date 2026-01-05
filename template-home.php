@@ -33,55 +33,82 @@ $productsQuery = new WP_Query($args);
 
   <?php get_template_part("partials/header"); ?>
 
-  <div class="page">
-    <?php if ($presentation = get_field("presentation")): ?>
-      <div class="intro" style="display: none;">
-        <div class="intro__slideshow">
-          <div class="swiper intro-slideshow">
-            <div class="swiper-wrapper">
-              <?php foreach ($group["slideshow"] as $item): ?>
-                <div class="swiper-slide intro-slideshow__slide">
-                  <?php if (!empty($item["video"])): ?>
-                    <video class="intro-slideshow__video" muted playsinline autoplay
-                      src="<?php echo $item["video"]["url"]; ?>"></video>
-                  <?php endif; ?>
-                  <?php if (!empty($item["image"])): ?>
-                    <img class="intro-slideshow__image" src="<?php echo $item["image"]["url"]; ?>">
-                  <?php endif; ?>
-                </div>
-              <?php endforeach; ?>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-        <div class="intro__nav">
-          <div class="main-nav">
-            <button class="main-nav__close"></button>
-            <?php wp_nav_menu([
-              "theme_location" => "main",
-              "container" => false,
-            ]); ?>
-          </div>
-        </div>
-        <div class="intro__content">
-          <div class="intro__content-logo">
-            <img src="<?php echo $group["content"]["logo"]["url"]; ?>" alt="">
-          </div>
-          <h1 class="intro__content-after">
-            <?php echo $group["content"]["after"]; ?>
-          </h1>
-          <a href="<?php echo $group["content"]["link"]; ?>" class="intro__content-description">
-            <?php echo $group["content"]["description"]; ?>
-          </a>
-        </div>
-        <button class="header__toggle intro__toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    <?php endif; ?>
+  <?php if ($presentation = get_field("presentation")): ?>
+    <div class="intro">
+      <?php if ($bg_video = $presentation['bg_video']): ?>
+        <video class="intro__video" muted playsinline autoplay src="<?php echo $bg_video['url'] ?>"></video>
+      <?php endif; ?>
 
+      <div class="container">
+        <div class="intro__logo">
+          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/big-white-logo.png" alt="<?php bloginfo('name') ?>" class="intro__logo-img">
+          <?php if ($discount = $presentation['discount']): ?>
+            <div class="intro__discount">
+              <?php echo nl2br($discount); ?>
+            </div>
+          <?php endif; ?>
+        </div>
+        <div class="intro__order">
+          <a href="/kontakty/" class="intro__order-btn">
+            Заказать бетон <span class="icon icon-arrow-right"></span>
+          </a>
+          <?php if ($conditions = $presentation['conditions']): ?>
+            <div class="intro__conditions">
+              <?php echo nl2br($conditions); ?>
+            </div>
+          <?php endif; ?>
+        </div>
+        <div class="intro__texts">
+          <div class="intro__text intro__text_1">
+            <div class="intro__text-content">
+              Испытание образцов бетона на прочность
+            </div>
+            <div class="intro__text-desc">
+              ГОСТ 12730.1
+            </div>
+          </div>
+          <div class="intro__text intro__text_2">
+            <div class="intro__text-content">
+              Определение морозостойкости образцов бетона
+            </div>
+            <div class="intro__text-desc">
+              ГОСТ 10060-2012
+            </div>
+          </div>
+          <div class="intro__text intro__text_3">
+            <div class="intro__text-content">
+              Измерение прочности бетонных конструкций на месте проведения строительных работ
+            </div>
+            <div class="intro__text-desc">
+              Склерометр ИПС-МГ4.03
+            </div>
+          </div>
+          <div class="intro__text intro__text_4">
+            <div class="intro__text-content">
+              Измерение подвижности бетона<br>
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/icon-wave.svg" alt="<?php bloginfo('name') ?>">
+            </div>
+            <div class="intro__text-desc">
+              ГОСТ 10181
+            </div>
+          </div>
+          <div class="intro__text intro__text_5">
+            <div class="intro__text-content">
+              Определение пористости бетонной смеси
+            </div>
+          </div>
+          <div class="intro__text intro__text_6">
+            <div class="intro__text-content">
+              Измерение сохранности свойств бетонной смеси во времени<br>
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/icon-wave.svg" alt="<?php bloginfo('name') ?>">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
+
+  <div class="page">
     <div class="main">
       <div class="container">
 

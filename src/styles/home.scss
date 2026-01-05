@@ -1,3 +1,65 @@
+.intro {
+  position: relative;
+  background: #0c3057;
+  z-index: 50;
+  padding-top: 74px;
+}
+
+.intro__video {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  object-fit: cover;
+}
+
+.intro__logo {
+  display: flex;
+  position: relative;
+}
+
+.intro__logo::before {
+  content: "";
+  position: absolute;
+  right: -116px;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 84px);
+  background: #0035bb;
+}
+
+.intro__logo-img {
+  width: 100%;
+  height: auto;
+}
+
+.intro__discount {
+}
+
+.intro__order {
+}
+
+.intro__order-btn {
+}
+
+.intro__conditions {
+}
+
+.intro__texts {
+}
+
+.intro__text {
+}
+
+.intro__text-content {
+}
+
+.intro__text-desc {
+}
+
 .home-news {
   margin-top: 68px;
   margin-bottom: 68px;

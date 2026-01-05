@@ -122,7 +122,6 @@
   white-space: nowrap;
   position: relative;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
 .header-callback::after {
@@ -132,9 +131,9 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 2px;
+  bottom: 0;
   background: currentColor;
-  transition: 0.3s ease;
+  transition: width 0.3s ease;
 }
 
 .header-callback:hover {
@@ -150,14 +149,13 @@
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  padding-top: 20px;
+  padding-top: 28px;
   padding-bottom: 20px;
 }
 
 .header-logo {
   display: flex;
   opacity: 0.74;
-  transition: 0.3s ease;
   filter: brightness(0) invert(1) brightness(1000%);
 }
 
@@ -198,15 +196,18 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
+  opacity: 0;
   background: rgb(var(--color));
   transition: 0.3s ease;
 }
 
 .header-menu li.current-menu-item a::after {
   width: 36px;
+  opacity: 1;
 }
 
 .header-menu li a:hover::after {
+  opacity: 1;
   width: 50px;
   background: #eb8a1c;
 }
