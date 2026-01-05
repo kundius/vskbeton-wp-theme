@@ -14,6 +14,7 @@
   bottom: 0;
   display: block;
   object-fit: cover;
+  opacity: 0.5;
 }
 
 .intro__logo {
@@ -29,6 +30,20 @@
   bottom: 0;
   left: calc(50% - 84px);
   background: #0035bb;
+  z-index: -1;
+  mix-blend-mode: color-burn;
+}
+
+.intro__logo::after {
+  content: "";
+  position: absolute;
+  right: -222px;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 84px);
+  background: #0035bb;
+  z-index: -1;
+  mix-blend-mode: color-burn;
 }
 
 .intro__logo-img {
@@ -37,6 +52,22 @@
 }
 
 .intro__discount {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  color: #fff;
+  padding: 6px 24px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(81, 196, 173);
+  background-color: rgb(44, 55, 67);
 }
 
 .intro__order {

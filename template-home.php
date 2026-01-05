@@ -36,7 +36,7 @@ $productsQuery = new WP_Query($args);
   <?php if ($presentation = get_field("presentation")): ?>
     <div class="intro">
       <?php if ($bg_video = $presentation['bg_video']): ?>
-        <video class="intro__video" muted playsinline autoplay src="<?php echo $bg_video['url'] ?>"></video>
+        <video class="intro__video" muted playsinline autoplay loop src="<?php echo $bg_video['url'] ?>"></video>
       <?php endif; ?>
 
       <div class="container">
