@@ -177,14 +177,17 @@
 }
 
 .intro__texts {
-  height: 248px;
+  --gap: 8px;
+  --size: 232px;
+
+  height: calc(var(--gap) + var(--gap) + var(--size));
   position: relative;
 }
 
 .intro__text {
   background-color: rgb(0, 20, 176);
-  width: 232px;
-  height: 232px;
+  width: var(--size);
+  height: var(--size);
   padding: 40px 24px;
 }
 
@@ -206,36 +209,36 @@
 .intro__text_1 {
   position: absolute;
   top: -140px;
-  left: -232px;
+  left: calc(var(--size) * -1);
 }
 
 .intro__text_2 {
   position: absolute;
   top: -140px;
-  left: 8px;
+  left: var(--gap);
 }
 
 .intro__text_3 {
   position: absolute;
-  top: 8px;
-  left: calc(8px + 232px + 8px);
+  top: var(--gap);
+  left: calc(var(--gap) + var(--size) + var(--gap));
 }
 
 .intro__text_4 {
   position: absolute;
-  top: 8px;
-  left: calc(8px + 232px + 8px + 232px + 8px);
+  top: var(--gap);
+  left: calc(var(--gap) + var(--size) + var(--gap) + var(--size) + var(--gap));
 }
 
 .intro__text_5 {
   position: absolute;
-  top: 8px;
-  right: calc(232px + 8px - 200px);
+  top: var(--gap);
+  right: calc(var(--size) + var(--gap) - 200px);
 }
 
 .intro__text_6 {
   position: absolute;
-  top: 8px;
+  top: var(--gap);
   right: -200px;
 }
 
