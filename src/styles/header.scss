@@ -1,9 +1,21 @@
 .header {
   position: sticky;
-  top: 0;
+  top: var(--wp-admin--admin-bar--height, 0px);
   z-index: 100;
-  background: url("../images/header.jpg") no-repeat 50% 50%;
   background-size: cover;
+  background: #0c3057;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: url("../images/header.jpg") no-repeat 50% 50%;
+  opacity: 0.5;
 }
 
 .header-primary {
