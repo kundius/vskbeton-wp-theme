@@ -11,6 +11,9 @@ import Swiper, {
   Thumbs,
 } from "swiper";
 import "fslightbox";
+import { initStickyHeader } from "./sticky-header";
+
+initStickyHeader();
 
 new Swiper(".geography-slideshow .swiper", {
   modules: [Autoplay, Navigation],

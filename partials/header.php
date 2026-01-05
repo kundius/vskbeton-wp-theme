@@ -1,5 +1,5 @@
 <?php $data = get_field('header', 'option') ?>
-<div class="header">
+<div class="header" data-sticky-header>
   <div class="container">
     <div class="header-primary">
       <div class="header-contacts">
@@ -55,3 +55,4 @@
     </div>
   </div>
 </div>
+<div class="header-anchor" data-sticky-header-anchor></div>
