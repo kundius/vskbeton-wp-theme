@@ -45,7 +45,7 @@
   top: 0;
   bottom: 0;
   left: calc(50% - 84px);
-  background: rgba(0, 53, 187, 0.5);
+  background: rgba(0, 53, 187, 1);
   z-index: -1;
   mix-blend-mode: color-burn;
 }
@@ -70,8 +70,8 @@
 .intro__discount {
   position: absolute;
   bottom: 260px;
-  left: calc(50% + 150px);
-  max-width: calc(50% - 150px);
+  right: 0;
+  max-width: calc(50% - 120px);
   color: #fff;
   padding: 24px;
   border-radius: 32px 32px 32px 0;
@@ -177,15 +177,66 @@
 }
 
 .intro__texts {
+  height: 250px;
+  position: relative;
 }
 
 .intro__text {
+  background-color: rgb(0, 20, 176);
+  width: 232px;
+  height: 232px;
+  padding: 40px 24px;
 }
 
 .intro__text-content {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  height: calc(1.2em * 6);
+  overflow: hidden;
 }
 
 .intro__text-desc {
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.intro__text_1 {
+  position: absolute;
+  top: -140px;
+  left: -232px;
+}
+
+.intro__text_2 {
+  position: absolute;
+  top: -140px;
+  left: -6px;
+}
+
+.intro__text_3 {
+  position: absolute;
+  top: 6px;
+  left: calc(6px + 232px + 6px);
+}
+
+.intro__text_4 {
+  position: absolute;
+  top: 6px;
+  left: calc(6px + 232px + 6px + 232px + 6px);
+}
+
+.intro__text_5 {
+  position: absolute;
+  top: 6px;
+  right: calc(232px + 6px - 200px);
+}
+
+.intro__text_6 {
+  position: absolute;
+  top: 6px;
+  right: -200px;
 }
 
 .home-news {
