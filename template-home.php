@@ -50,7 +50,7 @@ $productsQuery = new WP_Query($args);
         </div>
         <div class="intro__order">
           <a href="/kontakty/" class="intro__order-btn">
-            Заказать бетон <span class="icon icon-arrow-right"></span>
+            Получить консультацию <span class="icon icon-arrow-right"></span>
           </a>
           <?php if ($conditions = $presentation['conditions']): ?>
             <div class="intro__conditions">
