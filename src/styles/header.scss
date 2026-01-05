@@ -20,6 +20,10 @@
   transition: 0.3s ease;
 }
 
+body:has(.intro) .header::before {
+  display: none;
+}
+
 .header::after {
   content: "";
   position: absolute;
@@ -31,6 +35,10 @@
   background: #0c3057;
   opacity: 0.75;
   transition: 0.3s ease;
+}
+
+body:has(.intro) .header::after {
+  opacity: 0;
 }
 
 .header-anchor {

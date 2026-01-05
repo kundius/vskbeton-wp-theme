@@ -5,6 +5,11 @@
   padding-top: 74px;
 }
 
+.header-anchor + .intro {
+  padding-top: calc(74px + 112px);
+  margin-top: -112px;
+}
+
 .intro__video {
   position: absolute;
   z-index: -1;
