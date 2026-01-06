@@ -217,6 +217,10 @@
     padding-top: var(--gap);
     padding-bottom: var(--gap);
   }
+  @include below(md) {
+    --gap: 8px;
+    --width: 160px;
+  }
 }
 
 .intro__text {
@@ -369,6 +373,12 @@
       display: block;
       order: 35;
       width: calc(100% - (var(--width) * 3) - (var(--gap) * 3));
+    }
+  }
+  @include below(md) {
+    &::before,
+    &::after {
+      display: none;
     }
   }
 }
