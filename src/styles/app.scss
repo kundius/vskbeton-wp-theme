@@ -25,6 +25,13 @@
 
   @include below(md) {
     --container-padding: 16px;
+    --header-height: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed;
   }
 }
 

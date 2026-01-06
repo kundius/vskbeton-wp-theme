@@ -123,6 +123,12 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
 .header-phones {
   display: flex;
   gap: 16px;
+
+  @include below(md) {
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 8px;
+  }
 }
 
 .header-phones__item {
@@ -203,6 +209,9 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   @include below(lg) {
     padding-top: 16px;
     padding-bottom: 8px;
+  }
+  @include below(md) {
+    padding-top: 8px;
   }
 }
 
