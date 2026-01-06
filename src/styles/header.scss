@@ -20,14 +20,6 @@
   transition: 0.3s ease;
 }
 
-body:has(.intro) .header:not([data-sticky-header="active"])::before {
-  display: none;
-}
-
-body:has(.intro) .header:not([data-sticky-header="active"])::after {
-  opacity: 0;
-}
-
 .header::after {
   content: "";
   position: absolute;
@@ -47,6 +39,14 @@ body:has(.intro) .header:not([data-sticky-header="active"])::after {
   width: 100%;
 }
 
+body:has(.intro) .header::before {
+  display: none;
+}
+
+body:has(.intro) .header::after {
+  opacity: 0;
+}
+
 .header:has([data-header-toggle="active"]),
 .header[data-sticky-header="active"] {
   --color: 34, 34, 34;
@@ -62,6 +62,16 @@ body:has(.intro) .header:not([data-sticky-header="active"])::after {
 .header:has([data-header-toggle="active"]) .header-logo,
 .header[data-sticky-header="active"] .header-logo {
   filter: none;
+  opacity: 1;
+}
+
+body:has(.intro) .header:has([data-header-toggle="active"])::before,
+body:has(.intro) .header[data-sticky-header="active"]::before {
+  display: block;
+}
+
+body:has(.intro) .header:has([data-header-toggle="active"])::after,
+body:has(.intro) .header[data-sticky-header="active"]::after {
   opacity: 1;
 }
 
