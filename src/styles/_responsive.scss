@@ -21,8 +21,18 @@
       @content;
     }
   }
-  @if $point == xxl {
-    @media (min-width: #{$breakpoint-xxl}) {
+  @if $point == 2xl {
+    @media (min-width: #{$breakpoint-2xl}) {
+      @content;
+    }
+  }
+  @if $point == 3xl {
+    @media (min-width: #{$breakpoint-3xl}) {
+      @content;
+    }
+  }
+  @if $point == 4xl {
+    @media (min-width: #{$breakpoint-4xl}) {
       @content;
     }
   }
@@ -49,8 +59,18 @@
       @content;
     }
   }
-  @if $point == xxl {
-    @media (max-width: #{$breakpoint-xxl - 1}) {
+  @if $point == 2xl {
+    @media (max-width: #{$breakpoint-2xl - 1}) {
+      @content;
+    }
+  }
+  @if $point == 3xl {
+    @media (max-width: #{$breakpoint-3xl - 1}) {
+      @content;
+    }
+  }
+  @if $point == 4xl {
+    @media (max-width: #{$breakpoint-4xl - 1}) {
       @content;
     }
   }

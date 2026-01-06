@@ -210,36 +210,65 @@
   position: absolute;
   top: -140px;
   left: calc(var(--size) * -1);
+
+  @include below(2xl) {
+    left: 0;
+  }
 }
 
 .intro__text_2 {
   position: absolute;
   top: -140px;
   left: var(--gap);
+
+  @include below(2xl) {
+    left: calc(var(--gap) + var(--size));
+  }
 }
 
 .intro__text_3 {
   position: absolute;
   top: var(--gap);
   left: calc(var(--gap) + var(--size) + var(--gap));
+
+  @include below(2xl) {
+    left: calc(
+      var(--gap) + var(--size) + var(--gap) + var(--size) + var(--gap)
+    );
+  }
 }
 
 .intro__text_4 {
   position: absolute;
   top: var(--gap);
   left: calc(var(--gap) + var(--size) + var(--gap) + var(--size) + var(--gap));
+
+  @include below(2xl) {
+    left: calc(
+      var(--gap) + var(--size) + var(--gap) + var(--size) + var(--gap) +
+        var(--size) + var(--gap)
+    );
+  }
 }
 
 .intro__text_5 {
   position: absolute;
   top: var(--gap);
   right: calc(var(--size) + var(--gap) - 200px);
+
+  @include below(2xl) {
+    right: calc(var(--size) + var(--gap));
+  }
 }
 
 .intro__text_6 {
   position: absolute;
   top: var(--gap);
   right: -200px;
+
+  @include below(2xl) {
+    right: 0;
+  }
 }
 
 .home-news {
