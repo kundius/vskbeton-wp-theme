@@ -47,16 +47,19 @@ body:has(.intro) .header:not([data-sticky-header="active"])::after {
   width: 100%;
 }
 
+.header:has([data-header-toggle="active"]),
 .header[data-sticky-header="active"] {
   --color: 34, 34, 34;
   box-shadow: 0px 3px 6px 0px rgba(38, 70, 102, 0.16);
 }
 
+.header:has([data-header-toggle="active"])::after,
 .header[data-sticky-header="active"]::after {
   background: #fff;
   opacity: 1;
 }
 
+.header:has([data-header-toggle="active"]) .header-logo,
 .header[data-sticky-header="active"] .header-logo {
   filter: none;
   opacity: 1;
