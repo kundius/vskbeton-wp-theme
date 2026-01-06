@@ -365,7 +365,6 @@
   @include below(lg) {
     content: "";
     display: block;
-    flex-grow: 1;
     order: 35;
     width: calc(100% - (var(--width) * 3) - (var(--gap) * 3));
   }
@@ -375,8 +374,8 @@
   @include below(lg) {
     content: "";
     display: block;
-    flex-grow: 1;
     order: 35;
+    width: calc(100% - (var(--width) * 3) - (var(--gap) * 3));
   }
 }
 
