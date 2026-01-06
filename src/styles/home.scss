@@ -361,21 +361,15 @@
   }
 }
 
-.intro__texts::before {
+.intro__texts {
   @include below(lg) {
-    content: "";
-    display: block;
-    order: 35;
-    width: calc(100% - (var(--width) * 3) - (var(--gap) * 3));
-  }
-}
-
-.intro__texts::after {
-  @include below(lg) {
-    content: "";
-    display: block;
-    order: 35;
-    width: calc(100% - (var(--width) * 3) - (var(--gap) * 3));
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      order: 35;
+      width: calc(100% - (var(--width) * 3) - (var(--gap) * 3));
+    }
   }
 }
 
