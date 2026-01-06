@@ -225,7 +225,7 @@
   left: calc(var(--size) * -1);
 
   @include below(2xl) {
-    left: 0;
+    left: calc((var(--container-padding) - var(--gap)) * -1);
   }
 }
 
@@ -235,7 +235,9 @@
   left: var(--gap);
 
   @include below(2xl) {
-    left: calc(var(--gap) + var(--size));
+    left: calc(
+      var(--gap) + var(--size) + ((var(--container-padding) - var(--gap)) * -1)
+    );
   }
 }
 
@@ -246,7 +248,8 @@
 
   @include below(2xl) {
     left: calc(
-      var(--gap) + var(--size) + var(--gap) + var(--size) + var(--gap)
+      var(--gap) + var(--size) + var(--gap) + var(--size) + var(--gap) +
+        ((var(--container-padding) - var(--gap)) * -1)
     );
   }
 }
@@ -259,7 +262,8 @@
   @include below(2xl) {
     left: calc(
       var(--gap) + var(--size) + var(--gap) + var(--size) + var(--gap) +
-        var(--size) + var(--gap)
+        var(--size) + var(--gap) +
+        ((var(--container-padding) - var(--gap)) * -1)
     );
   }
 }
@@ -271,7 +275,7 @@
 
   @include below(2xl) {
     right: calc(
-      var(--size) + var(--gap) - ((var(--container-padding) - var(--gap)) * -1)
+      var(--size) + var(--gap) + ((var(--container-padding) - var(--gap)) * -1)
     );
   }
 }
