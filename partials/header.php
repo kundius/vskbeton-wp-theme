@@ -47,6 +47,11 @@
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/logo.png" alt="<?php bloginfo('name') ?>" width="120" height="28" class="header-logo__image">
       </a>
 
+      <button type="button" class="header-toggle" data-header-toggle>
+        <span class="icon icon-menu"></span>
+        <span class="icon icon-close"></span>
+      </button>
+
       <?php wp_nav_menu([
         'theme_location' => 'main',
         'menu_class' => 'header-menu',

@@ -12,7 +12,9 @@ import Swiper, {
 } from "swiper";
 import "fslightbox";
 import { initStickyHeader } from "./sticky-header";
+import { initHeaderToggle } from "./header-toggle";
 
+initHeaderToggle();
 initStickyHeader();
 
 new Swiper(".geography-slideshow .swiper", {
@@ -94,16 +96,3 @@ new Swiper(".block-partners .swiper", {
     },
   },
 });
-
-const headerToggle = document.querySelector(".header__toggle");
-const mainNav = document.querySelector(".main-nav");
-const mainNavClose = document.querySelector(".main-nav__close");
-
-if (headerToggle && mainNav && mainNavClose) {
-  headerToggle.addEventListener("click", () => {
-    mainNav.classList.add("main-nav_opened");
-  });
-  mainNavClose.addEventListener("click", () => {
-    mainNav.classList.remove("main-nav_opened");
-  });
-}

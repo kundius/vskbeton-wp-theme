@@ -78,6 +78,10 @@ body:has(.intro) .header:not([data-sticky-header="active"])::after {
     gap: 0;
     flex-direction: column;
   }
+
+  @include below(lg) {
+    display: none;
+  }
 }
 
 .header-contacts__schedule {
@@ -183,12 +187,48 @@ body:has(.intro) .header:not([data-sticky-header="active"])::after {
 .header-logo__image {
 }
 
+.header-toggle {
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0;
+  background: transparent;
+  border: none;
+
+  @include above(lg) {
+    display: none;
+  }
+}
+
+.header-toggle:not([data-header-toggle="active"]) .icon-close {
+  display: none;
+}
+
+.header-toggle[data-header-toggle="active"] .icon-menu {
+  display: none;
+}
+
 .header-menu {
   display: flex;
   gap: 24px;
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @include below(lg) {
+    position: fixed;
+    top: calc(var(--wp-admin--admin-bar--height, 0px) + 112px + 8px);
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    background: #fff;
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 .header-menu li {
