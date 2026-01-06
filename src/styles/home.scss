@@ -250,6 +250,9 @@
   @include below(xl) {
     padding: 16px 12px;
   }
+  @include below(md) {
+    aspect-ratio: initial;
+  }
 }
 
 .intro__text-content {
