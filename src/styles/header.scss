@@ -73,23 +73,28 @@ body:has(.intro) .header:not([data-sticky-header="active"])::after {
   display: flex;
   align-items: flex-start;
   gap: 16px;
+
+  @include below(xl) {
+    gap: 0;
+    flex-direction: row-reverse;
+  }
 }
 
 .header-contacts__schedule {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 16px;
   color: rgba(var(--color), 0.65);
 }
 
 .header-contacts__address {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 16px;
   color: rgba(var(--color), 0.65);
 }
 
 .header-contacts__address .icon {
   font-size: 24px;
-  margin: -5px 0;
+  margin: -8px 0;
 }
 
 .header-phones {
