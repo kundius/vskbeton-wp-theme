@@ -76,7 +76,7 @@ body:has(.intro) .header:not([data-sticky-header="active"])::after {
 
   @include below(xl) {
     gap: 0;
-    flex-direction: row-reverse;
+    flex-direction: column;
   }
 }
 
@@ -95,6 +95,10 @@ body:has(.intro) .header:not([data-sticky-header="active"])::after {
 .header-contacts__address .icon {
   font-size: 24px;
   margin: -8px 0;
+
+  @include below(xl) {
+    display: none;
+  }
 }
 
 .header-phones {
