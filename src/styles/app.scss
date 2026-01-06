@@ -13,9 +13,14 @@
 :root {
   --container-width: 1200px;
   --container-padding: 36px;
+  --header-height: 112px;
 
   @include below(xl) {
     --container-padding: 24px;
+  }
+
+  @include below(lg) {
+    --header-height: 100px;
   }
 
   @include below(md) {

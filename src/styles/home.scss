@@ -7,8 +7,8 @@
 }
 
 .header-anchor + .intro {
-  padding-top: calc(74px + 112px);
-  margin-top: -112px;
+  padding-top: calc(74px + var(--header-height));
+  margin-top: calc(var(--header-height) * -1);
 }
 
 .intro__video {

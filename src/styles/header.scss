@@ -172,6 +172,11 @@ body:has(.intro) .header:not([data-sticky-header="active"])::after {
   gap: 16px;
   padding-top: 28px;
   padding-bottom: 20px;
+
+  @include below(lg) {
+    padding-top: 16px;
+    padding-bottom: 8px;
+  }
 }
 
 .header-logo {
@@ -194,14 +199,19 @@ body:has(.intro) .header:not([data-sticky-header="active"])::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: rgb(var(--color));
   padding: 0;
   background: transparent;
   border: none;
+  border: 2px solid currentColor;
 
   @include above(lg) {
     display: none;
   }
+}
+
+.header-toggle:hover {
+  color: #eb8a1c;
 }
 
 .header-toggle:not([data-header-toggle="active"]) .icon-close {
@@ -221,13 +231,16 @@ body:has(.intro) .header:not([data-sticky-header="active"])::after {
 
   @include below(lg) {
     position: fixed;
-    top: calc(var(--wp-admin--admin-bar--height, 0px) + 112px + 8px);
+    top: calc(
+      var(--wp-admin--admin-bar--height, 0px) + var(--header-height) + 8px
+    );
     left: 8px;
     right: 8px;
     bottom: 8px;
     background: #fff;
     flex-direction: column;
     gap: 12px;
+    padding: 16px;
   }
 }
 
@@ -243,6 +256,10 @@ body:has(.intro) .header:not([data-sticky-header="active"])::after {
   white-space: nowrap;
   font-weight: 500;
   position: relative;
+
+  @include below(lg) {
+    color: rgb(34, 34, 34);
+  }
 }
 
 .header-menu li a::after {
