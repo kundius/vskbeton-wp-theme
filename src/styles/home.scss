@@ -270,7 +270,9 @@
   right: calc(var(--size) + var(--gap) - 200px);
 
   @include below(2xl) {
-    right: calc(var(--size) + var(--gap));
+    right: calc(
+      var(--size) + var(--gap) - ((var(--container-padding) - var(--gap)) * -1)
+    );
   }
 }
 
@@ -280,7 +282,7 @@
   right: -200px;
 
   @include below(2xl) {
-    right: 0;
+    right: calc((var(--container-padding) - var(--gap)) * -1);
   }
 }
 
