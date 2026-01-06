@@ -70,7 +70,8 @@
 
 .intro__discount {
   position: absolute;
-  bottom: 92%;
+  bottom: 100%;
+  transform: translateY(32px);
   right: 0;
   color: #fff;
   padding: 1em;
@@ -93,6 +94,7 @@
   }
   @include below(md) {
     font-size: 14px;
+    transform: translateY(-8px);
   }
 }
 
