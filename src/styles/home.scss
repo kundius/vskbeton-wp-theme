@@ -210,6 +210,7 @@
     --gap: 8px;
     --width: 196px;
 
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap);
@@ -255,6 +256,7 @@
   position: absolute;
   top: -140px;
   left: calc(var(--width) * -1);
+  order: 10;
 
   @include below(2xl) {
     left: calc((var(--container-padding) - var(--gap)) * -1);
@@ -270,6 +272,7 @@
   position: absolute;
   top: -140px;
   left: var(--gap);
+  order: 20;
 
   @include below(2xl) {
     left: calc(
@@ -287,6 +290,7 @@
   position: absolute;
   top: var(--gap);
   left: calc(var(--gap) + var(--width) + var(--gap));
+  order: 30;
 
   @include below(2xl) {
     left: calc(
@@ -307,6 +311,7 @@
   left: calc(
     var(--gap) + var(--width) + var(--gap) + var(--width) + var(--gap)
   );
+  order: 40;
 
   @include below(2xl) {
     left: calc(
@@ -319,7 +324,6 @@
     position: relative;
     top: initial;
     left: initial;
-    margin-left: auto;
   }
 }
 
@@ -327,6 +331,7 @@
   position: absolute;
   top: var(--gap);
   right: calc(var(--width) + var(--gap) - 200px);
+  order: 50;
 
   @include below(2xl) {
     right: calc(
@@ -344,6 +349,7 @@
   position: absolute;
   top: var(--gap);
   right: -200px;
+  order: 60;
 
   @include below(2xl) {
     right: calc((var(--container-padding) - var(--gap)) * -1);
@@ -352,6 +358,24 @@
     position: relative;
     top: initial;
     right: initial;
+  }
+}
+
+.intro__text::before {
+  @include below(lg) {
+    content: "";
+    display: block;
+    flex-grow: 1;
+    order: 35;
+  }
+}
+
+.intro__text::after {
+  @include below(lg) {
+    content: "";
+    display: block;
+    flex-grow: 1;
+    order: 35;
   }
 }
 
