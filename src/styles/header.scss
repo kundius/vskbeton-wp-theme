@@ -20,6 +20,13 @@
   transition: 0.3s ease;
 }
 
+.header .container {
+  @include below(md) {
+    padding-left: calc(var(--container-padding) / 2);
+    padding-right: calc(var(--container-padding) / 2);
+  }
+}
+
 .header::after {
   content: "";
   position: absolute;
@@ -128,6 +135,10 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   display: flex;
   color: rgba(var(--color), 0.65);
   font-size: 24px;
+
+  @include below(md) {
+    font-size: 20px;
+  }
 }
 
 .header-phones__item-num {
@@ -136,6 +147,10 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   line-height: 1;
   white-space: nowrap;
   font-weight: 700;
+
+  @include below(md) {
+    font-size: 14px;
+  }
 }
 
 .header-callback {
@@ -151,6 +166,10 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   white-space: nowrap;
   position: relative;
   cursor: pointer;
+
+  @include below(md) {
+    display: none;
+  }
 }
 
 .header-callback::after {
