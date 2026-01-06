@@ -89,7 +89,7 @@
     font-size: 20px;
   }
   @include below(lg) {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -185,7 +185,9 @@
     font-size: 20px;
   }
   @include below(lg) {
-    font-size: 16px;
+    font-size: 18px;
+    right: 0;
+    left: initial;
   }
 }
 
