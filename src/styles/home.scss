@@ -73,8 +73,8 @@
   bottom: 92%;
   right: 0;
   color: #fff;
-  padding: 24px;
-  border-radius: 32px 32px 32px 0;
+  padding: 1em;
+  border-radius: 1.5em 1.5em 1.5em 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,7 +87,9 @@
 
   @include below(xl) {
     font-size: 20px;
-    padding: 20px;
+  }
+  @include below(lg) {
+    font-size: 16px;
   }
 }
 
@@ -167,8 +169,8 @@
   bottom: 60px;
   left: calc(50% + 168px);
   color: #fff;
-  padding: 24px;
-  border-radius: 32px 32px 32px 0;
+  padding: 1em;
+  border-radius: 1.5em 1.5em 1.5em 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,30 +183,39 @@
 
   @include below(xl) {
     font-size: 20px;
-    padding: 20px;
+  }
+  @include below(lg) {
+    font-size: 16px;
   }
 }
 
 .intro__texts {
   --gap: 8px;
-  --size: 232px;
+  --width: 232px;
 
-  height: calc(var(--gap) + var(--gap) + var(--size));
+  height: calc(var(--gap) + var(--gap) + var(--width));
   position: relative;
 
   @include below(2xl) {
     --gap: 4px;
-    --size: 196px;
+    --width: 196px;
   }
   @include below(xl) {
     --gap: 5px;
-    --size: 164px;
+    --width: 164px;
+  }
+  @include below(lg) {
+    --gap: 8px;
+    --width: 164px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 .intro__text {
   background-color: rgb(0, 20, 176);
-  width: var(--size);
+  width: var(--width);
   aspect-ratio: 1;
   padding: 40px 24px;
 
@@ -238,10 +249,15 @@
 .intro__text_1 {
   position: absolute;
   top: -140px;
-  left: calc(var(--size) * -1);
+  left: calc(var(--width) * -1);
 
   @include below(2xl) {
     left: calc((var(--container-padding) - var(--gap)) * -1);
+  }
+  @include below(lg) {
+    position: relative;
+    top: initial;
+    left: initial;
   }
 }
 
@@ -252,47 +268,69 @@
 
   @include below(2xl) {
     left: calc(
-      var(--gap) + var(--size) + ((var(--container-padding) - var(--gap)) * -1)
+      var(--gap) + var(--width) + ((var(--container-padding) - var(--gap)) * -1)
     );
+  }
+  @include below(lg) {
+    position: relative;
+    top: initial;
+    left: initial;
   }
 }
 
 .intro__text_3 {
   position: absolute;
   top: var(--gap);
-  left: calc(var(--gap) + var(--size) + var(--gap));
+  left: calc(var(--gap) + var(--width) + var(--gap));
 
   @include below(2xl) {
     left: calc(
-      var(--gap) + var(--size) + var(--gap) + var(--size) + var(--gap) +
+      var(--gap) + var(--width) + var(--gap) + var(--width) + var(--gap) +
         ((var(--container-padding) - var(--gap)) * -1)
     );
+  }
+  @include below(lg) {
+    position: relative;
+    top: initial;
+    left: initial;
   }
 }
 
 .intro__text_4 {
   position: absolute;
   top: var(--gap);
-  left: calc(var(--gap) + var(--size) + var(--gap) + var(--size) + var(--gap));
+  left: calc(
+    var(--gap) + var(--width) + var(--gap) + var(--width) + var(--gap)
+  );
 
   @include below(2xl) {
     left: calc(
-      var(--gap) + var(--size) + var(--gap) + var(--size) + var(--gap) +
-        var(--size) + var(--gap) +
+      var(--gap) + var(--width) + var(--gap) + var(--width) + var(--gap) +
+        var(--width) + var(--gap) +
         ((var(--container-padding) - var(--gap)) * -1)
     );
+  }
+  @include below(lg) {
+    position: relative;
+    top: initial;
+    left: initial;
   }
 }
 
 .intro__text_5 {
   position: absolute;
   top: var(--gap);
-  right: calc(var(--size) + var(--gap) - 200px);
+  right: calc(var(--width) + var(--gap) - 200px);
 
   @include below(2xl) {
     right: calc(
-      var(--size) + var(--gap) + ((var(--container-padding) - var(--gap)) * -1)
+      var(--width) + var(--gap) + ((var(--container-padding) - var(--gap)) * -1)
     );
+  }
+  @include below(lg) {
+    position: relative;
+    top: initial;
+    right: initial;
   }
 }
 
@@ -303,6 +341,11 @@
 
   @include below(2xl) {
     right: calc((var(--container-padding) - var(--gap)) * -1);
+  }
+  @include below(lg) {
+    position: relative;
+    top: initial;
+    right: initial;
   }
 }
 
