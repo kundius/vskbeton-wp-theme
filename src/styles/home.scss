@@ -361,7 +361,7 @@
   }
 }
 
-.intro__text::before {
+.intro__texts::before {
   @include below(lg) {
     content: "";
     display: block;
@@ -370,7 +370,7 @@
   }
 }
 
-.intro__text::after {
+.intro__texts::after {
   @include below(lg) {
     content: "";
     display: block;
