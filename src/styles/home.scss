@@ -174,7 +174,8 @@
 .intro__conditions {
   position: absolute;
   bottom: 60px;
-  left: calc(50% + 168px);
+  left: 50%;
+  transform: translateX(168px);
   color: #fff;
   padding: 1em;
   border-radius: 1.5em 1.5em 1.5em 0;
@@ -193,11 +194,11 @@
   }
   @include below(lg) {
     font-size: 18px;
-    right: 0;
-    left: initial;
+    transform: translateX(90px);
   }
   @include below(md) {
     font-size: 14px;
+    transform: translateX(-50%);
   }
 }
 
