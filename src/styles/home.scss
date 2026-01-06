@@ -182,6 +182,11 @@
 
   height: calc(var(--gap) + var(--gap) + var(--size));
   position: relative;
+
+  @include below(2xl) {
+    --gap: 4px;
+    --size: 196px;
+  }
 }
 
 .intro__text {
@@ -189,6 +194,10 @@
   width: var(--size);
   height: var(--size);
   padding: 40px 24px;
+
+  @include below(2xl) {
+    padding: 32px 20px;
+  }
 }
 
 .intro__text-content {
@@ -197,6 +206,10 @@
   line-height: 1.2;
   height: calc(1.2em * 6);
   overflow: hidden;
+
+  @include below(2xl) {
+    font-size: 14px;
+  }
 }
 
 .intro__text-desc {

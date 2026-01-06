@@ -10,6 +10,19 @@
 @import "partners";
 @import "home";
 
+:root {
+  --container-width: 1200px;
+  --container-padding: 36px;
+
+  @include below(lg) {
+    --container-padding: 24px;
+  }
+
+  @include below(md) {
+    --container-padding: 16px;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -120,17 +133,12 @@ body {
 }
 
 .container {
-  width: 1248px;
-  padding-left: 24px;
-  padding-right: 24px;
+  width: calc(var(--container-width) + (var(--container-padding) * 2));
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-
-  @include below(md) {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 .advantages {
