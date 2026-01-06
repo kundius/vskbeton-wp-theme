@@ -206,11 +206,13 @@
   }
   @include below(lg) {
     --gap: 8px;
-    --width: 164px;
+    --width: 196px;
 
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    padding-top: var(--gap);
+    padding-bottom: var(--gap);
   }
 }
 
@@ -315,6 +317,7 @@
     position: relative;
     top: initial;
     left: initial;
+    margin-left: auto;
   }
 }
 
