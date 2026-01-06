@@ -65,11 +65,6 @@ body:has(.intro) .header::after {
   opacity: 1;
 }
 
-body:has(.intro) .header:has([data-header-toggle="active"])::before,
-body:has(.intro) .header[data-sticky-header="active"]::before {
-  display: block;
-}
-
 body:has(.intro) .header:has([data-header-toggle="active"])::after,
 body:has(.intro) .header[data-sticky-header="active"]::after {
   opacity: 1;
