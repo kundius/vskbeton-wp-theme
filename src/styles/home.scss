@@ -86,8 +86,9 @@
   position: absolute;
   bottom: 100%;
   z-index: 20;
-  transform: translateY(32px);
-  right: 0;
+  transform: translate(142px, 32px);
+  max-width: calc(50% - 142px);
+  left: 50%;
   color: #fff;
   width: max-content;
   padding: 1em;
@@ -204,9 +205,10 @@
 .intro__conditions {
   position: absolute;
   z-index: 20;
-  bottom: 60px;
+  bottom: 100%;
   left: 50%;
-  transform: translateX(168px);
+  transform: translate(168px, 8px);
+  max-width: calc(50% - 168px);
   color: #fff;
   padding: 1em;
   border-radius: 1.5em 1.5em 1.5em 0;
