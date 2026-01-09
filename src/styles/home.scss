@@ -9,6 +9,10 @@
 .header-anchor + .intro {
   padding-top: calc(74px + var(--header-height));
   margin-top: calc(var(--header-height) * -1);
+
+  @include below(md) {
+    padding-top: calc(24px + var(--header-height));
+  }
 }
 
 .intro__video {
@@ -35,9 +39,15 @@
 
 .intro__logo {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .intro__logo-wrap {
+  width: 100%;
   display: flex;
   position: relative;
   aspect-ratio: 1204 / 285;
@@ -115,11 +125,11 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-direction: column;
+  gap: 8px;
 
   @include below(md) {
     margin-top: 8px;
-    flex-direction: column;
-    gap: 8px;
   }
 }
 

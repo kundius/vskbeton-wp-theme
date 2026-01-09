@@ -51,14 +51,14 @@ $productsQuery = new WP_Query($args);
           </div>
         </div>
         <div class="intro__order">
-          <a href="/kontakty/" class="intro__order-btn">
-            Получить консультацию <span class="icon icon-arrow-right"></span>
-          </a>
           <?php if ($conditions = $presentation['conditions']): ?>
             <div class="intro__conditions">
               <?php echo nl2br($conditions); ?>
             </div>
           <?php endif; ?>
+          <a href="/kontakty/" class="intro__order-btn">
+            Получить консультацию <span class="icon icon-arrow-right"></span>
+          </a>
         </div>
         <div class="intro__texts">
           <div class="intro__text intro__text_1">
