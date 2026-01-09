@@ -1,0 +1,412 @@
+.intro {
+  position: relative;
+  background: #0c3057;
+  z-index: 50;
+  padding-top: 74px;
+  overflow: hidden;
+}
+
+.header-anchor + .intro {
+  padding-top: calc(74px + var(--header-height));
+  margin-top: calc(var(--header-height) * -1);
+}
+
+.intro__video {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.intro__logo {
+  position: relative;
+}
+
+.intro__logo-wrap {
+  width: 100%;
+  display: flex;
+  position: relative;
+  aspect-ratio: 1204 / 285;
+}
+
+.intro__logo-wrap::before {
+  content: "";
+  position: absolute;
+  right: -116px;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 84px);
+  background: rgba(0, 53, 187, 1);
+  z-index: -1;
+  mix-blend-mode: color-burn;
+}
+
+.intro__logo-wrap::after {
+  content: "";
+  position: absolute;
+  right: -116px;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 84px);
+  background: rgba(0, 53, 187, 0.5);
+  z-index: -1;
+  backdrop-filter: blur(20px);
+}
+
+.intro__logo-img {
+  width: 100%;
+  height: auto;
+}
+
+.intro__discount {
+  position: absolute;
+  bottom: 100%;
+  z-index: 20;
+  transform: translate(142px, 32px);
+  max-width: calc(50% - 142px);
+  left: 50%;
+  color: #fff;
+  width: max-content;
+  padding: 1em;
+  border-radius: 1.5em 1.5em 1.5em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(81, 196, 173);
+  background-color: rgb(44, 55, 67);
+
+  @include below(xl) {
+    font-size: 20px;
+  }
+  @include below(lg) {
+    font-size: 18px;
+  }
+  @include below(md) {
+    font-size: 14px;
+    transform: translate(-50%, -8px);
+    max-width: 100%;
+  }
+}
+
+.intro__order {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.intro__order-btn {
+  background: #f18b3a;
+  width: 360px;
+  max-width: 100%;
+  height: 72px;
+  overflow: hidden;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: 0.025em;
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+
+  @include below(md) {
+    font-size: 16px;
+  }
+}
+
+.intro__order-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 36px solid #db9157;
+  border-left: 36px solid transparent;
+  opacity: 0;
+  transition: 0.3s ease;
+  transform: translate(36px, -36px);
+}
+
+.intro__order-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 36px solid #db9157;
+  border-left: 36px solid transparent;
+  opacity: 0;
+  transition: 0.3s ease;
+  transform: translate(36px, 36px);
+}
+
+.intro__order-btn:hover {
+  background: #d87d34;
+}
+
+.intro__order-btn:hover::after {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.intro__order-btn:hover::before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.intro__conditions {
+  position: absolute;
+  z-index: 20;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(168px, 8px);
+  max-width: calc(50% - 168px);
+  color: #fff;
+  padding: 1em;
+  border-radius: 1.5em 1.5em 1.5em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  font-size: 24px;
+  line-height: 1;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(81, 196, 173);
+  background-color: rgb(44, 55, 67);
+
+  @include below(xl) {
+    font-size: 20px;
+  }
+  @include below(lg) {
+    font-size: 18px;
+    transform: translate(-50%, -8px);
+    max-width: 100%;
+  }
+  @include below(md) {
+    font-size: 14px;
+  }
+}
+
+.intro__texts {
+  --gap: 8px;
+  --width: 232px;
+
+  height: calc(var(--gap) + var(--gap) + var(--width));
+  position: relative;
+
+  @include below(2xl) {
+    --gap: 4px;
+    --width: 196px;
+  }
+  @include below(xl) {
+    --gap: 5px;
+    --width: 164px;
+  }
+  @include below(lg) {
+    --gap: 8px;
+    --width: 196px;
+
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    padding-top: var(--gap);
+    padding-bottom: var(--gap);
+  }
+  @include below(md) {
+    --gap: 8px;
+    --width: calc(50% - 4px);
+  }
+}
+
+.intro__text {
+  background-color: rgb(0, 20, 176);
+  width: var(--width);
+  aspect-ratio: 1;
+  padding: 40px 24px;
+
+  @include below(2xl) {
+    padding: 32px 20px;
+  }
+  @include below(xl) {
+    padding: 16px 12px;
+  }
+  @include below(md) {
+    aspect-ratio: initial;
+  }
+}
+
+.intro__text-content {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  height: calc(1.2em * 6);
+  overflow: hidden;
+
+  @include below(2xl) {
+    font-size: 14px;
+  }
+}
+
+.intro__text-desc {
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.intro__text_1 {
+  position: absolute;
+  top: -140px;
+  left: calc(var(--width) * -1);
+  order: 10;
+
+  @include below(2xl) {
+    left: calc((var(--container-padding) - var(--gap)) * -1);
+  }
+  @include below(lg) {
+    position: relative;
+    top: initial;
+    left: initial;
+  }
+}
+
+.intro__text_2 {
+  position: absolute;
+  top: -140px;
+  left: var(--gap);
+  order: 20;
+
+  @include below(2xl) {
+    left: calc(
+      var(--gap) + var(--width) + ((var(--container-padding) - var(--gap)) * -1)
+    );
+  }
+  @include below(lg) {
+    position: relative;
+    top: initial;
+    left: initial;
+  }
+}
+
+.intro__text_3 {
+  position: absolute;
+  top: var(--gap);
+  left: calc(var(--gap) + var(--width) + var(--gap));
+  order: 30;
+
+  @include below(2xl) {
+    left: calc(
+      var(--gap) + var(--width) + var(--gap) + var(--width) + var(--gap) +
+        ((var(--container-padding) - var(--gap)) * -1)
+    );
+  }
+  @include below(lg) {
+    position: relative;
+    top: initial;
+    left: initial;
+  }
+}
+
+.intro__text_4 {
+  position: absolute;
+  top: var(--gap);
+  left: calc(
+    var(--gap) + var(--width) + var(--gap) + var(--width) + var(--gap)
+  );
+  order: 40;
+
+  @include below(2xl) {
+    left: calc(
+      var(--gap) + var(--width) + var(--gap) + var(--width) + var(--gap) +
+        var(--width) + var(--gap) +
+        ((var(--container-padding) - var(--gap)) * -1)
+    );
+  }
+  @include below(lg) {
+    position: relative;
+    top: initial;
+    left: initial;
+  }
+}
+
+.intro__text_5 {
+  position: absolute;
+  top: var(--gap);
+  right: calc(var(--width) + var(--gap) - 200px);
+  order: 50;
+
+  @include below(2xl) {
+    right: calc(
+      var(--width) + var(--gap) + ((var(--container-padding) - var(--gap)) * -1)
+    );
+  }
+  @include below(lg) {
+    position: relative;
+    top: initial;
+    right: initial;
+  }
+}
+
+.intro__text_6 {
+  position: absolute;
+  top: var(--gap);
+  right: -200px;
+  order: 60;
+
+  @include below(2xl) {
+    right: calc((var(--container-padding) - var(--gap)) * -1);
+  }
+  @include below(lg) {
+    position: relative;
+    top: initial;
+    right: initial;
+  }
+}
+
+.intro__texts {
+  @include below(lg) {
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      order: 35;
+      width: calc(100% - (var(--width) * 3) - (var(--gap) * 3));
+    }
+  }
+  @include below(md) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}

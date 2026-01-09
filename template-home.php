@@ -34,7 +34,7 @@ $productsQuery = new WP_Query($args);
   <?php get_template_part("partials/header"); ?>
 
   <?php if ($presentation = get_field("presentation")): ?>
-    <div class="intro">
+    <section class="intro">
       <?php if ($bg_video = $presentation['bg_video']): ?>
         <video class="intro__video" muted playsinline autoplay loop src="<?php echo $bg_video['url'] ?>"></video>
       <?php endif; ?>
@@ -107,89 +107,85 @@ $productsQuery = new WP_Query($args);
           </div>
         </div>
       </div>
-    </div>
+    </section>
   <?php endif; ?>
+
+  <section class="products">
+    <div class="container">
+      <div class="products__title">
+        Наша продукция
+      </div>
+      <div class="products-grid">
+        <div class="products-grid__cell">
+          <div class="products-item">
+            <div class="products-item__title">
+              <strong>Товарный бетон</strong>
+            </div>
+            <a href="/czeny/#tovbet" class="products-item__section">
+              <span>Подробнее</span>
+              <span></span>
+            </a>
+            <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/betn-img.png" class="products-item__image">
+          </div>
+        </div>
+
+        <div class="products-grid__cell">
+          <div class="products-item">
+            <div class="products-item__title">
+              <strong>Пескобетон</strong>
+            </div>
+            <a href="/czeny/#peskbet" class="products-item__section">
+              <span>Подробнее</span>
+              <span></span>
+            </a>
+            <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/pesk-img.png" class="products-item__image">
+          </div>
+        </div>
+
+        <div class="products-grid__cell">
+          <div class="products-item">
+            <div class="products-item__title">
+              <strong>Цементный раствор</strong>
+            </div>
+            <a href="/czeny/#cemrast" class="products-item__section">
+              <span>Подробнее</span>
+              <span></span>
+            </a>
+            <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/rast-img.png" class="products-item__image">
+          </div>
+        </div>
+
+        <div class="products-grid__cell products-grid__cell--wide">
+          <div class="products-item products-item--blue">
+            <div class="products-item__title">
+              <strong>Калькулятор</strong> стоимости бетона
+            </div>
+            <a href="/kalkulyator/" class="products-item__section">
+              <span>Рассчитать онлайн</span>
+              <span></span>
+            </a>
+            <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/calc-img.png" class="products-item__image">
+          </div>
+        </div>
+
+        <div class="products-grid__cell">
+          <div class="products-item">
+            <div class="products-item__title">
+              <strong>Полный прайс</strong>
+            </div>
+            <a href="/czeny/" class="products-item__section">
+              <span>Подробнее</span>
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="page">
     <div class="main">
       <div class="container">
-
-
-        <div class="products">
-          <div class="section-title">
-            <span>Наша</span> продукция
-          </div>
-
-          <div class="products-grid">
-            <div class="products-grid__cell">
-              <div class="products-item">
-                <div class="products-item__title">
-                  <strong>Товарный бетон</strong>
-                </div>
-                <a href="/czeny/#tovbet" class="products-item__section">
-                  <span>Подробнее</span>
-                </a>
-                <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/betn-img.png" class="products-item__image">
-              </div>
-            </div>
-
-            <div class="products-grid__cell">
-              <div class="products-item">
-                <div class="products-item__title">
-                  <strong>Пескобетон</strong>
-                </div>
-                <a href="/czeny/#peskbet" class="products-item__section">
-                  <span>Подробнее</span>
-                </a>
-                <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/pesk-img.png" class="products-item__image">
-              </div>
-            </div>
-
-            <div class="products-grid__cell">
-              <div class="products-item">
-                <div class="products-item__title">
-                  <strong>Цементный раствор</strong>
-                </div>
-                <a href="/czeny/#cemrast" class="products-item__section">
-                  <span>Подробнее</span>
-                </a>
-                <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/rast-img.png" class="products-item__image">
-              </div>
-            </div>
-
-            <div class="products-grid__cell products-grid__cell_span products-grid__cell_no-mobile">
-              <div class="products-item products-item_blue">
-                <div class="products-item__group">
-                  <div class="products-item__title">
-                    <strong>Калькулятор</strong> стоимости бетона
-                  </div>
-                  <a href="/kalkulyator/" class="products-item__section">
-                    <span>Рассчитать онлайн</span>
-                  </a>
-                </div>
-                <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/calc-img.png" class="products-item__image">
-              </div>
-            </div>
-
-            <div class="products-grid__cell products-grid__cell_on-mobile">
-              <div class="products-item products-item_blue">
-                <div class="products-item__title">
-                  <strong>Калькулятор</strong><br> стоимости бетона
-                </div>
-                <a href="/kalkulyator/" class="products-item__section">
-                  <span>Рассчитать онлайн</span>
-                </a>
-                <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/calc-img.png" class="products-item__image">
-              </div>
-            </div>
-
-            <div class="products-grid__cell">
-              <a href="/czeny/" class="products-price">
-                <span>Смотреть прайс</span>
-              </a>
-            </div>
-          </div>
-        </div>
 
         <?php if ($items = get_field("advantages")): ?>
           <div class="advantages">
