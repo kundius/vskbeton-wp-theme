@@ -30,7 +30,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
-  aspect-ratio: 1200 / 500;
+  aspect-ratio: 1200 / 515;
 
   @include below(lg) {
     gap: 12px;
@@ -56,11 +56,11 @@
   position: relative;
   background: #efefef;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 32px 36px;
+  padding: 40px;
   min-height: 100%;
+  flex-direction: column;
 }
 
 .products-item--blue {
