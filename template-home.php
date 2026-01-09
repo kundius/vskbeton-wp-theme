@@ -41,12 +41,14 @@ $productsQuery = new WP_Query($args);
 
       <div class="container">
         <div class="intro__logo">
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/big-white-logo.png" alt="<?php bloginfo('name') ?>" class="intro__logo-img">
           <?php if ($discount = $presentation['discount']): ?>
             <div class="intro__discount">
               <?php echo nl2br($discount); ?>
             </div>
           <?php endif; ?>
+          <div class="intro__logo-wrap">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/big-white-logo.png" alt="<?php bloginfo('name') ?>" class="intro__logo-img">
+          </div>
         </div>
         <div class="intro__order">
           <a href="/kontakty/" class="intro__order-btn">
