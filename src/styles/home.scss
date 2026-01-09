@@ -39,11 +39,6 @@
 
 .intro__logo {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
 }
 
 .intro__logo-wrap {
@@ -111,27 +106,16 @@
   }
   @include below(md) {
     font-size: 14px;
-    position: relative;
-    transform: none;
-    left: initial;
-    bottom: initial;
-    border-radius: 1.5em;
-    text-align: center;
+    transform: translate(142px, -8px);
+    max-width: 100%;
   }
 }
 
 .intro__order {
   margin-top: 80px;
   display: flex;
-  align-items: center;
   justify-content: center;
   position: relative;
-  flex-direction: column;
-  gap: 8px;
-
-  @include below(md) {
-    margin-top: 8px;
-  }
 }
 
 .intro__order-btn {
@@ -228,16 +212,11 @@
   }
   @include below(lg) {
     font-size: 18px;
-    transform: translateX(90px);
+    transform: translate(-50%, -8px);
+    max-width: 100%;
   }
   @include below(md) {
     font-size: 14px;
-    position: relative;
-    transform: none;
-    left: initial;
-    bottom: initial;
-    border-radius: 1.5em;
-    text-align: center;
   }
 }
 
