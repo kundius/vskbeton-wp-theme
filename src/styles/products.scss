@@ -7,6 +7,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
+  aspect-ratio: 1200 / 500;
 
   @include below(lg) {
     gap: 12px;
@@ -36,11 +37,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 32px 36px;
-  aspect-ratio: 400 / 260;
-
-  @include below(lg) {
-    padding: 16px 18px;
-  }
+  min-height: 100%;
 }
 
 .products-item--blue {
@@ -56,13 +53,12 @@
   line-height: 1;
   margin-bottom: 32px;
 
-  .products-item--blue & {
-    color: #fff;
+  strong {
+    font-weight: 500;
   }
 
-  @include below(lg) {
-    font-size: 18px;
-    margin-bottom: 16px;
+  .products-item--blue & {
+    color: #fff;
   }
 }
 
@@ -74,11 +70,6 @@
   width: 120px;
   height: 120px;
   object-fit: contain;
-
-  @include below(lg) {
-    right: 8px;
-    bottom: 8px;
-  }
 }
 
 .products-item__section {
@@ -91,7 +82,7 @@
   font-style: normal;
   text-transform: uppercase;
   font-weight: 700;
-  line-height: 1.75;
+  line-height: 1.5;
 
   .products-item--blue & {
     color: #fff;
@@ -114,6 +105,7 @@
 
 .products-item__section span:nth-child(1) {
   position: relative;
+  z-index: 1;
 }
 
 .products-item__section span:nth-child(1)::after {
@@ -125,6 +117,7 @@
   height: 0;
   background: #c0d2ff;
   transition: 0.3s ease;
+  z-index: -1;
 }
 
 .products-item__section:hover span:nth-child(1)::after {
@@ -148,23 +141,35 @@
   transition: 0.3s ease;
 }
 
+.products-item--blue .products-item__section span:nth-child(2)::before {
+  background: #001562;
+}
+
 .products-item__section:hover span:nth-child(2)::before {
   width: 24px;
 }
 
 .products-item__section span:nth-child(2)::after {
   content: "";
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   position: absolute;
-  left: 12px;
-  top: 2px;
+  left: 5px;
+  top: 3px;
+  position: absolute;
   transform: rotate(-45deg);
-  border-right: 2px solid #858586;
-  border-bottom: 2px solid #858586;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+  opacity: 0.5;
   transition: 0.3s ease;
 }
 
+.products-item--blue .products-item__section span:nth-child(2)::after {
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+
 .products-item__section:hover span:nth-child(2)::after {
-  left: 20px;
+  left: 13px;
+  opacity: 1;
 }
