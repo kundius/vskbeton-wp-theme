@@ -251,9 +251,9 @@ $productsQuery = new WP_Query($args);
         <div class="photogallery-embla">
           <div class="photogallery-embla__viewport" data-photogallery-viewport>
             <div class="photogallery-embla__container">
-              <?php foreach ($gallery as $item): ?>
-                <div class="photogallery-embla__slide">
-                  <?php print_r($item); ?>
+              <?php foreach ($gallery as $key => $item): ?>
+                <div class="photogallery-embla__slide photogallery-embla__slide--<?php echo $key; ?>">
+                  <img src="<?php $item['title']; ?>" alt="<?php $item['alt']; ?>" class="photogallery-embla__image">
                 </div>
               <?php endforeach; ?>
             </div>
