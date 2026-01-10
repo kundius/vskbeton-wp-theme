@@ -13,9 +13,11 @@ import Swiper, {
 import "fslightbox";
 import { initStickyHeader } from "./sticky-header";
 import { initHeaderToggle } from "./header-toggle";
+import { initPhotogallery } from "./photogallery";
 
 initHeaderToggle();
 initStickyHeader();
+initPhotogallery();
 
 new Swiper(".geography-slideshow .swiper", {
   modules: [Autoplay, Navigation],

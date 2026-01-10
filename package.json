@@ -28,6 +28,7 @@
     "yargs": "^17.4.0"
   },
   "dependencies": {
+    "embla-carousel": "^8.6.0",
     "fslightbox": "^3.4.1",
     "hystmodal": "^1.0.1",
     "normalize.css": "^8.0.1",

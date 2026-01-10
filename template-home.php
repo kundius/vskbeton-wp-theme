@@ -224,6 +224,45 @@ $productsQuery = new WP_Query($args);
     </section>
   <?php endif; ?>
 
+  <?php if ($photogallery = get_field("photogallery")): ?>
+    <section class="photogallery" data-photogallery>
+      <div class="container">
+        <div class="photogallery-header">
+          <div class="photogallery-header__title">
+            <?php echo nl2br($photogallery['title']); ?>
+          </div>
+          <div class="photogallery-header__controls">
+            <?php if ($gallery = $photogallery['gallery']): ?>
+              <div class="photogallery-controls">
+                <button class="photogallery-controls__prev" type="button" data-photogallery-prev>
+                  <span></span>
+                  <span>Назад</span>
+                </button>
+                <button class="photogallery-controls__next" type="button" data-photogallery-next>
+                  <span>Пролистать вперёд</span>
+                  <span></span>
+                </button>
+              </div>
+            <?php endif; ?>
+          </div>
+        </div>
+      </div>
+      <?php if ($gallery = $photogallery['gallery']): ?>
+        <div class="photogallery-embla">
+          <div class="photogallery-embla__viewport" data-photogallery-viewport>
+            <div class="photogallery-embla__container">
+              <?php foreach ($gallery as $item): ?>
+                <div class="photogallery-embla__slide">
+                  <?php print_r($item); ?>
+                </div>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        </div>
+      <?php endif; ?>
+    </section>
+  <?php endif; ?>
+
   <div class="page">
     <div class="main">
       <div class="container">
