@@ -185,37 +185,39 @@ $productsQuery = new WP_Query($args);
 
   <?php if ($advantages = get_field("advantages")): ?>
     <section class="advantages">
-      <div class="advantages__title">
-        <span>НАШИ</span> ПРЕИМУЩЕСТВА
-      </div>
-      <div class="advantages-layout">
-        <div class="advantages-equipment">
-          <div class="advantages-equipment__body">
-            <div class="advantages-equipment__title">
-              <strong>Современное оборудование</strong>
+      <div class="container">
+        <div class="advantages__title">
+          <span>НАШИ</span> ПРЕИМУЩЕСТВА
+        </div>
+        <div class="advantages-layout">
+          <div class="advantages-equipment">
+            <div class="advantages-equipment__body">
+              <div class="advantages-equipment__title">
+                <strong>Современное оборудование</strong>
+              </div>
+              <div class="advantages-equipment__desc">
+                <?php echo nl2br($advantages['equipment']); ?>
+              </div>
             </div>
-            <div class="advantages-equipment__desc">
-              <?php echo nl2br($advantages['equipment']); ?>
+          </div>
+          <div class="advantages-assortment">
+            <div class="advantages-assortment__title">
+              Широкий<br>
+              <strong>ассортимент</strong>
             </div>
           </div>
-        </div>
-        <div class="advantages-assortment">
-          <div class="advantages-assortment__title">
-            Широкий<br>
-            <strong>ассортимент</strong>
+          <div class="advantages-schedule">
+            <div class="advantages-schedule__title">
+              Гибкий<br>
+              <strong>график</strong>
+            </div>
           </div>
-        </div>
-        <div class="advantages-schedule">
-          <div class="advantages-schedule__title">
-            Гибкий<br>
-            <strong>график</strong>
-          </div>
-        </div>
-        <div class="advantages-control">
-          <div class="advantages-control__title">
-            <strong>Контроль</strong><br>
-            <strong>качества бетона</strong><br>
-            на производстве
+          <div class="advantages-control">
+            <div class="advantages-control__title">
+              <strong>Контроль</strong><br>
+              <strong>качества бетона</strong><br>
+              на производстве
+            </div>
           </div>
         </div>
       </div>
