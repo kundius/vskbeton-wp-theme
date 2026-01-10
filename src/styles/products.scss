@@ -82,7 +82,7 @@
   }
 
   @include below(md) {
-    padding: 24px;
+    padding: 32px;
   }
 }
 
@@ -106,14 +106,6 @@
   .products-item--blue & {
     color: #fff;
   }
-
-  @include below(xl) {
-    font-size: 28px;
-  }
-
-  @include below(md) {
-    font-size: 24px;
-  }
 }
 
 .products-item__image {
@@ -128,13 +120,6 @@
   @include below(xl) {
     right: 16px;
     bottom: 16px;
-    width: 80px;
-    height: 80px;
-  }
-
-  @include below(md) {
-    right: 12px;
-    bottom: 12px;
   }
 }
 
