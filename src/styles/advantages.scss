@@ -40,6 +40,11 @@
   height: 50%;
   background: #efefef;
   padding: 48px;
+
+  @include below(xl) {
+    width: 100%;
+    padding: 40px;
+  }
 }
 
 .advantages-equipment__title {
@@ -68,6 +73,10 @@
 .advantages-assortment {
   background: #f6f6f6;
   padding: 48px;
+
+  @include below(xl) {
+    padding: 40px;
+  }
 }
 
 .advantages-assortment::after {
@@ -77,6 +86,11 @@
   display: block;
   background: url("../images/advantages-assortment.png") no-repeat 50% 50%;
   background-size: contain;
+
+  @include below(xl) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .advantages-assortment__title {
@@ -94,6 +108,10 @@
 .advantages-schedule {
   background: #efefef;
   padding: 48px;
+
+  @include below(xl) {
+    padding: 40px;
+  }
 }
 
 .advantages-schedule__title {
@@ -113,7 +131,11 @@
   background: url("../images/advantages-control.png") no-repeat 50% 50%;
   background-size: cover;
   grid-column: span 2;
-  aspect-ratio: 1/2;
+  aspect-ratio: 2/1;
+
+  @include below(xl) {
+    padding: 40px;
+  }
 }
 
 .advantages-control__title {
