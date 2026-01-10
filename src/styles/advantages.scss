@@ -1,6 +1,12 @@
 .advantages {
+  --minh: 300px;
+
   padding-top: 96px;
   padding-bottom: 96px;
+
+  @include below(xl) {
+    --minh: 244px;
+  }
 
   @include below(md) {
     padding-top: 64px;
@@ -32,7 +38,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  aspect-ratio: 1/1;
+  min-height: calc(var(--minh) * 2);
 }
 
 .advantages-equipment__body {
@@ -73,6 +79,7 @@
 .advantages-assortment {
   background: #f6f6f6;
   padding: 48px;
+  min-height: var(--minh);
 
   @include below(xl) {
     padding: 40px;
@@ -108,6 +115,7 @@
 .advantages-schedule {
   background: #efefef;
   padding: 48px;
+  min-height: var(--minh);
 
   @include below(xl) {
     padding: 40px;
@@ -131,7 +139,7 @@
   background: url("../images/advantages-control.png") no-repeat 50% 50%;
   background-size: cover;
   grid-column: span 2;
-  aspect-ratio: 2/1;
+  min-height: var(--minh);
 
   @include below(xl) {
     padding: 40px;
