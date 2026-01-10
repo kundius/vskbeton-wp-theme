@@ -80,7 +80,11 @@
   flex-direction: column;
 
   @include below(xl) {
-    zoom: 0.9;
+    padding: 36px;
+  }
+
+  @include below(md) {
+    padding: 24px;
   }
 }
 
@@ -95,7 +99,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1;
-  margin-bottom: 32px;
+  margin-bottom: 1em;
 
   strong {
     font-weight: 500;
@@ -103,6 +107,14 @@
 
   .products-item--blue & {
     color: #fff;
+  }
+
+  @include below(xl) {
+    font-size: 28px;
+  }
+
+  @include below(md) {
+    font-size: 24px;
   }
 }
 
@@ -114,6 +126,18 @@
   width: 96px;
   height: 96px;
   object-fit: contain;
+
+  @include below(xl) {
+    right: 16px;
+    bottom: 16px;
+    width: 80px;
+    height: 80px;
+  }
+
+  @include below(md) {
+    right: 12px;
+    bottom: 12px;
+  }
 }
 
 .products-item__section {
