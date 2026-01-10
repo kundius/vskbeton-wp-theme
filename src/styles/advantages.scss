@@ -21,7 +21,7 @@
 .advantages-layout {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 25%;
+  grid-template-rows: repeat(2, auto);
 }
 
 .advantages-equipment {
@@ -32,6 +32,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  aspect-ratio: 1/1;
 }
 
 .advantages-equipment__body {
@@ -112,6 +113,7 @@
   background: url("../images/advantages-control.png") no-repeat 50% 50%;
   background-size: cover;
   grid-column: span 2;
+  aspect-ratio: 1/2;
 }
 
 .advantages-control__title {
