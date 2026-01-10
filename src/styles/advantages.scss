@@ -27,6 +27,8 @@
 .advantages-equipment {
   background: url("../images/advantages-equipment.png") no-repeat 50% 50%;
   background-size: cover;
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 .advantages-equipment__body {
@@ -108,6 +110,7 @@
   padding: 48px;
   background: url("../images/advantages-control.png") no-repeat 50% 50%;
   background-size: cover;
+  grid-column: span 2;
 }
 
 .advantages-control__title {
