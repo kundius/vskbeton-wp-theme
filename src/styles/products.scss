@@ -34,7 +34,8 @@
   aspect-ratio: 1200 / 515;
 
   @include below(lg) {
-    gap: 12px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @include below(md) {
@@ -48,8 +49,8 @@
 .products-grid__cell--wide {
   grid-column: span 2 / span 2;
 
-  @include below(md) {
-    grid-column: span 1 / span 1;
+  @include below(lg) {
+    grid-row: 2 / 3;
   }
 }
 
