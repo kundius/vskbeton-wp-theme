@@ -23,10 +23,20 @@
 }
 
 .photogallery-embla__viewport {
+  overflow: hidden;
 }
 
 .photogallery-embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
 }
 
 .photogallery-embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 100%;
+  min-width: 0;
+  display: flex;
+}
+
+.photogallery-embla__image {
 }

@@ -254,9 +254,7 @@ $productsQuery = new WP_Query($args);
               <?php foreach (array_chunk($gallery, 4) as $chunk): ?>
                 <div class="photogallery-embla__slide">
                   <?php foreach ($chunk as $key => $item): ?>
-                    <div class="photogallery-embla__group">
-                      <img src="<?php $item['title']; ?>" alt="<?php $item['alt']; ?>" class="photogallery-embla__image photogallery-embla__image--<?php echo $key; ?>">
-                    </div>
+                    <img src="<?php $item['title']; ?>" alt="<?php $item['alt']; ?>" class="photogallery-embla__image photogallery-embla__image--<?php echo $key; ?>">
                   <?php endforeach; ?>
                 </div>
               <?php endforeach; ?>
@@ -270,28 +268,6 @@ $productsQuery = new WP_Query($args);
   <div class="page">
     <div class="main">
       <div class="container">
-
-        <?php if ($group = get_field("technologies")): ?>
-          <div class="technologies">
-            <div class="technologies__image">
-              <?php if ($image = $group["image"]): ?>
-                <img src="<?php echo $image["url"]; ?>" alt="<?php echo $image["title"]; ?>">
-              <?php endif; ?>
-            </div>
-            <div class="technologies__content">
-              <?php if ($link = $group["link"]): ?>
-                <a href="<?php echo $link["url"]; ?>" class="technologies__section">
-                  <span>
-                    <?php echo $link["title"]; ?>
-                  </span>
-                </a>
-              <?php endif; ?>
-              <div class="technologies__title">
-                <?php echo $group["title"]; ?>
-              </div>
-            </div>
-          </div>
-        <?php endif; ?>
 
         <?php
         if ($productsQuery->have_posts()): ?>
