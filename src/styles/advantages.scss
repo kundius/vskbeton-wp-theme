@@ -29,13 +29,14 @@
   background-size: cover;
   grid-column: span 2;
   grid-row: span 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .advantages-equipment__body {
   width: 50%;
   height: 50%;
-  margin-left: auto;
-  margin-top: auto;
   background: #efefef;
   padding: 48px;
 }
