@@ -62,6 +62,10 @@
   padding: 40px;
   min-height: 100%;
   flex-direction: column;
+
+  @include below(xl) {
+    padding: 32px;
+  }
 }
 
 .products-item--blue {
@@ -94,6 +98,13 @@
   width: 96px;
   height: 96px;
   object-fit: contain;
+
+  @include below(xl) {
+    right: 16px;
+    bottom: 16px;
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .products-item__section {
