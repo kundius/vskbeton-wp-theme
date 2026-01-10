@@ -18,10 +18,6 @@
   letter-spacing: -0.05em;
   color: #333;
   position: relative;
-
-  @include below(md) {
-    font-size: 28px;
-  }
 }
 
 .products__title::before {
