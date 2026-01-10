@@ -64,7 +64,7 @@
   flex-direction: column;
 
   @include below(xl) {
-    padding: 32px;
+    zoom: 0.9;
   }
 }
 
@@ -88,10 +88,6 @@
   .products-item--blue & {
     color: #fff;
   }
-
-  @include below(xl) {
-    margin-bottom: 24px;
-  }
 }
 
 .products-item__image {
@@ -102,13 +98,6 @@
   width: 96px;
   height: 96px;
   object-fit: contain;
-
-  @include below(xl) {
-    right: 16px;
-    bottom: 16px;
-    width: 80px;
-    height: 80px;
-  }
 }
 
 .products-item__section {
@@ -135,10 +124,6 @@
     width: 100%;
     height: 100%;
     z-index: 20;
-  }
-
-  @include below(lg) {
-    font-size: 14px;
   }
 }
 
