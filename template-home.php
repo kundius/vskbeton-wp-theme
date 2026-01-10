@@ -251,9 +251,13 @@ $productsQuery = new WP_Query($args);
         <div class="photogallery-embla">
           <div class="photogallery-embla__viewport" data-photogallery-viewport>
             <div class="photogallery-embla__container">
-              <?php foreach ($gallery as $key => $item): ?>
-                <div class="photogallery-embla__slide photogallery-embla__slide--<?php echo $key; ?>">
-                  <img src="<?php $item['title']; ?>" alt="<?php $item['alt']; ?>" class="photogallery-embla__image">
+              <?php foreach (array_chunk($gallery, 4) as $chunk): ?>
+                <div class="photogallery-embla__slide">
+                  <?php foreach ($chunk as $key => $item): ?>
+                    <div class="photogallery-embla__group">
+                      <img src="<?php $item['title']; ?>" alt="<?php $item['alt']; ?>" class="photogallery-embla__image photogallery-embla__image--<?php echo $key; ?>">
+                    </div>
+                  <?php endforeach; ?>
                 </div>
               <?php endforeach; ?>
             </div>
