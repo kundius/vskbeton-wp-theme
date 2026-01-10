@@ -155,7 +155,7 @@ $productsQuery = new WP_Query($args);
           </div>
         </div>
 
-        <div class="products-grid__cell products-grid__cell--wide">
+        <div class="products-grid__cell products-grid__cell--calc">
           <div class="products-item products-item--blue">
             <div class="products-item__title">
               <strong>Калькулятор</strong> стоимости бетона
