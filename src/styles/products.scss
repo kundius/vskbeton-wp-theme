@@ -20,9 +20,6 @@
   position: relative;
 
   @include below(md) {
-    font-size: 24px;
-    margin-bottom: 32px;
-    padding-left: 40px;
   }
 }
 
