@@ -88,6 +88,10 @@
   .products-item--blue & {
     color: #fff;
   }
+
+  @include below(xl) {
+    margin-bottom: 24px;
+  }
 }
 
 .products-item__image {
