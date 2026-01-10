@@ -13,20 +13,24 @@
 @import "home";
 
 :root {
-  --container-width: 1200px;
-  --container-padding: 36px;
+  --container-width: 1280px;
+  --container-padding: 40px;
   --header-height: 112px;
 
   @include below(xl) {
+    --container-width: 1024px;
     --container-padding: 24px;
   }
 
   @include below(lg) {
+    --container-width: 768px;
+    --container-padding: 16px;
     --header-height: 100px;
   }
 
   @include below(md) {
-    --container-padding: 16px;
+    --container-width: 100%;
+    --container-padding: 12px;
     --header-height: 80px;
   }
 }
@@ -147,7 +151,7 @@ body {
 }
 
 .container {
-  width: calc(var(--container-width) + (var(--container-padding) * 2));
+  width: var(--container-width);
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
   max-width: 100%;
