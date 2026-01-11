@@ -253,8 +253,8 @@ $productsQuery = new WP_Query($args);
             <div class="photogallery-embla__container">
               <?php foreach (array_chunk($gallery, 4) as $chunk): ?>
                 <div class="photogallery-embla__slide">
-                  <?php foreach ($chunk as $key => $item): ?>
-                    <img src="<?php echo $item['url']; ?>" alt="<?php echo $item['alt']; ?>" class="photogallery-embla__image photogallery-embla__image--<?php echo $key; ?>">
+                  <?php foreach ($chunk as $item): ?>
+                    <img src="<?php echo $item['url']; ?>" alt="<?php echo $item['alt']; ?>" class="photogallery-embla__image">
                   <?php endforeach; ?>
                 </div>
               <?php endforeach; ?>
