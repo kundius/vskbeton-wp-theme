@@ -52,10 +52,15 @@
 
 .photogallery-embla__image:nth-child(2) {
   grid-column: 3 / 5;
+  grid-row: 1 / 2;
 }
 
 .photogallery-embla__image:nth-child(3) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
 }
 
 .photogallery-embla__image:nth-child(4) {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
 }
