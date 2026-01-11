@@ -230,7 +230,7 @@ $productsQuery = new WP_Query($args);
         <div class="photogallery-header">
           <div class="photogallery-header__title">
             <span>
-              <?php echo nl2br($photogallery['title']); ?>
+              <?php echo $photogallery['title']; ?>
             </span>
           </div>
           <div class="photogallery-header__controls">
