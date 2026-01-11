@@ -229,7 +229,9 @@ $productsQuery = new WP_Query($args);
       <div class="container">
         <div class="photogallery-header">
           <div class="photogallery-header__title">
-            <?php echo nl2br($photogallery['title']); ?>
+            <span>
+              <?php echo nl2br($photogallery['title']); ?>
+            </span>
           </div>
           <div class="photogallery-header__controls">
             <?php if ($gallery = $photogallery['gallery']): ?>
