@@ -37,7 +37,7 @@
   min-width: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 480px 480px;
+  grid-template-rows: calc(100vw * (480 / 1920)) calc(100vw * (480 / 1920));
 }
 
 .photogallery-embla__image-wrap {
