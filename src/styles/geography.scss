@@ -94,6 +94,7 @@
   position: relative;
   grid-column: 4 / 10;
   grid-row: 1 / 13;
+  z-index: 20;
 }
 
 .geography-gl-main__viewport {
@@ -130,8 +131,9 @@
 
 .geography-gl-before {
   position: relative;
-  grid-column: 1/5;
-  grid-row: 2/8;
+  grid-column: 1 / 5;
+  grid-row: 2 / 8;
+  z-index: 10;
 }
 
 .geography-gl-before__viewport {
@@ -170,6 +172,7 @@
   position: relative;
   grid-column: 9 / 13;
   grid-row: 6 / 12;
+  z-index: 10;
 }
 
 .geography-gl-after__viewport {
