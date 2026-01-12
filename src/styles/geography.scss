@@ -30,12 +30,23 @@
   transform: translate3d(0, 0, 0);
   flex: 0 0 calc(100% / 3);
   min-width: 0;
+  position: relative;
+  aspect-ratio: 800 / 600;
 }
 
 .geography-embla__lightbox {
+  position: absolute;
+  aspect-ratio: 800 / 600;
+  width: 75%;
+  left: 0;
+  top: 0;
 }
 
 .geography-embla__image {
+}
+
+.geography-embla__description {
+  display: none;
 }
 
 .geography-prev {
