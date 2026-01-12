@@ -291,14 +291,13 @@
 .geography-gl-desc__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
-  height: 100%;
 }
 
 .geography-gl-desc__slide {
   transform: translate3d(0, 0, 0);
   flex: 0 0 100%;
   min-width: 0;
-  position: relative;
+  display: flex;
 }
 
 .geography-gl-desc__content {
@@ -308,11 +307,10 @@
   font-weight: bold;
   line-height: 1.667;
   display: block;
-  height: 100%;
   text-decoration: none;
 }
 
-.geography-gl-desc::before {
+.geography-gl::before {
   content: "";
   position: absolute;
   right: 0;
@@ -322,16 +320,4 @@
   background: #0035bb;
   z-index: -1;
   mix-blend-mode: color-burn;
-}
-
-.geography-gl-desc::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 53, 187, 0.5);
-  z-index: -1;
-  backdrop-filter: blur(20px);
 }
