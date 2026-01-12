@@ -31,7 +31,7 @@
   flex: 0 0 calc(100% / 3);
   min-width: 0;
   position: relative;
-  aspect-ratio: 8 / 9;
+  aspect-ratio: 8 / 10;
 }
 
 .geography-embla__lightbox {
@@ -40,18 +40,20 @@
   aspect-ratio: 4 / 3;
   overflow: hidden;
   left: 0;
-  top: 0;
+  top: 8%;
   transition: 0.3s ease;
 }
 
 .geography-embla__slide.is-snapped .geography-embla__lightbox {
-  top: calc(100% / 3 / 2);
+  top: 0;
+  bottom: 0;
 }
 
 .geography-embla__slide.is-snapped
   + .geography-embla__slide
   .geography-embla__lightbox {
-  top: calc(100% / 3);
+  top: auto;
+  bottom: 8%;
 }
 
 .geography-embla__image {
