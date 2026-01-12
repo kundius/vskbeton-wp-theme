@@ -28,6 +28,9 @@
   @include below(xl) {
     grid-template-rows: repeat(15, 32px);
   }
+  @include below(lg) {
+    grid-template-rows: repeat(15, 24px);
+  }
 }
 
 .geography-gl-main {
@@ -222,6 +225,9 @@
   @include below(xl) {
     transform: translate(-50%, -50%);
   }
+  @include below(lg) {
+    height: 160px;
+  }
 }
 
 .geography-gl::before {
@@ -238,6 +244,9 @@
 
   @include below(xl) {
     transform: translate(-50%, -50%);
+  }
+  @include below(lg) {
+    height: 160px;
   }
 }
 
@@ -264,7 +273,12 @@
   font-size: 18px;
   color: rgb(255, 255, 255);
   font-weight: bold;
-  line-height: 1.667;
+  line-height: 1.5;
   display: block;
   text-decoration: none;
+
+  @include below(lg) {
+    padding: 32px;
+    font-size: 16px;
+  }
 }
