@@ -92,17 +92,19 @@
 
 .geography-gl-main {
   position: relative;
-  grid-column: 4 / 8;
-  grid-row: 1 / 12;
+  grid-column: 4 / 10;
+  grid-row: 1 / 13;
 }
 
 .geography-gl-main__viewport {
   overflow: hidden;
+  height: 100%;
 }
 
 .geography-gl-main__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
+  height: 100%;
 }
 
 .geography-gl-main__slide {
@@ -110,12 +112,13 @@
   flex: 0 0 100%;
   min-width: 0;
   position: relative;
+  height: 100%;
 }
 
 .geography-gl-main__lightbox {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
 }
 
 .geography-gl-main__image {
@@ -127,17 +130,19 @@
 
 .geography-gl-before {
   position: relative;
-  grid-column: 1 / 4;
-  grid-row: 2 / 7;
+  grid-column: 1/5;
+  grid-row: 2/8;
 }
 
 .geography-gl-before__viewport {
   overflow: hidden;
+  height: 100%;
 }
 
 .geography-gl-before__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
+  height: 100%;
 }
 
 .geography-gl-before__slide {
@@ -145,12 +150,13 @@
   flex: 0 0 100%;
   min-width: 0;
   position: relative;
+  height: 100%;
 }
 
 .geography-gl-before__lightbox {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
 }
 
 .geography-gl-before__image {
@@ -162,17 +168,19 @@
 
 .geography-gl-after {
   position: relative;
-  grid-column: 8 / 12;
-  grid-row: 5 / 11;
+  grid-column: 9 / 13;
+  grid-row: 6 / 12;
 }
 
 .geography-gl-after__viewport {
   overflow: hidden;
+  height: 100%;
 }
 
 .geography-gl-after__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
+  height: 100%;
 }
 
 .geography-gl-after__slide {
@@ -180,12 +188,13 @@
   flex: 0 0 100%;
   min-width: 0;
   position: relative;
+  height: 100%;
 }
 
 .geography-gl-after__lightbox {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
 }
 
 .geography-gl-after__image {
