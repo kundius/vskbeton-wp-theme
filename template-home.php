@@ -297,8 +297,8 @@ $productsQuery = new WP_Query($args);
         </div>
       </div>
     </section>
-  <?php endif;
-  wp_reset_postdata(); ?>
+  <?php endif; ?>
+  <?php wp_reset_postdata(); ?>
 
   <?php if ($geography = get_field("geography")): ?>
     <section class="geography">
@@ -333,52 +333,66 @@ $productsQuery = new WP_Query($args);
           </button>
         </div>
         <div class="geography-gl" data-geography-gl>
-          <div class="geography-gl-before" data-geography-gl-before>
-            <div class="geography-gl-before__viewport" data-geography-gl-before-viewport>
-              <div class="geography-gl-before__container">
-                <?php foreach ($geography["items"] as $item): ?>
-                  <div class="geography-gl-before__slide">
-                    <a href="<?php echo $item["image"]["url"]; ?>" data-fslightbox="geography-gl-before" class="geography-gl-before__lightbox">
-                      <img class="geography-gl-before__image" src="<?php echo $item["image"]["url"]; ?>">
-                    </a>
-                  </div>
-                <?php endforeach; ?>
+          <div class="geography-gl__emblas">
+            <div class="geography-gl-before" data-geography-gl-before>
+              <div class="geography-gl-before__viewport" data-geography-gl-before-viewport>
+                <div class="geography-gl-before__container">
+                  <?php foreach ($geography["items"] as $item): ?>
+                    <div class="geography-gl-before__slide">
+                      <a href="<?php echo $item["image"]["url"]; ?>" data-fslightbox="geography-gl-before" class="geography-gl-before__lightbox">
+                        <img class="geography-gl-before__image" src="<?php echo $item["image"]["url"]; ?>">
+                      </a>
+                    </div>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+            </div>
+            <div class="geography-gl-main" data-geography-gl-main>
+              <div class="geography-gl-main__viewport" data-geography-gl-main-viewport>
+                <div class="geography-gl-main__container">
+                  <?php foreach ($geography["items"] as $item): ?>
+                    <div class="geography-gl-main__slide">
+                      <a href="<?php echo $item["image"]["url"]; ?>" data-fslightbox="geography-gl-main" class="geography-gl-main__lightbox">
+                        <img class="geography-gl-main__image" src="<?php echo $item["image"]["url"]; ?>">
+                      </a>
+                    </div>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+              <button class="geography-gl-main__prev" type="button" data-geography-gl-main-prev></button>
+              <button class="geography-gl-main__next" type="button" data-geography-gl-main-next></button>
+            </div>
+            <div class="geography-gl-after" data-geography-gl-after>
+              <div class="geography-gl-after__viewport" data-geography-gl-after-viewport>
+                <div class="geography-gl-after__container">
+                  <?php foreach ($geography["items"] as $item): ?>
+                    <div class="geography-gl-after__slide">
+                      <a href="<?php echo $item["image"]["url"]; ?>" data-fslightbox="geography-gl-after" class="geography-gl-after__lightbox">
+                        <img class="geography-gl-after__image" src="<?php echo $item["image"]["url"]; ?>">
+                      </a>
+                    </div>
+                  <?php endforeach; ?>
+                </div>
               </div>
             </div>
           </div>
-          <div class="geography-gl-main" data-geography-gl-main>
-            <div class="geography-gl-main__viewport" data-geography-gl-main-viewport>
-              <div class="geography-gl-main__container">
+          <div class="geography-gl-desc" data-geography-gl-desc>
+            <div class="geography-gl-desc__viewport" data-geography-gl-desc-viewport>
+              <div class="geography-gl-desc__container">
                 <?php foreach ($geography["items"] as $item): ?>
-                  <div class="geography-gl-main__slide">
-                    <a href="<?php echo $item["image"]["url"]; ?>" data-fslightbox="geography-gl-main" class="geography-gl-main__lightbox">
-                      <img class="geography-gl-main__image" src="<?php echo $item["image"]["url"]; ?>">
-                    </a>
-                  </div>
-                <?php endforeach; ?>
-              </div>
-            </div>
-            <button class="geography-gl-main__prev" type="button" data-geography-gl-main-prev>
-              Назад
-            </button>
-            <button class="geography-gl-main__next" type="button" data-geography-gl-main-next>
-              вперёд
-            </button>
-          </div>
-          <div class="geography-gl-after" data-geography-gl-after>
-            <div class="geography-gl-after__viewport" data-geography-gl-after-viewport>
-              <div class="geography-gl-after__container">
-                <?php foreach ($geography["items"] as $item): ?>
-                  <div class="geography-gl-after__slide">
-                    <a href="<?php echo $item["image"]["url"]; ?>" data-fslightbox="geography-gl-after" class="geography-gl-after__lightbox">
-                      <img class="geography-gl-after__image" src="<?php echo $item["image"]["url"]; ?>">
-                    </a>
+                  <div class="geography-gl-desc__slide">
+                    <?php if (!empty($item["description"])): ?>
+                      <<?php echo ($item["link"] ? 'a href="' . $item["link"] . '"' : 'div'); ?> class="geography-gl-desc__content">
+                        <?php echo $item["description"]; ?>
+                      </<?php echo ($item["link"] ? 'a' : 'div'); ?>>
+                    <?php endif; ?>
                   </div>
                 <?php endforeach; ?>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </section>
   <?php endif; ?>
 

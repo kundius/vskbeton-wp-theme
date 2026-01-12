@@ -22,12 +22,16 @@ export function initGeographyGl() {
   const afterViewportNode = wrapNode.querySelector(
     "[data-geography-gl-after-viewport]"
   );
+  const descViewportNode = wrapNode.querySelector(
+    "[data-geography-gl-desc-viewport]"
+  );
   const mainPrevNode = wrapNode.querySelector("[data-geography-gl-main-prev]");
   const mainNextNode = wrapNode.querySelector("[data-geography-gl-main-next]");
 
   const mainEmblaApi = EmblaCarousel(mainViewportNode, options);
   const beforeEmblaApi = EmblaCarousel(beforeViewportNode, options);
   const afterEmblaApi = EmblaCarousel(afterViewportNode, options);
+  const descEmblaApi = EmblaCarousel(descViewportNode, options);
 
   const removeMainPrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(
     mainEmblaApi,
@@ -51,6 +55,7 @@ export function initGeographyGl() {
     beforeEmblaApi.scrollTo(prev, false);
     mainEmblaApi.scrollTo(centerIndex, false);
     afterEmblaApi.scrollTo(next, false);
+    descEmblaApi.scrollTo(centerIndex, false);
   }
 
   // Обработчик для каждой карусели
