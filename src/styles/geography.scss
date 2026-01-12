@@ -31,8 +31,6 @@
   grid-template-columns: repeat(15, 1fr);
   grid-template-rows: repeat(15, 36px);
   filter: drop-shadow(0 6px 6px rgb(109, 121, 140));
-  position: relative;
-  z-index: 10;
 
   @include below(xl) {
     grid-template-rows: repeat(15, 32px);
@@ -245,16 +243,17 @@
 
 .geography-gl-desc {
   position: absolute;
-  left: 50%;
+  right: 50%;
   top: 100%;
-  transform: translate(-100%, -50%);
-  aspect-ratio: 300/250;
-  width: 25%;
-  z-index: 30;
+  width: 100%;
+  margin-top: -128px;
+  max-width: 280px;
+  min-height: 240px;
 
   @include below(lg) {
-    transform: translate(-50%, -50%);
-    width: 40%;
+    right: auto;
+    left: 50%;
+    margin-left: -50%;
   }
   @include below(md) {
     width: 80%;
@@ -266,25 +265,16 @@
   background: #0035bb;
   mix-blend-mode: multiply;
   position: absolute;
-  left: 50%;
-  top: 100%;
-  transform: translate(-100%, -50%);
-  aspect-ratio: 300/250;
-  width: 25%;
-  z-index: 20;
-
-  @include below(lg) {
-    transform: translate(-50%, -50%);
-    width: 40%;
-  }
-  @include below(md) {
-    width: 80%;
-  }
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .geography-gl-desc__viewport {
   overflow: hidden;
   height: 100%;
+  position: relative;
 }
 
 .geography-gl-desc__container {
