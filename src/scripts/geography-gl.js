@@ -6,13 +6,13 @@ export function initGeographyGl() {
 
   if (!wrapNode) return;
 
-  const mainViewportNode = wrap.querySelector(
+  const mainViewportNode = wrapNode.querySelector(
     "[data-geography-gl-main-viewport]"
   );
-  const beforeViewportNode = wrap.querySelector(
+  const beforeViewportNode = wrapNode.querySelector(
     "[data-geography-gl-before-viewport]"
   );
-  const afterViewportNode = wrap.querySelector(
+  const afterViewportNode = wrapNode.querySelector(
     "[data-geography-gl-after-viewport]"
   );
 
