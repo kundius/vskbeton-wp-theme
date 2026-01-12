@@ -130,6 +130,53 @@
   object-fit: cover;
 }
 
+.geography-gl-main__prev {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 58.41px 0.59px rgba(0, 53, 187, 0.32);
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: 50%;
+  margin-top: -28px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.geography-gl-main__prev::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid #464646;
+  border-bottom: 2px solid #464646;
+  transform: rotate(45deg);
+}
+
+.geography-gl-main__next {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 58.41px 0.59px rgba(0, 53, 187, 0.32);
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: 50%;
+  margin-top: -28px;
+  right: 20px;
+}
+
+.geography-gl-main__next::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #464646;
+  border-bottom: 2px solid #464646;
+  transform: rotate(-45deg);
+}
+
 .geography-gl-before {
   position: relative;
   grid-column: 1 / 5;
