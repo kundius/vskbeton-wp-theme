@@ -19,8 +19,8 @@
 
 .geography-gl__emblas {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 40px);
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 36px);
   filter: drop-shadow(0 6px 6px rgb(109, 121, 140));
   position: relative;
   z-index: 10;
@@ -28,8 +28,8 @@
 
 .geography-gl-main {
   position: relative;
-  grid-column: 4 / 10;
-  grid-row: 1 / 13;
+  grid-column: 4/13;
+  grid-row: 1/16;
   z-index: 20;
   box-shadow: -1.097px 8.933px 15.3px 2.7px rgba(109, 121, 140, 0.54);
 }
@@ -128,8 +128,8 @@
 
 .geography-gl-before {
   position: relative;
-  grid-column: 1 / 5;
-  grid-row: 2 / 8;
+  grid-column: 1/6;
+  grid-row: 2/10;
   z-index: 10;
   box-shadow: -7.08px 10.903px 8.73px 0.27px rgba(109, 140, 127, 0.28);
 }
@@ -168,8 +168,8 @@
 
 .geography-gl-after {
   position: relative;
-  grid-column: 9 / 13;
-  grid-row: 6 / 12;
+  grid-column: 11/16;
+  grid-row: 7/15;
   z-index: 10;
   box-shadow: -7.08px 10.903px 8.73px 0.27px rgba(109, 140, 127, 0.28);
 }
@@ -211,8 +211,8 @@
   left: 50%;
   top: 100%;
   transform: translate(-100%, -50%);
-  aspect-ratio: 1;
-  width: 20%;
+  height: 240px;
+  width: 280px;
   z-index: 30;
 }
 
@@ -224,8 +224,8 @@
   left: 50%;
   top: 100%;
   transform: translate(-100%, -50%);
-  aspect-ratio: 1;
-  width: 20%;
+  height: 240px;
+  width: 280px;
   z-index: 20;
 }
 
