@@ -31,19 +31,17 @@
 
 .services-grid {
   display: grid;
-  grid-template-rows: repeat(4, 150px);
+  grid-auto-rows: 140px;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 
-  // @include below(lg) {
-  //   grid-template-rows: repeat(3, 300px);
-  //   grid-template-columns: repeat(2, 1fr);
-  // }
+  @include below(xl) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  // @include below(md) {
-  //   grid-template-rows: repeat(5, 300px);
-  //   grid-template-columns: repeat(1, 1fr);
-  // }
+  @include below(md) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .services-grid__cell {
@@ -88,11 +86,15 @@
 }
 
 .services-grid__cell:nth-child(1) {
-  grid-row: span 3;
+  @include above(xl) {
+    grid-row: span 3;
+  }
 }
 
 .services-grid__cell:nth-child(4) {
-  grid-column: span 2;
+  @include above(xl) {
+    grid-column: span 2;
+  }
 }
 
 .services-grid__cell:nth-child(4) .services-item__title {
