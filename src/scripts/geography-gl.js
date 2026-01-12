@@ -77,6 +77,7 @@ export function initGeographyGl() {
   beforeEmblaApi.on("select", createHandler.call(beforeEmblaApi, -1));
   mainEmblaApi.on("select", createHandler.call(mainEmblaApi, 0));
   afterEmblaApi.on("select", createHandler.call(afterEmblaApi, +1));
+  descEmblaApi.on("select", createHandler.call(descEmblaApi, 0));
 
   // Инициализация: покажем начальное состояние (например, центр = 0)
   updateAllFromCenter(0);
