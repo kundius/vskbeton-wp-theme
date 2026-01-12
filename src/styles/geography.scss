@@ -255,9 +255,6 @@
     left: 50%;
     margin-left: -50%;
   }
-  @include below(md) {
-    width: 80%;
-  }
 }
 
 .geography-gl-desc::before {
