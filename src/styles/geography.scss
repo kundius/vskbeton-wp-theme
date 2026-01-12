@@ -248,18 +248,16 @@
   left: 50%;
   top: 100%;
   transform: translate(-100%, -50%);
-  height: 240px;
-  width: 280px;
+  aspect-ratio: 300/250;
+  width: 25%;
   z-index: 30;
 
-  @include below(xl) {
-    transform: translate(-50%, -50%);
-  }
   @include below(lg) {
-    height: 160px;
+    transform: translate(-50%, -50%);
+    width: 40%;
   }
   @include below(md) {
-    height: 140px;
+    width: 80%;
   }
 }
 
@@ -271,18 +269,16 @@
   left: 50%;
   top: 100%;
   transform: translate(-100%, -50%);
-  height: 240px;
-  width: 280px;
+  aspect-ratio: 300/250;
+  width: 25%;
   z-index: 20;
 
-  @include below(xl) {
-    transform: translate(-50%, -50%);
-  }
   @include below(lg) {
-    height: 160px;
+    transform: translate(-50%, -50%);
+    width: 40%;
   }
   @include below(md) {
-    height: 140px;
+    width: 80%;
   }
 }
 
