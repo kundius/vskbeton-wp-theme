@@ -93,6 +93,8 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 40px);
   filter: drop-shadow(0 6px 6px rgb(109, 121, 140));
+  position: relative;
+  z-index: 10;
 }
 
 .geography-gl-main {
@@ -280,7 +282,22 @@
   left: 50%;
   top: 100%;
   transform: translate(-100%, -50%);
+  aspect-ratio: 4 / 3;
   width: 20%;
+  z-index: 30;
+}
+.geography-gl::before {
+  content: "";
+  background: #0035bb;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-100%, -50%);
+  aspect-ratio: 4 / 3;
+  width: 20%;
+  z-index: 20;
 }
 
 .geography-gl-desc__viewport {
@@ -308,16 +325,4 @@
   line-height: 1.667;
   display: block;
   text-decoration: none;
-}
-
-.geography-gl-desc::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background: #0035bb;
-  z-index: -1;
-  mix-blend-mode: multiply;
 }
