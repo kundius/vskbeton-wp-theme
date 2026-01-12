@@ -14,26 +14,12 @@ import "fslightbox";
 import { initStickyHeader } from "./sticky-header";
 import { initHeaderToggle } from "./header-toggle";
 import { initPhotogallery } from "./photogallery";
+import { initGeography } from "./geography";
 
 initHeaderToggle();
 initStickyHeader();
 initPhotogallery();
-
-new Swiper(".geography-slideshow .swiper", {
-  modules: [Autoplay, Navigation],
-  speed: 500,
-  spaceBetween: 24,
-  loop: true,
-  autoplay: {
-    disableOnInteraction: false,
-    delay: 6000,
-  },
-  navigation: {
-    nextEl: ".geography-slideshow .swiper-button-next",
-    prevEl: ".geography-slideshow .swiper-button-prev",
-  },
-  slidesPerView: 1,
-});
+initGeography();
 
 new Swiper(".partners-slideshow .swiper", {
   modules: [Navigation],

@@ -13,6 +13,7 @@
 @import "advantages";
 @import "photogallery";
 @import "services";
+@import "geography";
 @import "home";
 
 :root {
@@ -582,215 +583,6 @@ body {
   @include below(md) {
     transform: translateX(4px);
   }
-}
-
-.directions {
-  margin-top: 64px;
-  margin-bottom: 64px;
-
-  @include below(md) {
-    margin-top: 48px;
-    margin-bottom: 48px;
-  }
-}
-
-.directions-item {
-  display: flex;
-  align-items: center;
-
-  @include below(md) {
-    flex-direction: column;
-  }
-}
-
-* + .directions-item {
-  margin-top: 100px;
-
-  @include below(lg) {
-    margin-top: 80px;
-  }
-  @include below(md) {
-    margin-top: 48px;
-  }
-}
-
-.directions-item:nth-child(2n) .directions-item__image {
-  order: -1;
-  margin-left: 0;
-  margin-right: 64px;
-
-  @include below(lg) {
-    margin-right: 48px;
-  }
-  @include below(md) {
-    margin-right: 0;
-  }
-}
-
-.directions-item__image {
-  margin-left: 64px;
-  order: 1;
-  width: 40%;
-  flex-shrink: 0;
-
-  @include below(lg) {
-    margin-left: 48px;
-  }
-  @include below(md) {
-    order: -1;
-    margin: 0 0 16px;
-    width: 100%;
-  }
-}
-
-.directions-item__image img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.directions-item__body {
-}
-
-.directions-item__title {
-  font-size: 42px;
-  line-height: 1.2;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #000;
-
-  @include below(lg) {
-    font-size: 36px;
-  }
-  @include below(md) {
-    font-size: 24px;
-  }
-}
-
-.directions-item__title span {
-  color: #e06f19;
-}
-
-.directions-item__description {
-  color: rgb(51, 51, 51);
-  font-size: 22px;
-  margin-top: 24px;
-  line-height: 1.35;
-
-  @include below(lg) {
-    font-size: 18px;
-    margin-top: 20px;
-  }
-  @include below(md) {
-    font-size: 16px;
-    margin-top: 16px;
-  }
-}
-
-.geography {
-  margin-top: 68px;
-  margin-bottom: 68px;
-
-  @include below(md) {
-    margin-top: 48px;
-    margin-bottom: 48px;
-  }
-}
-
-.section-title {
-  font-size: 42px;
-  line-height: 1;
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 48px;
-  text-align: center;
-
-  @include below(lg) {
-    font-size: 36px;
-    margin-bottom: 36px;
-  }
-  @include below(md) {
-    font-size: 30px;
-    margin-bottom: 24px;
-  }
-}
-
-.section-title span {
-  color: rgb(224, 111, 25);
-}
-
-.geography-slideshow {
-  position: relative;
-}
-
-.geography-slideshow .swiper-button-next,
-.geography-slideshow .swiper-button-prev {
-  color: #fff;
-
-  @include below(md) {
-    width: 44px;
-    background: rgba(0, 0, 0, 0.4);
-    &::after {
-      font-size: 24px;
-    }
-    &.swiper-button-prev {
-      left: -16px;
-    }
-    &.swiper-button-next {
-      right: -16px;
-    }
-  }
-}
-
-.geography-slideshow__slide {
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  border-radius: 32px;
-}
-
-.geography-slideshow__description {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: #fff;
-  background: rgba(11, 72, 179, 0.64);
-  text-align: center;
-  line-height: 1.2;
-  padding: 20px;
-  font-size: 20px;
-  pointer-events: none;
-
-  @include below(lg) {
-    padding: 16px;
-    font-size: 16px;
-  }
-  @include below(md) {
-    padding: 12px;
-    font-size: 14px;
-  }
-}
-
-.geography-slideshow__link {
-  display: block;
-  height: 640px;
-  width: 100%;
-
-  @include below(lg) {
-    height: 480px;
-  }
-  @include below(md) {
-    height: 320px;
-  }
-}
-
-.geography-slideshow__image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .partners {
@@ -1749,10 +1541,6 @@ body {
 .main-nav > ul {
   background: none;
 }
-.geography-slideshow .swiper-button-next,
-.geography-slideshow .swiper-button-prev {
-  color: #e06f19;
-}
 
 @media screen and (max-width: 768px) {
   .main-nav_opened {
@@ -1761,10 +1549,6 @@ body {
   }
   .swiper-slide {
     padding: 0;
-  }
-  .geography-slideshow .swiper-button-next,
-  .geography-slideshow .swiper-button-prev {
-    color: #fff;
   }
   .ui-selectmenu-button {
     z-index: 1;

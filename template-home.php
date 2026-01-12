@@ -298,45 +298,47 @@ $productsQuery = new WP_Query($args);
       </div>
     </section>
   <?php endif;
-  wp_reset_postdata();
-  ?>
+  wp_reset_postdata(); ?>
+
+  <?php if ($geography = get_field("geography")): ?>
+    <section class="geography">
+      <div class="container">
+        <div class="geography__title">
+          <?php echo $geography["title"]; ?>
+        </div>
+        <div class="geography-embla" data-geography>
+          <div class="geography-embla__viewport" data-geography-viewport>
+            <div class="geography-embla__container">
+              <?php foreach ($geography["items"] as $item): ?>
+                <div class="geography-embla__slide">
+                  <a href="<?php echo $item["image"]["url"]; ?>" data-fslightbox="geography-lightbox" class="geography-embla__lightbox">
+                    <img class="geography-embla__image" src="<?php echo $item["image"]["url"]; ?>">
+                  </a>
+                  <?php if (!empty($item["description"])): ?>
+                    <<?php echo ($item["link"] ? 'a href="' . $item["link"] . '"' : 'div'); ?> class="geography-embla__description">
+                      <?php echo $item["description"]; ?>
+                    </<?php echo ($item["link"] ? 'a' : 'div'); ?>>
+                  <?php endif; ?>
+                </div>
+              <?php endforeach; ?>
+            </div>
+          </div>
+          <button class="geography-prev" type="button" data-geography-prev>
+            <span></span>
+            <span>Назад</span>
+          </button>
+          <button class="geography-next" type="button" data-geography-next>
+            <span>Пролистать вперёд</span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+  <?php endif; ?>
 
   <div class="page">
     <div class="main">
       <div class="container">
-
-        <?php if ($group = get_field("geography")): ?>
-          <div class="geography">
-            <div class="section-title">
-              <?php echo $group["title"]; ?>
-            </div>
-            <div class="geography-slideshow">
-              <div class="swiper">
-                <div class="swiper-wrapper">
-                  <?php foreach ($group["items"] as $item): ?>
-                    <div class="swiper-slide geography-slideshow__slide">
-                      <?php if ($link = $item["link"]): ?>
-                        <a href="<?php echo $link; ?>" class="geography-slideshow__link" target="_blank">
-                        <?php else: ?>
-                          <a href="<?php echo $item["image"]["url"]; ?>" data-fslightbox="geography-lightbox"
-                            class="geography-slideshow__link">
-                          <?php endif; ?>
-                          <img class="geography-slideshow__image" src="<?php echo $item["image"]["url"]; ?>">
-                          </a>
-                          <?php if (!empty($item["description"])): ?>
-                            <div class="geography-slideshow__description">
-                              <?php echo $item["description"]; ?>
-                            </div>
-                          <?php endif; ?>
-                    </div>
-                  <?php endforeach; ?>
-                </div>
-              </div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-          </div>
-        <?php endif; ?>
 
         <?php
         $list_query_params = [

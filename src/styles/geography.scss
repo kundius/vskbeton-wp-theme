@@ -1,0 +1,47 @@
+.geography {
+  padding-top: 112px;
+  padding-bottom: 214px;
+}
+
+.geography__title {
+  margin-bottom: 128px;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #333;
+}
+
+.geography-embla {
+  position: relative;
+}
+
+.geography-embla__viewport {
+  overflow: hidden;
+}
+
+.geography-embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.geography-embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 calc(100% / 3);
+  min-width: 0;
+}
+
+.geography-embla__lightbox {
+}
+
+.geography-embla__image {
+}
+
+.geography-prev {
+  position: absolute;
+}
+
+.geography-next {
+  position: absolute;
+}
