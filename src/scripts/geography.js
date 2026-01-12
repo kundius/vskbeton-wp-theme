@@ -8,7 +8,7 @@ export function applyGeography(wrap) {
 
   const emblaApi = EmblaCarousel(viewportNode, {
     loop: true,
-    slidesToScroll: "auto",
+    slidesToScroll: 1,
     containScroll: false,
   });
 
