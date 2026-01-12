@@ -15,6 +15,8 @@ export function initGeographyGl() {
   const afterViewportNode = wrapNode.querySelector(
     "[data-geography-gl-after-viewport]"
   );
+  const mainPrevNode = wrapNode.querySelector("[data-geography-gl-main-prev]");
+  const mainNextNode = wrapNode.querySelector("[data-geography-gl-main-next]");
 
   const mainEmblaApi = EmblaCarousel(mainViewportNode, {
     loop: true,
@@ -28,6 +30,14 @@ export function initGeographyGl() {
     loop: true,
     slidesToScroll: "auto",
   });
+
+  const removeMainPrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(
+    mainEmblaApi,
+    mainPrevNode,
+    mainNextNode
+  );
+
+  emblaApi.on("destroy", removeMainPrevNextBtnsClickHandlers);
 
   const syncCarousels = () => {
     const index = mainEmblaApi.selectedScrollSnap();

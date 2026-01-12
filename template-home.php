@@ -358,6 +358,12 @@ $productsQuery = new WP_Query($args);
                 <?php endforeach; ?>
               </div>
             </div>
+            <button class="geography-gl-main__prev" type="button" data-geography-gl-main-prev>
+              Назад
+            </button>
+            <button class="geography-gl-main__next" type="button" data-geography-gl-main-next>
+              вперёд
+            </button>
           </div>
           <div class="geography-gl-after" data-geography-gl-after>
             <div class="geography-gl-after__viewport" data-geography-gl-after-viewport>
