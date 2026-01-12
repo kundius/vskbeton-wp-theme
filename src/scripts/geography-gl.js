@@ -1,6 +1,13 @@
 import EmblaCarousel from "embla-carousel";
 import { addPrevNextBtnsClickHandlers } from "./EmblaCarouselArrowButtons";
 
+const options = {
+  loop: true,
+  slidesToScroll: 1,
+  dragFree: false, // или true — не влияет напрямую на ease
+  ease: (t) => t, // линейная анимация
+};
+
 export function initGeographyGl() {
   const wrapNode = document.querySelector("[data-geography-gl]");
 
@@ -18,18 +25,9 @@ export function initGeographyGl() {
   const mainPrevNode = wrapNode.querySelector("[data-geography-gl-main-prev]");
   const mainNextNode = wrapNode.querySelector("[data-geography-gl-main-next]");
 
-  const mainEmblaApi = EmblaCarousel(mainViewportNode, {
-    loop: true,
-    slidesToScroll: 1,
-  });
-  const beforeEmblaApi = EmblaCarousel(beforeViewportNode, {
-    loop: true,
-    slidesToScroll: 1,
-  });
-  const afterEmblaApi = EmblaCarousel(afterViewportNode, {
-    loop: true,
-    slidesToScroll: 1,
-  });
+  const mainEmblaApi = EmblaCarousel(mainViewportNode, options);
+  const beforeEmblaApi = EmblaCarousel(beforeViewportNode, options);
+  const afterEmblaApi = EmblaCarousel(afterViewportNode, options);
 
   const removeMainPrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(
     mainEmblaApi,
