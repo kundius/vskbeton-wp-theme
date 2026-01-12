@@ -310,7 +310,7 @@
   text-decoration: none;
 }
 
-.geography-gl::before {
+.geography-gl-desc::before {
   content: "";
   position: absolute;
   right: 0;
@@ -319,5 +319,5 @@
   left: 0;
   background: #0035bb;
   z-index: -1;
-  mix-blend-mode: color-burn;
+  mix-blend-mode: multiply;
 }
