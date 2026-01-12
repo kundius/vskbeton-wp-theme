@@ -121,7 +121,7 @@ $productsQuery = new WP_Query($args);
             <div class="products-item__title">
               <strong>Товарный бетон</strong>
             </div>
-            <a href="/czeny/#tovbet" class="products-item__section">
+            <a href="/czeny/#tovbet" class="more-link">
               <span>Подробнее</span>
               <span></span>
             </a>
@@ -134,7 +134,7 @@ $productsQuery = new WP_Query($args);
             <div class="products-item__title">
               <strong>Пескобетон</strong>
             </div>
-            <a href="/czeny/#peskbet" class="products-item__section">
+            <a href="/czeny/#peskbet" class="more-link">
               <span>Подробнее</span>
               <span></span>
             </a>
@@ -147,7 +147,7 @@ $productsQuery = new WP_Query($args);
             <div class="products-item__title">
               <strong>Цементный раствор</strong>
             </div>
-            <a href="/czeny/#cemrast" class="products-item__section">
+            <a href="/czeny/#cemrast" class="more-link">
               <span>Подробнее</span>
               <span></span>
             </a>
@@ -160,7 +160,7 @@ $productsQuery = new WP_Query($args);
             <div class="products-item__title">
               <strong>Калькулятор</strong> стоимости бетона
             </div>
-            <a href="/kalkulyator/" class="products-item__section">
+            <a href="/kalkulyator/" class="more-link">
               <span>Рассчитать онлайн</span>
               <span></span>
             </a>
@@ -173,7 +173,7 @@ $productsQuery = new WP_Query($args);
             <div class="products-item__title">
               <strong>Полный прайс</strong>
             </div>
-            <a href="/czeny/" class="products-item__section">
+            <a href="/czeny/" class="more-link">
               <span>Подробнее</span>
               <span></span>
             </a>
@@ -282,11 +282,11 @@ $productsQuery = new WP_Query($args);
         <div class="services-grid">
           <?php while ($productsQuery->have_posts()): $productsQuery->the_post(); ?>
             <div class="services-grid__cell">
-              <div class="products-item">
-                <div class="products-item__title">
+              <div class="services-item">
+                <div class="services-item__title">
                   <?php echo (get_field("title_in_list") ?: get_the_title()); ?>
                 </div>
-                <a href="<?php the_permalink(); ?>" class="products-item__section">
+                <a href="<?php the_permalink(); ?>" class="more-link">
                   <span>Подробнее</span>
                   <span></span>
                 </a>

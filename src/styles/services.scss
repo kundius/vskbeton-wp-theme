@@ -14,9 +14,10 @@
   min-height: 192px;
   display: flex;
   align-items: center;
-  margin-left: auto;
   width: 50%;
   letter-spacing: -0.005em;
+  margin-left: auto;
+  margin-bottom: 96px;
 
   strong {
     color: rgb(212, 224, 255);
@@ -30,20 +31,59 @@
 
 .services-grid {
   display: grid;
-  grid-template-rows: repeat(2, 300px);
+  grid-template-rows: repeat(4, 150px);
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 
-  @include below(lg) {
-    grid-template-rows: repeat(3, 300px);
-    grid-template-columns: repeat(2, 1fr);
-  }
+  // @include below(lg) {
+  //   grid-template-rows: repeat(3, 300px);
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
 
-  @include below(md) {
-    grid-template-rows: repeat(5, 300px);
-    grid-template-columns: repeat(1, 1fr);
-  }
+  // @include below(md) {
+  //   grid-template-rows: repeat(5, 300px);
+  //   grid-template-columns: repeat(1, 1fr);
+  // }
 }
 
 .services-grid__cell {
+  grid-row: span 2;
+}
+
+.services-item {
+  position: relative;
+  background: #efefef;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px;
+  min-height: 100%;
+  flex-direction: column;
+
+  @include below(xl) {
+    padding: 36px;
+  }
+
+  @include below(md) {
+    padding: 32px;
+  }
+}
+
+.products-item::after {
+  content: "";
+  display: block;
+}
+
+.services-item__title {
+  width: 100%;
+  color: #333333;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 1em;
+
+  strong {
+    font-weight: 500;
+  }
 }
