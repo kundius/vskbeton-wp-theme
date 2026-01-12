@@ -103,6 +103,13 @@
   align-items: center;
   justify-content: center;
   border: none;
+
+  @include below(md) {
+    width: 48px;
+    height: 48px;
+    margin-top: -24px;
+    left: 12px;
+  }
 }
 
 .geography-gl-main__prev:hover {
@@ -133,6 +140,13 @@
   align-items: center;
   justify-content: center;
   border: none;
+
+  @include below(md) {
+    width: 48px;
+    height: 48px;
+    margin-top: -24px;
+    right: 12px;
+  }
 }
 
 .geography-gl-main__next::before {
