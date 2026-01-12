@@ -28,22 +28,22 @@
   }
 }
 
-.products-grid {
+.services-grid {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 300px);
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 
   @include below(lg) {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 300px);
     grid-template-columns: repeat(2, 1fr);
   }
 
   @include below(md) {
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 300px);
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-.products-grid__cell {
+.services-grid__cell {
 }

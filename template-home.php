@@ -274,8 +274,10 @@ $productsQuery = new WP_Query($args);
     <section class="services">
       <div class="container">
         <div class="services__title">
-          <strong>НАШИ</strong><br>
-          УСЛУГИ
+          <span>
+            <strong>НАШИ</strong><br>
+            УСЛУГИ
+          </span>
         </div>
         <div class="services-grid">
           <?php while ($productsQuery->have_posts()): $productsQuery->the_post(); ?>
