@@ -84,8 +84,16 @@
 
 /* ----------- */
 
+.geography-gl {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 40px);
+}
+
 .geography-gl-main {
   position: relative;
+  grid-column: 4 / 8;
+  grid-row: 1 / 12;
 }
 
 .geography-gl-main__viewport {
@@ -119,6 +127,8 @@
 
 .geography-gl-before {
   position: relative;
+  grid-column: 1 / 4;
+  grid-row: 2 / 7;
 }
 
 .geography-gl-before__viewport {
@@ -152,6 +162,8 @@
 
 .geography-gl-after {
   position: relative;
+  grid-column: 8 / 12;
+  grid-row: 5 / 11;
 }
 
 .geography-gl-after__viewport {
