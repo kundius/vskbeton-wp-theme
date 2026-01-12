@@ -15,11 +15,13 @@ import { initStickyHeader } from "./sticky-header";
 import { initHeaderToggle } from "./header-toggle";
 import { initPhotogallery } from "./photogallery";
 import { initGeography } from "./geography";
+import { initGeographyGl } from "./geography-gl";
 
 initHeaderToggle();
 initStickyHeader();
 initPhotogallery();
 initGeography();
+initGeographyGl();
 
 new Swiper(".partners-slideshow .swiper", {
   modules: [Navigation],

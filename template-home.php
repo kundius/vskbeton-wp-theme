@@ -323,16 +323,56 @@ $productsQuery = new WP_Query($args);
               <?php endforeach; ?>
             </div>
           </div>
-          <button class="geography-prev" type="button" data-geography-prev>
+          <button class="geography-embla__prev" type="button" data-geography-prev>
             <span></span>
             <span>Назад</span>
           </button>
-          <button class="geography-next" type="button" data-geography-next>
+          <button class="geography-embla__next" type="button" data-geography-next>
             <span>Пролистать вперёд</span>
             <span></span>
           </button>
         </div>
-      </div>
+        <div class="geography-gl" data-geography-gl>
+          <div class="geography-gl-before" data-geography-gl-before>
+            <div class="geography-gl-before__viewport" data-geography-gl-before-viewport>
+              <div class="geography-gl-before__container">
+                <?php foreach ($geography["items"] as $item): ?>
+                  <div class="geography-gl-before__slide">
+                    <a href="<?php echo $item["image"]["url"]; ?>" data-fslightbox="geography-gl-before" class="geography-gl-before__lightbox">
+                      <img class="geography-gl-before__image" src="<?php echo $item["image"]["url"]; ?>">
+                    </a>
+                  </div>
+                <?php endforeach; ?>
+              </div>
+            </div>
+          </div>
+          <div class="geography-gl-main" data-geography-gl-main>
+            <div class="geography-gl-main__viewport" data-geography-gl-main-viewport>
+              <div class="geography-gl-main__container">
+                <?php foreach ($geography["items"] as $item): ?>
+                  <div class="geography-gl-main__slide">
+                    <a href="<?php echo $item["image"]["url"]; ?>" data-fslightbox="geography-gl-main" class="geography-gl-main__lightbox">
+                      <img class="geography-gl-main__image" src="<?php echo $item["image"]["url"]; ?>">
+                    </a>
+                  </div>
+                <?php endforeach; ?>
+              </div>
+            </div>
+          </div>
+          <div class="geography-gl-after" data-geography-gl-after>
+            <div class="geography-gl-after__viewport" data-geography-gl-after-viewport>
+              <div class="geography-gl-after__container">
+                <?php foreach ($geography["items"] as $item): ?>
+                  <div class="geography-gl-after__slide">
+                    <a href="<?php echo $item["image"]["url"]; ?>" data-fslightbox="geography-gl-after" class="geography-gl-after__lightbox">
+                      <img class="geography-gl-after__image" src="<?php echo $item["image"]["url"]; ?>">
+                    </a>
+                  </div>
+                <?php endforeach; ?>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
   <?php endif; ?>
 

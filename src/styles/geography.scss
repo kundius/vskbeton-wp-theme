@@ -15,6 +15,7 @@
 
 .geography-embla {
   position: relative;
+  filter: drop-shadow(0 8px 8px rgb(109, 121, 140));
 }
 
 .geography-embla__viewport {
@@ -47,12 +48,7 @@
   left: 0;
   top: 0;
   transform: translateY(40px);
-  opacity: 0;
   transition: 0.5s ease;
-}
-
-.geography-embla__slide.is-in-view .geography-embla__lightbox {
-  opacity: 1;
 }
 
 .geography-embla__slide.is-snapped .geography-embla__lightbox {
@@ -78,10 +74,111 @@
   display: none;
 }
 
-.geography-prev {
+.geography-embla__prev {
   position: absolute;
 }
 
-.geography-next {
+.geography-embla__next {
   position: absolute;
+}
+
+/* ----------- */
+
+.geography-gl-main {
+  position: relative;
+}
+
+.geography-gl-main__viewport {
+  overflow: hidden;
+}
+
+.geography-gl-main__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.geography-gl-main__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 100%;
+  min-width: 0;
+  position: relative;
+}
+
+.geography-gl-main__lightbox {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.geography-gl-main__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.geography-gl-before {
+  position: relative;
+}
+
+.geography-gl-before__viewport {
+  overflow: hidden;
+}
+
+.geography-gl-before__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.geography-gl-before__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 100%;
+  min-width: 0;
+  position: relative;
+}
+
+.geography-gl-before__lightbox {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.geography-gl-before__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.geography-gl-after {
+  position: relative;
+}
+
+.geography-gl-after__viewport {
+  overflow: hidden;
+}
+
+.geography-gl-after__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.geography-gl-after__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 100%;
+  min-width: 0;
+  position: relative;
+}
+
+.geography-gl-after__lightbox {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.geography-gl-after__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
