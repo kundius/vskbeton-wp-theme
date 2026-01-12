@@ -59,6 +59,7 @@
   padding: 40px;
   min-height: 100%;
   flex-direction: column;
+  z-index: 1;
 
   @include below(xl) {
     padding: 36px;
@@ -94,4 +95,41 @@
 
 .services-grid__cell:nth-child(4) {
   grid-column: span 2;
+}
+
+.services-grid__cell:nth-child(4) .services-item__title {
+  color: #fff;
+}
+
+.services-grid__cell:nth-child(4) .more-link {
+  --text-color: #fff;
+  --bg-color: #001562;
+}
+
+.services-item::before {
+  content: "";
+  background: url("../images/lab-bg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  opacity: 0.7;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.services-item::after {
+  content: "";
+  background: linear-gradient(
+    135deg,
+    rgba(0, 53, 187, 1) 0%,
+    rgba(0, 53, 187, 0) 50%
+  );
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
