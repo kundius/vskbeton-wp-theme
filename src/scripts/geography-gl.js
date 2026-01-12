@@ -28,4 +28,31 @@ export function initGeographyGl() {
     loop: true,
     slidesToScroll: "auto",
   });
+
+  const syncCarousels = () => {
+    const index = mainEmblaApi.selectedScrollSnap();
+    const slideCount = mainEmblaApi.slideNodes().length;
+
+    // Первая карусель — отстаёт на 1
+    let prevIndex = index - 1;
+    if (prevIndex < 0) {
+      prevIndex = options.loop ? slideCount - 1 : 0;
+    }
+
+    // Третья карусель — опережает на 1
+    let nextIndex = index + 1;
+    if (nextIndex >= slideCount) {
+      nextIndex = options.loop ? 0 : slideCount - 1;
+    }
+
+    // Обновляем позиции без анимации (или с ней — по желанию)
+    beforeEmblaApi.scrollTo(prevIndex, false);
+    afterEmblaApi.scrollTo(nextIndex, false);
+  };
+
+  // Подписываемся на изменение слайда во второй карусели
+  mainEmblaApi.on("select", syncCarousels);
+
+  // Инициализируем начальное состояние
+  syncCarousels();
 }
