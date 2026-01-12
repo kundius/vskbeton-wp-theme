@@ -37,7 +37,7 @@ export function initGeographyGl() {
     mainNextNode
   );
 
-  emblaApi.on("destroy", removeMainPrevNextBtnsClickHandlers);
+  mainEmblaApi.on("destroy", removeMainPrevNextBtnsClickHandlers);
 
   const syncCarousels = () => {
     const index = mainEmblaApi.selectedScrollSnap();
