@@ -269,46 +269,38 @@ $productsQuery = new WP_Query($args);
     </section>
   <?php endif; ?>
 
+  <?php
+  if ($productsQuery->have_posts()): ?>
+    <section class="services">
+      <div class="container">
+        <div class="services__title">
+          <strong>НАШИ</strong><br>
+          УСЛУГИ
+        </div>
+        <div class="services-grid">
+          <?php while ($productsQuery->have_posts()): $productsQuery->the_post(); ?>
+            <div class="services-grid__cell">
+              <div class="products-item">
+                <div class="products-item__title">
+                  <?php echo (get_field("title_in_list") ?: get_the_title()); ?>
+                </div>
+                <a href="<?php the_permalink(); ?>" class="products-item__section">
+                  <span>Подробнее</span>
+                  <span></span>
+                </a>
+              </div>
+            </div>
+          <?php endwhile; ?>
+        </div>
+      </div>
+    </section>
+  <?php endif;
+  wp_reset_postdata();
+  ?>
+
   <div class="page">
     <div class="main">
       <div class="container">
-
-        <?php
-        if ($productsQuery->have_posts()): ?>
-          <div class="services">
-            <div class="section-title">
-              <span>НАШИ</span> УСЛУГИ
-            </div>
-            <div class="services-grid">
-              <?php
-              $key = 0;
-              while ($productsQuery->have_posts()):
-
-                $productsQuery->the_post();
-                $key++;
-              ?>
-                <div class="services-grid__cell<?php if (
-                                                  $productsQuery->post_count % 2 > 0 &&
-                                                  $key === $productsQuery->post_count
-                                                ): ?> services-grid__cell_wide<?php endif; ?>">
-                  <div class="simple-card">
-                    <div class="simple-card__image">
-                      <?php the_post_thumbnail("article-medium"); ?>
-                    </div>
-                    <a href="<?php the_permalink(); ?>" class="simple-card__title">
-                      <?php echo get_field("title_in_list") ?:
-                        get_the_title(); ?>
-                    </a>
-                  </div>
-                </div>
-              <?php
-              endwhile;
-              ?>
-            </div>
-          </div>
-        <?php endif;
-        wp_reset_postdata();
-        ?>
 
         <?php if ($group = get_field("geography")): ?>
           <div class="geography">

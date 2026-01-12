@@ -12,6 +12,7 @@
 @import "products";
 @import "advantages";
 @import "photogallery";
+@import "services";
 @import "home";
 
 :root {
@@ -486,74 +487,6 @@ body {
   @include below(md) {
     transform: translateX(4px);
   }
-}
-
-.simple-card {
-  position: relative;
-}
-
-.simple-card__image {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  border-radius: 32px;
-  transition: all 0.3s ease;
-  .simple-card:hover & {
-    box-shadow: 4.225px 7.947px 10px 0 rgba(25, 42, 70, 0.24);
-  }
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: all 0.8s ease;
-    .simple-card:hover & {
-      transform: scale(1.1);
-      filter: grayscale(1);
-    }
-  }
-}
-
-.simple-card__image::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 20;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    35deg,
-    transparent calc(100% - 120px),
-    rgba(78, 119, 196, 0.9) 100%
-  );
-}
-
-.simple-card__title {
-  display: block;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-  color: #e06f19;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 1.25;
-  margin-top: 6px;
-  @include below(lg) {
-    font-size: 24px;
-  }
-  @include below(md) {
-    font-size: 18px;
-    margin-top: 4px;
-  }
-}
-
-.simple-card__title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .directions {
@@ -1718,203 +1651,11 @@ body {
   }
 }
 
-.services {
-  margin-top: 78px;
-  margin-bottom: 78px;
-
-  @include below(md) {
-    margin-top: 48px;
-    margin-bottom: 48px;
-  }
-}
-
-.services-grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -64px;
-  margin-top: -64px;
-
-  @include below(lg) {
-    margin-left: -32px;
-    margin-top: -32px;
-  }
-  @include below(md) {
-    margin-left: -16px;
-    margin-top: -16px;
-  }
-}
-
-.services-grid__cell {
-  width: 50%;
-  padding-left: 64px;
-  padding-top: 64px;
-
-  @include below(lg) {
-    padding-left: 32px;
-    padding-top: 32px;
-  }
-  @include below(md) {
-    padding-left: 16px;
-    padding-top: 16px;
-    width: 100%;
-  }
-}
-
-.services-grid__cell_wide {
-  width: 100%;
-}
-
-.services-item {
-  position: relative;
-  min-height: 320px;
-  padding: 48px 48px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  @include below(lg) {
-    padding: 24px 24px 12px;
-  }
-  @include below(md) {
-    padding: 16px 16px 8px;
-  }
-}
-
-.services-item__image {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.services-item__image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  z-index: 10;
-}
-
-.services-item__image::after {
-  content: "";
-  background: rgba(11, 72, 179, 0.45);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 20;
-}
-
-.services-item__title {
-  font-size: 32px;
-  line-height: 1.2;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #fff;
-
-  @include below(lg) {
-    font-size: 24px;
-  }
-  @include below(md) {
-    font-size: 24px;
-  }
-}
-
-.services-item__title span {
-  color: rgb(224, 111, 25);
-}
-
-.services-item__section {
-  align-self: flex-end;
-}
-
-.services-item__section-link {
-  font-size: 20px;
-  text-decoration: none;
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  line-height: 1.2;
-
-  @include below(lg) {
-    font-size: 18px;
-  }
-}
-
-.services-item__section-link::before {
-  content: "";
-  background: url("../images/arrow-1.png") no-repeat 50% 50%;
-  background-size: cover;
-  width: calc(40px * 0.6);
-  height: calc(64px * 0.6);
-  margin-right: 16px;
-  flex-shrink: 0;
-  transition: all 0.3s ease;
-
-  @include below(lg) {
-    width: calc(40px * 0.5);
-    height: calc(64px * 0.5);
-  }
-  @include below(md) {
-    width: 18px;
-    height: 30px;
-    margin-right: 8px;
-  }
-}
-
-.services-item__section-link:hover::before {
-  transform: translateX(4px);
-
-  @include below(lg) {
-    transform: translateX(4px);
-  }
-}
-
-.services-item__section-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 20;
-}
-
 .main-nav > ul {
   background: none;
 }
-.services-item__image img {
-  border-radius: 40px;
-}
-.services-item__image::after {
-  content: "";
-  background: #0b48b3a1;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 20;
-  border-radius: 40px;
-}
 .geography-slideshow .swiper-button-next,
 .geography-slideshow .swiper-button-prev {
-  color: #e06f19;
-}
-.services-item__price {
-  margin-top: -40px;
-  font-size: 18px;
-  line-height: 1.2;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-}
-.services-item__price span {
   color: #e06f19;
 }
 
@@ -1922,15 +1663,6 @@ body {
   .main-nav_opened {
     top: 40px;
     background: rgba(0, 0, 0, 0.9);
-  }
-  .services-item__price {
-    position: relative;
-    margin-top: -100px;
-    font-size: 14px;
-    line-height: 1.2;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #fff;
   }
   .swiper-slide {
     padding: 0;
