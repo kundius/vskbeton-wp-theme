@@ -1,6 +1,11 @@
 .geography {
   padding-top: 112px;
   padding-bottom: 214px;
+
+  @include below(md) {
+    padding-top: 64px;
+    padding-bottom: 128px;
+  }
 }
 
 .geography__title {
@@ -11,6 +16,10 @@
   line-height: 1;
   letter-spacing: -0.05em;
   color: #333;
+
+  @include below(md) {
+    margin-bottom: 64px;
+  }
 }
 
 .geography-gl {
@@ -31,6 +40,9 @@
   @include below(lg) {
     grid-template-rows: repeat(15, 24px);
   }
+  @include below(md) {
+    grid-template-rows: repeat(15, 5vw);
+  }
 }
 
 .geography-gl-main {
@@ -39,6 +51,10 @@
   grid-row: 1/16;
   z-index: 20;
   box-shadow: -1.097px 8.933px 15.3px 2.7px rgba(109, 121, 140, 0.54);
+
+  @include below(md) {
+    grid-column: 2/15;
+  }
 }
 
 .geography-gl-main__viewport {
@@ -280,5 +296,8 @@
   @include below(lg) {
     padding: 32px;
     font-size: 16px;
+  }
+  @include below(md) {
+    padding: 24px;
   }
 }
