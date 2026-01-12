@@ -47,7 +47,12 @@
   left: 0;
   top: 0;
   transform: translateY(40px);
-  transition: 0.3s ease;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.geography-embla__slide.is-in-view .geography-embla__lightbox {
+  opacity: 1;
 }
 
 .geography-embla__slide.is-snapped .geography-embla__lightbox {
