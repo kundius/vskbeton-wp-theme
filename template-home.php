@@ -306,32 +306,6 @@ $productsQuery = new WP_Query($args);
         <div class="geography__title">
           <?php echo $geography["title"]; ?>
         </div>
-        <div class="geography-embla" data-geography>
-          <div class="geography-embla__viewport" data-geography-viewport>
-            <div class="geography-embla__container">
-              <?php foreach ($geography["items"] as $item): ?>
-                <div class="geography-embla__slide">
-                  <a href="<?php echo $item["image"]["url"]; ?>" data-fslightbox="geography-lightbox" class="geography-embla__lightbox">
-                    <img class="geography-embla__image" src="<?php echo $item["image"]["url"]; ?>">
-                  </a>
-                  <?php if (!empty($item["description"])): ?>
-                    <<?php echo ($item["link"] ? 'a href="' . $item["link"] . '"' : 'div'); ?> class="geography-embla__description">
-                      <?php echo $item["description"]; ?>
-                    </<?php echo ($item["link"] ? 'a' : 'div'); ?>>
-                  <?php endif; ?>
-                </div>
-              <?php endforeach; ?>
-            </div>
-          </div>
-          <button class="geography-embla__prev" type="button" data-geography-prev>
-            <span></span>
-            <span>Назад</span>
-          </button>
-          <button class="geography-embla__next" type="button" data-geography-next>
-            <span>Пролистать вперёд</span>
-            <span></span>
-          </button>
-        </div>
         <div class="geography-gl" data-geography-gl>
           <div class="geography-gl__emblas">
             <div class="geography-gl-before" data-geography-gl-before>
