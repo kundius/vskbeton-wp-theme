@@ -290,6 +290,7 @@ $productsQuery = new WP_Query($args);
                   <span>Подробнее</span>
                   <span></span>
                 </a>
+                <div class="services-item__space"></div>
               </div>
             </div>
           <?php endwhile; ?>
