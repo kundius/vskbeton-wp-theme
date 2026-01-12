@@ -24,6 +24,10 @@
   filter: drop-shadow(0 6px 6px rgb(109, 121, 140));
   position: relative;
   z-index: 10;
+
+  @include below(xl) {
+    grid-template-rows: repeat(15, 32px);
+  }
 }
 
 .geography-gl-main {
@@ -214,6 +218,10 @@
   height: 240px;
   width: 280px;
   z-index: 30;
+
+  @include below(xl) {
+    transform: translate(-50%, -50%);
+  }
 }
 
 .geography-gl::before {
@@ -227,6 +235,10 @@
   height: 240px;
   width: 280px;
   z-index: 20;
+
+  @include below(xl) {
+    transform: translate(-50%, -50%);
+  }
 }
 
 .geography-gl-desc__viewport {
