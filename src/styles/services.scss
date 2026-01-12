@@ -69,7 +69,7 @@
   }
 }
 
-.products-item::after {
+.services-item::after {
   content: "";
   display: block;
 }
@@ -86,4 +86,12 @@
   strong {
     font-weight: 500;
   }
+}
+
+.services-grid__cell:nth-child(1) {
+  grid-row: span 3;
+}
+
+.services-grid__cell:nth-child(4) {
+  grid-column: span 2;
 }
