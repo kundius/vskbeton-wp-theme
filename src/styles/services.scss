@@ -1,6 +1,20 @@
 .services {
   overflow: hidden;
   padding-top: 128px;
+  position: relative;
+  z-index: 1;
+}
+
+.services::before {
+  content: "";
+  position: absolute;
+  top: 216px;
+  left: 216px;
+  width: 50vw;
+  aspect-ratio: 1204 / 285;
+  background: url("../images/big-white-logo.png") no-repeat 50% 50%;
+  background-size: cover;
+  z-index: -1;
 }
 
 .services__title {
