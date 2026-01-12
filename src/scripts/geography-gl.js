@@ -20,15 +20,15 @@ export function initGeographyGl() {
 
   const mainEmblaApi = EmblaCarousel(mainViewportNode, {
     loop: true,
-    slidesToScroll: "auto",
+    slidesToScroll: 1,
   });
   const beforeEmblaApi = EmblaCarousel(beforeViewportNode, {
     loop: true,
-    slidesToScroll: "auto",
+    slidesToScroll: 1,
   });
   const afterEmblaApi = EmblaCarousel(afterViewportNode, {
     loop: true,
-    slidesToScroll: "auto",
+    slidesToScroll: 1,
   });
 
   const removeMainPrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(
@@ -46,13 +46,13 @@ export function initGeographyGl() {
     // Первая карусель — отстаёт на 1
     let prevIndex = index - 1;
     if (prevIndex < 0) {
-      prevIndex = options.loop ? slideCount - 1 : 0;
+      prevIndex = slideCount - 1;
     }
 
     // Третья карусель — опережает на 1
     let nextIndex = index + 1;
     if (nextIndex >= slideCount) {
-      nextIndex = options.loop ? 0 : slideCount - 1;
+      nextIndex = 0;
     }
 
     // Обновляем позиции без анимации (или с ней — по желанию)
