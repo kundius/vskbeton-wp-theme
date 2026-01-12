@@ -258,6 +258,9 @@
   @include below(lg) {
     height: 160px;
   }
+  @include below(md) {
+    height: 140px;
+  }
 }
 
 .geography-gl::before {
@@ -277,6 +280,9 @@
   }
   @include below(lg) {
     height: 160px;
+  }
+  @include below(md) {
+    height: 140px;
   }
 }
 
