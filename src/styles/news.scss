@@ -144,24 +144,17 @@
   margin-bottom: 16px;
 }
 
+.news-card__space {
+  flex-grow: 1;
+}
+
 .news-card__desc {
   font-size: 16px;
   color: rgb(51, 51, 51);
   line-height: 1.5;
   margin-bottom: 16px;
-  display: none;
-}
-
-.news-card__desc p {
-  margin: 0;
-}
-
-.news-card__desc p + p {
-  margin-top: 1em;
-}
-
-.news-card__more {
-  margin-top: auto;
+  max-height: 4.5em;
+  overflow: hidden;
 }
 
 .news-card__more::after {

@@ -10,8 +10,9 @@
       <?php the_title(); ?>
     </div>
     <div class="news-card__desc">
-      <?php the_excerpt(); ?>
+      <?php echo wp_strip_all_tags(get_the_excerpt()); ?>
     </div>
+    <div class="news-card__space"></div>
     <a href="<?php the_permalink(); ?>" class="more-link news-card__more">
       <span>Подробнее</span>
       <span></span>
