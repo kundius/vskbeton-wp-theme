@@ -1,6 +1,6 @@
 .footer {
   padding-top: 36px;
-  padding-bottom: 36px;
+  padding-bottom: 24px;
 }
 
 .footer-layout {
@@ -15,10 +15,12 @@
 
 .footer-layout__second {
   padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .footer-layout__third {
   padding-top: 12px;
+  padding-bottom: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
