@@ -40,8 +40,8 @@
 
 <section class="footer">
   <div class="container">
-    <div class="footer-primary">
-      <div class="footer-primary__first">
+    <div class="footer-layout">
+      <div class="footer-layout__first">
         <div class="footer-contacts">
           <?php if ($phone_number = $data['phone_number']): ?>
             <div class="footer-contacts__item">
@@ -84,7 +84,7 @@
         </a>
       </div>
 
-      <div class="footer-primary__second">
+      <div class="footer-layout__second">
         <?php wp_nav_menu([
           'theme_location' => 'menu-footer',
           'container' => null,
@@ -92,7 +92,7 @@
         ]); ?>
       </div>
 
-      <div class="footer-primary__third">
+      <div class="footer-layout__third">
         <?php wp_nav_menu([
           'theme_location' => 'menu-rules',
           'container' => null,
@@ -104,18 +104,22 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="footer-secondary">
-      <div class="footer-secondary__copyright">
+<section class="footbar">
+  <div class="container">
+    <div class="footbar-layout">
+      <div class="footbar-layout__copyright">
         <?php echo $data['copyright']; ?>
       </div>
-      <a href="<?php the_permalink(1755); ?>" class="footer-secondary__sitemap">
+      <a href="<?php the_permalink(1755); ?>" class="footbar-layout__sitemap">
         Карта сайта
       </a>
-      <div class="footer-secondary__counters">
+      <div class="footbar-layout__counters">
         <?php echo $data['counters']; ?>
       </div>
-      <a href="https://domenart-studio.ru/" class="footer-secondary__creator" target="_blank">
+      <a href="https://domenart-studio.ru/" class="footbar-layout__creator" target="_blank">
         <img src="<?php bloginfo('template_url'); ?>/assets/creator.png" alt="creator" width="138" height="30" />
       </a>
     </div>
