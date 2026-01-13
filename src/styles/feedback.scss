@@ -18,7 +18,7 @@
 
 .feedback-form {
   position: relative;
-  padding: 48px 56px 12px;
+  padding: 48px 56px 20px;
 }
 
 .feedback-form::before {
@@ -43,7 +43,7 @@
   line-height: 1.2;
   letter-spacing: -0.005em;
   color: #fff;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   font-weight: 300;
 }
 
@@ -66,6 +66,7 @@
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
 }
 
 .feedback-form__submit {

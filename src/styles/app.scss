@@ -179,6 +179,10 @@ body {
   padding: 0;
 }
 
+.flat-input::placeholder {
+  color: var(--text-color);
+}
+
 .btn-arrow-left,
 .btn-arrow-right {
   font-size: 18px;
