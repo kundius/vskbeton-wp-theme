@@ -61,13 +61,26 @@
 .news-list .news-card:nth-child(2n)::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
   right: 0;
   bottom: 0;
   z-index: -1;
   background-color: #0035bb;
   mix-blend-mode: multiply;
+}
+
+.news-list .news-card:nth-child(2n) .news-card__date {
+  color: #fff;
+}
+
+.news-list .news-card:nth-child(2n) .news-card__title {
+  color: #fff;
+}
+
+.news-list .news-card:nth-child(2n) .news-card__more {
+  --text-color: #fff;
+  --bg-color: #001562;
 }
 
 .news-card {
