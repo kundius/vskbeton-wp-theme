@@ -97,28 +97,28 @@
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-top: 36px solid #db9157;
-  border-left: 36px solid transparent;
+  left: 100%;
+  width: 24px;
+  height: 100%;
   opacity: 0;
   transition: 0.3s ease;
-  transform: translate(36px, -36px);
+  transform: rotate(-45deg);
+  background: #db9157;
+  transform-origin: 0% 0%;
 }
 
 .feedback-form__submit::after {
   content: "";
-  position: absolute;
   bottom: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 36px solid #db9157;
-  border-left: 36px solid transparent;
+  position: absolute;
+  left: 100%;
+  width: 24px;
+  height: 100%;
   opacity: 0;
   transition: 0.3s ease;
-  transform: translate(36px, 36px);
+  transform: rotate(45deg);
+  background: #db9157;
+  transform-origin: 0% 100%;
 }
 
 .feedback-form__submit:hover {
@@ -127,12 +127,12 @@
 
 .feedback-form__submit:hover::after {
   opacity: 1;
-  transform: translate(0, 0);
+  left: calc(100% - 60px);
 }
 
 .feedback-form__submit:hover::before {
   opacity: 1;
-  transform: translate(0, 0);
+  left: calc(100% - 60px);
 }
 
 .feedback-form__rules {
