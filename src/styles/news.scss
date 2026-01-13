@@ -76,6 +76,10 @@
   z-index: -1;
   background-color: #0035bb;
   mix-blend-mode: multiply;
+
+  @include below(md) {
+    left: 0;
+  }
 }
 
 .news-list .news-card:nth-child(2n) .news-card__date {
