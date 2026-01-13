@@ -52,6 +52,10 @@
   font-size: 12px;
   color: rgb(255, 255, 255);
   line-height: 1.2;
+
+  @include below(md) {
+    text-align: center;
+  }
 }
 
 .footbar-layout__sitemap {
