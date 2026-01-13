@@ -50,6 +50,26 @@
   grid-row: 2 / 3;
 }
 
+.news-list .news-card:nth-child(2n) .news-card__desc {
+  display: none;
+}
+
+.news-list .news-card:nth-child(2n) .news-card__content {
+  background: transparent;
+}
+
+.news-list .news-card:nth-child(2n)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #0035bb;
+  mix-blend-mode: multiply;
+}
+
 .news-card {
   display: grid;
   grid-template-rows: 1fr auto;
@@ -67,7 +87,7 @@
   display: block;
   position: relative;
   overflow: hidden;
-  z-index: -1;
+  z-index: -2;
 
   img {
     position: absolute;
