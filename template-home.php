@@ -418,7 +418,7 @@ $productsQuery = new WP_Query($args);
         <div class="partners-embla" data-partners-embla>
           <div class="partners-embla__viewport" data-partners-embla-viewport>
             <div class="partners-embla__container">
-              <?php foreach ($group["items"] as $chunk): ?>
+              <?php foreach ($group["items"] as $item): ?>
                 <div class="partners-embla__slide">
                   <a href="<?php echo $item["link"]; ?>" class="partners-embla__link" target="_blank">
                     <img class="partners-embla__image" src="<?php echo $item["logo"]["url"]; ?>">
