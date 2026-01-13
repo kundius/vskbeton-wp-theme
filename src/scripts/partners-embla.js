@@ -7,7 +7,7 @@ export function applyPartnersEmbla(wrap) {
   const nextNode = wrap.querySelector("[data-partners-embla-next]");
 
   const emblaApi = EmblaCarousel(viewportNode, {
-    loop: false,
+    loop: true,
     slidesToScroll: "auto",
   });
 
