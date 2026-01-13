@@ -85,7 +85,7 @@
 
 .news-card {
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
   position: relative;
   aspect-ratio: 1;
@@ -149,6 +149,7 @@
   color: rgb(51, 51, 51);
   line-height: 1.5;
   margin-bottom: 16px;
+  display: none;
 }
 
 .news-card__desc p {
