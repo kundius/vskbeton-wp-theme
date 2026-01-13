@@ -407,36 +407,34 @@ $productsQuery = new WP_Query($args);
   <?php endif; ?>
   <?php wp_reset_query(); ?>
 
-  <div class="page">
-    <div class="main">
+  <?php if ($group = get_field("partners")): ?>
+    <section class="partners">
       <div class="container">
-
-        <?php if ($group = get_field("partners")): ?>
-          <div class="partners">
-            <div class="section-title">
-              <?php echo $group["title"]; ?>
-            </div>
-            <div class="partners-slideshow">
-              <div class="swiper">
-                <div class="swiper-wrapper">
-                  <?php foreach ($group["items"] as $item): ?>
-                    <div class="swiper-slide partners-slideshow__slide">
-                      <a href="<?php echo $item["link"]; ?>" class="partners-slideshow__link" target="_blank">
-                        <img class="partners-slideshow__image" src="<?php echo $item["logo"]["url"]; ?>">
-                      </a>
-                    </div>
-                  <?php endforeach; ?>
+        <div class="partners__title">
+          <span>
+            <?php echo $group["title"]; ?>
+          </span>
+        </div>
+        <div class="partners-embla" data-partners-embla>
+          <div class="partners-embla__viewport" data-partners-embla-viewport>
+            <div class="partners-embla__container">
+              <?php foreach ($group["items"] as $chunk): ?>
+                <div class="partners-embla__slide">
+                  <a href="<?php echo $item["link"]; ?>" class="partners-embla__link" target="_blank">
+                    <img class="partners-embla__image" src="<?php echo $item["logo"]["url"]; ?>">
+                  </a>
                 </div>
-              </div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <?php endforeach; ?>
             </div>
           </div>
-        <?php endif; ?>
+          <button class="partners-embla__prev" type="button" data-partners-embla-prev></button>
+          <button class="partners-embla__next" type="button" data-partners-embla-next></button>
+        </div>
       </div>
-    </div>
+    </section>
+  <?php endif; ?>
 
-    <?php get_template_part("partials/footer"); ?>
+  <?php get_template_part("partials/footer"); ?>
   </div>
 
   <?php wp_footer(); ?>

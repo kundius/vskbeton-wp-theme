@@ -13,11 +13,21 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 96px;
+  gap: 20px;
+
+  @include below(md) {
+    margin-bottom: 64px;
+    flex-direction: column;
+  }
 }
 
 .news-header::after {
   content: "";
   display: block;
+
+  @include below(md) {
+    display: none;
+  }
 }
 
 .news-header__title {

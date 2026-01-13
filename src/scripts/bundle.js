@@ -15,28 +15,13 @@ import { initStickyHeader } from "./sticky-header";
 import { initHeaderToggle } from "./header-toggle";
 import { initPhotogallery } from "./photogallery";
 import { initGeographyGl } from "./geography-gl";
+import { initPartnersEmbla } from "./partners-embla";
 
 initHeaderToggle();
 initStickyHeader();
 initPhotogallery();
 initGeographyGl();
-
-new Swiper(".partners-slideshow .swiper", {
-  modules: [Navigation],
-  spaceBetween: 10,
-  slidesPerView: 2,
-  freeMode: true,
-  navigation: {
-    nextEl: ".partners-slideshow .swiper-button-next",
-    prevEl: ".partners-slideshow .swiper-button-prev",
-  },
-  breakpoints: {
-    767: {
-      spaceBetween: 20,
-      slidesPerView: 5,
-    },
-  },
-});
+initPartnersEmbla();
 
 new Swiper(".team .swiper", {
   modules: [Navigation],
