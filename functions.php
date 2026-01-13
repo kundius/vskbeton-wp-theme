@@ -32,6 +32,8 @@ add_image_size("article-medium", 600, 320, true);
 add_image_size("article-large", 1200, 600, true);
 register_nav_menus([
     "main" => "Основное меню",
+    "menu-footer" => "Меню в подвале",
+    "menu-rules" => "Меню правила",
 ]);
 
 add_theme_support("html5", [
