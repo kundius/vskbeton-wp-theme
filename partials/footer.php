@@ -1,5 +1,3 @@
-<?php $data = get_field('footer', 'option') ?>
-
 <section class="feedback">
   <div class="container">
     <form
@@ -37,6 +35,8 @@
     </form>
   </div>
 </section>
+
+<?php $data = get_field('footer', 'option'); ?>
 
 <section class="footer">
   <div class="container">
