@@ -22,14 +22,8 @@
         <div class="feedback-form__errors" data-feedback-form-errors></div>
 
         <div class="feedback-form__fields">
-          <div class="input-field">
-            <label for="name" class="input-field__label">Ваше имя</label>
-            <input type="text" id="name" name="name" class="input-field__input">
-          </div>
-          <div class="input-field">
-            <label for="phone" class="input-field__label">Ваш телефон*</label>
-            <input type="text" id="phone" type="text" name="phone" value="" data-maska="+ 7 (###) - ### - ## - ##" placeholder="+ 7 (___)  - ___ - __ - __" required class="input-field__input">
-          </div>
+          <input type="text" id="name" name="name" class="flat-input" placeholder="Ваше имя">
+          <input type="text" id="phone" type="text" name="phone" value="" data-maska="+ 7 (###) - ### - ## - ##" placeholder="+ 7 (___)  - ___ - __ - __" required class="flat-input">
           <button class="feedback-form__submit" type="submit">
             Заказать бетон
             <span></span>
@@ -44,7 +38,7 @@
   </div>
 </section>
 
-<div class="footer">
+<div class="footer" style="display: none;">
   <div class="container footer-layout">
     <div class="footer-layout__feedback">
       <div class="footer-feedback">
