@@ -66,12 +66,13 @@
   flex-direction: column;
   padding: 32px 36px;
   width: 100%;
+  background: #f6f6f6;
 }
 
 .news-card__date {
   font-size: 12px;
   color: rgb(0, 0, 0);
-  line-height: 15;
+  line-height: 1.5;
   margin-bottom: 12px;
 }
 

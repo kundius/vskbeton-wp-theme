@@ -388,15 +388,20 @@ $productsQuery = new WP_Query($args);
   ?>
   <?php if ($list_query->have_posts()): ?>
     <section class="news">
-      <div class="news-header">
-        <div class="news-header__title">Новости</div>
-        <a href="<?php echo get_category_link(3); ?>" class="btn-arrow-right">Смотреть все</a>
-      </div>
-      <div class="news-list">
-        <?php while ($list_query->have_posts()): ?>
-          <?php $list_query->the_post(); ?>
-          <?php get_template_part("partials/news-card"); ?>
-        <?php endwhile; ?>
+      <div class="container">
+        <div class="news-header">
+          <div class="news-header__title">Новости</div>
+          <a href="<?php echo get_category_link(3); ?>" class="btn-arrow-right">
+            <span>Смотреть все</span>
+            <span></span>
+          </a>
+        </div>
+        <div class="news-list">
+          <?php while ($list_query->have_posts()): ?>
+            <?php $list_query->the_post(); ?>
+            <?php get_template_part("partials/news-card"); ?>
+          <?php endwhile; ?>
+        </div>
       </div>
     </section>
   <?php endif; ?>
