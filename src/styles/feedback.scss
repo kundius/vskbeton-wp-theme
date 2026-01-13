@@ -51,6 +51,10 @@
   color: #fff;
   margin-bottom: 20px;
   font-weight: 300;
+
+  @include below(md) {
+    font-size: 24px;
+  }
 }
 
 .feedback-form__title::first-line {
@@ -73,6 +77,11 @@
   gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+
+  @include below(md) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
 
 .feedback-form__submit {
