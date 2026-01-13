@@ -236,11 +236,11 @@ $productsQuery = new WP_Query($args);
           <div class="photogallery-header__controls">
             <?php if ($gallery = $photogallery['gallery']): ?>
               <div class="photogallery-controls">
-                <button class="photogallery-controls__prev" type="button" data-photogallery-prev>
+                <button class="btn-arrow-left" type="button" data-photogallery-prev>
                   <span></span>
                   <span>Назад</span>
                 </button>
-                <button class="photogallery-controls__next" type="button" data-photogallery-next>
+                <button class="btn-arrow-right" type="button" data-photogallery-next>
                   <span>Пролистать вперёд</span>
                   <span></span>
                 </button>
@@ -269,8 +269,7 @@ $productsQuery = new WP_Query($args);
     </section>
   <?php endif; ?>
 
-  <?php
-  if ($productsQuery->have_posts()): ?>
+  <?php if ($productsQuery->have_posts()): ?>
     <section class="services">
       <div class="container">
         <div class="services__title">
@@ -370,47 +369,42 @@ $productsQuery = new WP_Query($args);
     </section>
   <?php endif; ?>
 
+  <?php
+  $list_query_params = [
+    "post_type" => "post",
+    "posts_per_page" => 2,
+    "order" => "DESC",
+    "orderby" => "date",
+    "tax_query" => [
+      "relation" => "OR",
+      [
+        "taxonomy" => "category",
+        "field" => "id",
+        "terms" => [3],
+      ],
+    ],
+  ];
+  $list_query = new WP_Query($list_query_params);
+  ?>
+  <?php if ($list_query->have_posts()): ?>
+    <section class="news">
+      <div class="news-header">
+        <div class="news-header__title">Новости</div>
+        <a href="<?php echo get_category_link(3); ?>" class="btn-arrow-right">Смотреть все</a>
+      </div>
+      <div class="news-list">
+        <?php while ($list_query->have_posts()): ?>
+          <?php $list_query->the_post(); ?>
+          <?php get_template_part("partials/news-card"); ?>
+        <?php endwhile; ?>
+      </div>
+    </section>
+  <?php endif; ?>
+  <?php wp_reset_query(); ?>
+
   <div class="page">
     <div class="main">
       <div class="container">
-
-        <?php
-        $list_query_params = [
-          "post_type" => "post",
-          "posts_per_page" => 2,
-          "order" => "DESC",
-          "orderby" => "date",
-          "tax_query" => [
-            "relation" => "OR",
-            [
-              "taxonomy" => "category",
-              "field" => "id",
-              "terms" => [3],
-            ],
-          ],
-        ];
-        $list_query = new WP_Query($list_query_params);
-        ?>
-        <div class="home-news">
-          <div class="home-news__headline">
-            <div class="home-news__headline-title">Новости</div>
-            <a href="<?php echo get_category_link(
-                        3,
-                      ); ?>" class="home-news__headline-all">Смотреть все</a>
-          </div>
-          <div class="home-news__list">
-            <?php while ($list_query->have_posts()):
-              $list_query->the_post(); ?>
-              <div class="home-news__item">
-                <?php get_template_part("partials/article", null, [
-                  "thumb" => "article-medium",
-                ]); ?>
-              </div>
-            <?php
-            endwhile; ?>
-          </div>
-        </div>
-        <?php wp_reset_query(); ?>
 
         <?php if ($group = get_field("partners")): ?>
           <div class="partners">
