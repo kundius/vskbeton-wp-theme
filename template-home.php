@@ -410,10 +410,12 @@ $productsQuery = new WP_Query($args);
   <?php if ($group = get_field("partners")): ?>
     <section class="partners">
       <div class="container">
-        <div class="partners__title">
-          <span>
-            <?php echo $group["title"]; ?>
-          </span>
+        <div class="partners-header">
+          <div class="partners-header__title">
+            <span>
+              <?php echo $group["title"]; ?>
+            </span>
+          </div>
         </div>
         <div class="partners-embla" data-partners-embla>
           <div class="partners-embla__viewport" data-partners-embla-viewport>

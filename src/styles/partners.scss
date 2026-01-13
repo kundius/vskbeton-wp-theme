@@ -4,7 +4,34 @@
   overflow: hidden;
 }
 
-.partners__title {
+.partners-header {
+  display: flex;
+  position: relative;
+  margin-bottom: 64px;
+}
+
+.partners-header::before {
+  content: "";
+  background-color: rgb(231, 231, 231);
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  top: 100%;
+  left: 0;
+}
+
+.partners-header::after {
+  content: "";
+  background-color: rgb(231, 231, 231);
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  top: 100%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.partners-header__title {
   font-size: 30px;
   color: #fff;
   text-transform: uppercase;
