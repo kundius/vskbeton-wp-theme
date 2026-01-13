@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.feedback-form::before {
+.feedback-form::after {
   content: "";
   background-color: rgb(231, 231, 231);
   position: absolute;
