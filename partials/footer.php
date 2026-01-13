@@ -26,7 +26,7 @@
           <input type="text" id="phone" type="text" name="phone" value="" data-maska="+ 7 (###) - ### - ## - ##" placeholder="+ 7 (___)  - ___ - __ - __" required class="flat-input">
           <button class="feedback-form__submit" type="submit">
             Заказать бетон
-            <span></span>
+            <span class="icon icon-arrow-right"></span>
           </button>
         </div>
 
