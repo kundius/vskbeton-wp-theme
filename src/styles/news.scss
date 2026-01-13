@@ -33,6 +33,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+
+  @include below(lg) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .news-list .news-card:nth-child(2n) {
@@ -48,6 +52,10 @@
 .news-list .news-card:nth-child(2n) .news-card__content {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+
+  @include below(md) {
+    grid-column: 1 / 3;
+  }
 }
 
 .news-list .news-card:nth-child(2n) .news-card__desc {
@@ -106,8 +114,8 @@
     position: absolute;
     left: 0;
     top: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
   }
@@ -155,6 +163,10 @@
   margin-bottom: 16px;
   max-height: 4.5em;
   overflow: hidden;
+
+  @include below(md) {
+    display: none;
+  }
 }
 
 .news-card__more::after {
