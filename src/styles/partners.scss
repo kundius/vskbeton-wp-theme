@@ -96,7 +96,9 @@
 }
 
 .partners-embla__image {
-  max-width: 100%;
+  max-width: 120px;
+  max-height: 120px;
+  width: auto;
   height: auto;
 }
 
@@ -114,6 +116,10 @@
   align-items: center;
   justify-content: center;
   border: none;
+
+  &:disabled {
+    display: none;
+  }
 
   @include below(md) {
     width: 48px;
@@ -151,6 +157,10 @@
   align-items: center;
   justify-content: center;
   border: none;
+
+  &:disabled {
+    display: none;
+  }
 
   @include below(md) {
     width: 48px;
