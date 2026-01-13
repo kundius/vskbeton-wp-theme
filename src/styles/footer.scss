@@ -187,6 +187,9 @@
   @include below(lg) {
     flex-direction: column;
   }
+  @include below(md) {
+    align-items: center;
+  }
 }
 
 .footer-contacts__item {
