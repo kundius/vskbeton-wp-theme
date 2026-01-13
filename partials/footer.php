@@ -80,7 +80,7 @@
         </div>
 
         <a href="/" class="footer-logo" target="_blank">
-          <img src="<?php bloginfo('template_url'); ?>/assets/logo-footer.png" alt="" width="163" height="60" />
+          <img src="<?php bloginfo('template_url'); ?>/assets/big-white-logo.png" alt="" />
         </a>
       </div>
 
@@ -109,7 +109,7 @@
       <div class="footer-secondary__copyright">
         <?php echo $data['copyright']; ?>
       </div>
-      <a href="<?php the_permalink(1); ?>" class="footer-secondary__sitemap">
+      <a href="<?php the_permalink(1755); ?>" class="footer-secondary__sitemap">
         Карта сайта
       </a>
       <div class="footer-secondary__counters">
