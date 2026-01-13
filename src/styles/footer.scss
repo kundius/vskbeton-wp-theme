@@ -1,4 +1,6 @@
 .footer {
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 
 .footer-layout {
@@ -10,9 +12,11 @@
 }
 
 .footer-layout__second {
+  padding-top: 12px;
 }
 
 .footer-layout__third {
+  padding-top: 12px;
 }
 
 .footbar {
@@ -56,6 +60,7 @@
   display: block;
   width: 400px;
   filter: invert(0.05);
+  margin: auto;
 }
 
 .footer-nav {
