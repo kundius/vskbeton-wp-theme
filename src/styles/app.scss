@@ -177,6 +177,7 @@ body {
   border-bottom: 2px solid var(--text-color);
   background: transparent;
   padding: 0;
+  min-width: 0;
 }
 
 .flat-input::placeholder {
