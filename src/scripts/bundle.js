@@ -16,12 +16,15 @@ import { initHeaderToggle } from "./header-toggle";
 import { initPhotogallery } from "./photogallery";
 import { initGeographyGl } from "./geography-gl";
 import { initPartnersEmbla } from "./partners-embla";
+import { Mask, MaskInput } from "maska";
 
 initHeaderToggle();
 initStickyHeader();
 initPhotogallery();
 initGeographyGl();
 initPartnersEmbla();
+
+new MaskInput("[data-maska]");
 
 new Swiper(".team .swiper", {
   modules: [Navigation],
