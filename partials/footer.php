@@ -46,7 +46,7 @@
           <?php if ($phone_number = $data['phone_number']): ?>
             <div class="footer-contacts__item">
               <div class="footer-contacts__item-icon">
-                <div class="icon icon-phone-circle"></div>
+                <div class="icon icon-phone"></div>
               </div>
               <div class="footer-contacts__item-body">
                 <div class="footer-contacts__item-val">
@@ -63,7 +63,7 @@
           <?php if ($max_number = $data['max_number']): ?>
             <div class="footer-contacts__item">
               <div class="footer-contacts__item-icon">
-                <div class="icon icon-whatsapp"></div>
+                <div class="icon icon-max"></div>
               </div>
               <div class="footer-contacts__item-body">
                 <div class="footer-contacts__item-val">
