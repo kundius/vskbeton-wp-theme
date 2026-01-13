@@ -57,6 +57,10 @@
 }
 
 .partners-embla {
+  --slide-spacing: 20px;
+  --slide-size: 20%;
+
+  position: relative;
 }
 
 .partners-embla__viewport {
@@ -66,15 +70,17 @@
 .partners-embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
 }
 
 .partners-embla__slide {
   transform: translate3d(0, 0, 0);
-  flex: 0 0 20%;
+  flex: 0 0 var(--slide-size);
   min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: var(--slide-spacing);
 }
 
 .partners-embla__link {
