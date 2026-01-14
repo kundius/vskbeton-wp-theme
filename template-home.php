@@ -110,78 +110,33 @@ $productsQuery = new WP_Query($args);
     </section>
   <?php endif; ?>
 
-  <section class="products">
-    <div class="container">
-      <div class="products__title">
-        Наша продукция
-      </div>
-      <div class="products-grid">
-        <div class="products-grid__cell">
-          <div class="products-item">
-            <div class="products-item__title">
-              <strong>Товарный бетон</strong>
-            </div>
-            <a href="/czeny/#tovbet" class="more-link">
-              <span>Подробнее</span>
-              <span></span>
-            </a>
-            <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/betn-img.png" class="products-item__image">
-          </div>
+  <?php if ($products = get_field("products")): ?>
+    <section class="products">
+      <div class="container">
+        <div class="products__title">
+          Наша продукция
         </div>
-
-        <div class="products-grid__cell">
-          <div class="products-item">
-            <div class="products-item__title">
-              <strong>Пескобетон</strong>
+        <div class="products-grid">
+          <?php foreach ($products['list'] as $item): ?>
+            <div class="products-grid__cell">
+              <div class="products-item products-item--<?php echo $item['color']; ?>">
+                <div class="products-item__title">
+                  <?php echo $item['name']; ?>
+                </div>
+                <a href="<?php echo $item['link_url']; ?>" class="more-link">
+                  <span><?php echo $item['link_text']; ?></span>
+                  <span></span>
+                </a>
+                <?php if ($icon = $item['icon']): ?>
+                  <img src="<?php echo $icon['url']; ?>" class="products-item__image">
+                <?php endif; ?>
+              </div>
             </div>
-            <a href="/czeny/#peskbet" class="more-link">
-              <span>Подробнее</span>
-              <span></span>
-            </a>
-            <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/pesk-img.png" class="products-item__image">
-          </div>
-        </div>
-
-        <div class="products-grid__cell">
-          <div class="products-item">
-            <div class="products-item__title">
-              <strong>Цементный раствор</strong>
-            </div>
-            <a href="/czeny/#cemrast" class="more-link">
-              <span>Подробнее</span>
-              <span></span>
-            </a>
-            <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/rast-img.png" class="products-item__image">
-          </div>
-        </div>
-
-        <div class="products-grid__cell products-grid__cell--calc">
-          <div class="products-item products-item--blue">
-            <div class="products-item__title">
-              <strong>Калькулятор</strong> стоимости бетона
-            </div>
-            <a href="/kalkulyator/" class="more-link">
-              <span>Рассчитать онлайн</span>
-              <span></span>
-            </a>
-            <img src="/wp-content/themes/vskbeton-wp-theme/vendor/images/calc-img.png" class="products-item__image">
-          </div>
-        </div>
-
-        <div class="products-grid__cell">
-          <div class="products-item">
-            <div class="products-item__title">
-              <strong>Полный прайс</strong>
-            </div>
-            <a href="/czeny/" class="more-link">
-              <span>Подробнее</span>
-              <span></span>
-            </a>
-          </div>
+          <?php endforeach; ?>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  <?php endif; ?>
 
   <?php if ($advantages = get_field("advantages")): ?>
     <section class="advantages">

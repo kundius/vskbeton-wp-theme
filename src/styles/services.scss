@@ -36,6 +36,29 @@
   transform: translateX(calc(100vw * (312 / 1920) * -1));
 }
 
+.services__title-alt {
+  margin-bottom: 1.5em;
+  padding-left: 1.75em;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #333;
+  position: relative;
+}
+
+.services__title-alt::before {
+  content: "";
+  background: #0035bb;
+  width: 1em;
+  height: 1em;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .services__title {
   font-size: 30px;
   color: rgb(255, 255, 255);
