@@ -21,6 +21,19 @@
 
 .modal-form__rules {
   margin-top: 24px;
+  font-size: 14px;
+  color: rgba(19, 19, 19, 0.702);
+  line-height: 1.2;
+  margin-top: 32px;
+}
+
+.modal-form__rules a {
+  text-decoration: underline;
+  color: currentColor;
+}
+
+.modal-form__rules a:hover {
+  color: rgb(19, 19, 19);
 }
 
 .modal-form__submit {
