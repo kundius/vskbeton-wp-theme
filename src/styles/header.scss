@@ -306,7 +306,7 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   }
 }
 
-.header-menu li a::after {
+.header-menu li a::before {
   content: "";
   height: 2px;
   width: 0;
@@ -319,12 +319,21 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   transition: 0.3s ease;
 }
 
-.header-menu li.current-menu-item a::after {
+.header-menu li.current-menu-item a::before {
   width: 36px;
   opacity: 1;
 }
 
-.header-menu li a:hover::after {
+.header-menu li.menu-item-has-children a::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.header-menu li a:hover::before {
   opacity: 1;
   width: 50px;
   background: #eb8a1c;
