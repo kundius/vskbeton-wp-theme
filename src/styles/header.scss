@@ -333,6 +333,10 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   transform: rotate(45deg);
+
+  @include below(md) {
+    display: none;
+  }
 }
 
 .header-menu > li > a:hover::before {
@@ -341,12 +345,81 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   background: #eb8a1c;
 }
 
-.header-menu > li > ul.sub-menu {
-  display: none;
-}
-
 .header-menu > li:hover > ul.sub-menu {
-  display: block;
   visibility: visible;
   opacity: 1;
+  transform: translateY(0);
+}
+
+.sub-menu {
+  width: 300px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+  margin: 0;
+  position: absolute;
+  top: calc(100% + 16px);
+  left: calc(100% - 48px);
+  margin-top: 12px;
+  transform: translateY(8px);
+  list-style: none;
+  padding: 16px 0;
+  border-radius: 4px;
+  background: #303437;
+
+  @include below(md) {
+    visibility: visible;
+    width: auto;
+    opacity: 1;
+    transform: none;
+    padding: 0;
+    position: relative;
+    margin-top: 0;
+    background: transparent;
+    margin-bottom: 16px;
+  }
+}
+
+.sub-menu::before {
+  content: "";
+  height: 16px;
+  left: 0;
+  top: -16px;
+  right: 0;
+  position: absolute;
+}
+
+.sub-menu::after {
+  content: "";
+  height: 0;
+  width: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #303437;
+  position: absolute;
+  left: 20px;
+  top: -20px;
+
+  @include below(md) {
+    display: none;
+  }
+}
+
+.sub-menu > li {
+  display: block;
+}
+
+.sub-menu > li > a {
+  display: block;
+  line-height: 1.2;
+  padding: 8px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #808080;
+
+  &:hover {
+    color: #fff;
+    background: #182475;
+  }
 }
