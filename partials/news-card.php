@@ -1,6 +1,6 @@
 <article class="news-card">
   <figure class="news-card__image">
-    <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" />
+    <img src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" />
   </figure>
   <div class="news-card__content">
     <div class="news-card__date">

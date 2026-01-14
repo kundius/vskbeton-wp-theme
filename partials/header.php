@@ -39,7 +39,7 @@
         <?php endif; ?>
       </div>
 
-      <button type="button" class="header-callback">Заказать звонок</button>
+      <button type="button" class="header-callback" data-callback-button>Заказать звонок</button>
     </div>
 
     <div class="header-secondary">

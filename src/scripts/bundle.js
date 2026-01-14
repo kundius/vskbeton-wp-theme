@@ -17,12 +17,14 @@ import { initPhotogallery } from "./photogallery";
 import { initGeographyGl } from "./geography-gl";
 import { initPartnersEmbla } from "./partners-embla";
 import { Mask, MaskInput } from "maska";
+import { initCallbackButton } from "./callback-button";
 
 initHeaderToggle();
 initStickyHeader();
 initPhotogallery();
 initGeographyGl();
 initPartnersEmbla();
+initCallbackButton();
 
 new MaskInput("[data-maska]");
 

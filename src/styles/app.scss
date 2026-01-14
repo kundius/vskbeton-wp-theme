@@ -3,6 +3,7 @@
 @import "icons";
 @import "header";
 @import "footer";
+@import "modal";
 @import "articles";
 @import "page";
 @import "content";
@@ -76,6 +77,43 @@ img {
   @include below(md) {
     padding: 48px 0;
   }
+}
+
+.input-field {
+}
+
+.input-field__label {
+  display: block;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #272935;
+  margin-bottom: 2px;
+}
+
+.input-field__input {
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 3px 13px 0px rgba(133, 133, 189, 0.25);
+  height: 44px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #272935;
+  width: 100%;
+  display: block;
+}
+
+.input-field__textarea {
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 3px 13px 0px rgba(133, 133, 189, 0.17);
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #272935;
+  width: 100%;
+  display: block;
 }
 
 .more-link {

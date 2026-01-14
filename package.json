@@ -33,6 +33,7 @@
     "fslightbox": "^3.4.1",
     "hystmodal": "^1.0.1",
     "maska": "^3.2.0",
+    "micromodal": "^0.6.1",
     "normalize.css": "^8.0.1",
     "swiper": "^8.4.4"
   }
