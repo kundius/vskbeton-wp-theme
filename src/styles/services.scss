@@ -11,7 +11,7 @@
   }
 }
 
-.services::before {
+.services--with-bg-logo::before {
   content: "";
   position: absolute;
   top: 216px;

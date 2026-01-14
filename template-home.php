@@ -225,7 +225,7 @@ $productsQuery = new WP_Query($args);
   <?php endif; ?>
 
   <?php if ($productsQuery->have_posts()): ?>
-    <section class="services">
+    <section class="services services--with-bg-logo">
       <div class="container">
         <div class="services__title">
           <span>
