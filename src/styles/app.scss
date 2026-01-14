@@ -79,6 +79,75 @@ img {
   }
 }
 
+.button-primary {
+  background: #f18b3a;
+  border: none;
+  height: 56px;
+  overflow: hidden;
+  font-size: 18px;
+  width: 100%;
+  padding: 0 24px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: 0.025em;
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+
+  @include below(md) {
+    font-size: 16px;
+  }
+}
+
+.button-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 24px;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  transform: rotate(-45deg);
+  background: #db9157;
+  transform-origin: 0% 0%;
+}
+
+.button-primary::after {
+  content: "";
+  bottom: 0;
+  position: absolute;
+  left: 100%;
+  width: 24px;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  transform: rotate(45deg);
+  background: #db9157;
+  transform-origin: 0% 100%;
+}
+
+.button-primary:hover {
+  background: #d87d34;
+}
+
+.button-primary:hover::after {
+  opacity: 1;
+  left: calc(100% - 60px);
+}
+
+.button-primary:hover::before {
+  opacity: 1;
+  left: calc(100% - 60px);
+}
+
 .input-field {
 }
 
