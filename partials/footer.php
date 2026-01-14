@@ -29,7 +29,7 @@
         </div>
 
         <div class="feedback-form__rules">
-          Нажимая на кнопку, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь c <a href="#">политикой конфиденциальности</a>
+          Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="<?php the_permalink(3); ?>">политикой конфиденциальности</a>
         </div>
       </div>
 
@@ -176,7 +176,7 @@
               <input type="checkbox" id="rules" name="rules" required class="rules-field__input" checked>
               <span class="rules-field__checkmark"></span>
               <span class="rules-field__text">
-                Прочитал(-а) <a href="" target="_blank">Пользовательское соглашение</a> и принимаю <a href="" target="_blank">Политику обработки персональных данных</a>
+                Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="<?php the_permalink(3); ?>">политикой конфиденциальности</a>
               </span>
             </label>
           </div>
