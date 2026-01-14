@@ -289,6 +289,7 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
 }
 
 .header-menu > li {
+  position: relative;
 }
 
 .header-menu > li > a {
@@ -352,7 +353,7 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
 }
 
 .sub-menu {
-  width: 300px;
+  width: 260px;
   visibility: hidden;
   opacity: 0;
   transition: 0.3s ease;
@@ -360,7 +361,6 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   position: absolute;
   top: calc(100% + 16px);
   left: calc(100% - 48px);
-  margin-top: 12px;
   transform: translateY(8px);
   list-style: none;
   padding: 16px 0;
@@ -397,7 +397,7 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   border-right: 20px solid transparent;
   border-bottom: 20px solid #303437;
   position: absolute;
-  left: 20px;
+  left: 24px;
   top: -20px;
 
   @include below(md) {
