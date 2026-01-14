@@ -165,3 +165,61 @@
 .feedback-form__rules a:hover {
   color: rgba(255, 255, 255, 1);
 }
+
+.feedback-form-success {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 53, 187, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+[data-feedback-form-status="success"] .feedback-form-success {
+  display: flex;
+}
+
+.feedback-form-success__title {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.feedback-form-success__desc {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.2;
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+.feedback-form-success__close {
+  font-size: 16px;
+  color: #303437;
+  line-height: 1.2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  font-weight: 500;
+  white-space: nowrap;
+  border: 2px solid #303437;
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  transition-duration: 0.15s;
+}
+
+.feedback-form-success__close:hover {
+  color: #fff;
+  transition-duration: 0.3s;
+  border-color: #303437;
+  background-color: #303437;
+}

@@ -32,6 +32,16 @@
           Нажимая на кнопку, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь c <a href="#">политикой конфиденциальности</a>
         </div>
       </div>
+
+      <div class="feedback-form-success">
+        <div class="feedback-form-success__title">
+          Сообщение успешно отправлено
+        </div>
+        <div class="feedback-form-success__desc">
+          Мы свяжемся с вами в ближайшее время
+        </div>
+        <button type="button" class="feedback-form-success__close" data-feedback-form-reset>Закрыть</button>
+      </div>
     </form>
   </div>
 </section>

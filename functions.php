@@ -1,5 +1,6 @@
 <?php
 
+require "inc/ajax.php";
 require "inc/post-types.php";
 require "inc/pagination.php";
 require "inc/shortcodes.php";
