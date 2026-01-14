@@ -357,7 +357,6 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0;
 }
 
 .sub-menu {
@@ -365,7 +364,6 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   visibility: hidden;
   opacity: 0;
   transition: 0.3s ease;
-  transition-delay: 0.3s;
   margin: 0;
   position: absolute;
   top: calc(100% + 16px);
