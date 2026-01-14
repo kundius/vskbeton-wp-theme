@@ -33,39 +33,29 @@ $productsQuery = new WP_Query($args);
           <div class="page-content content">
             <?php the_content(); ?>
           </div>
+
+          <?php if ($productsQuery->have_posts()): ?>
+            <div class="services-grid">
+              <?php while ($productsQuery->have_posts()): $productsQuery->the_post(); ?>
+                <div class="services-grid__cell">
+                  <div class="services-item">
+                    <div class="services-item__title">
+                      <?php echo (get_field("title_in_list") ?: get_the_title()); ?>
+                    </div>
+                    <a href="<?php the_permalink(); ?>" class="more-link">
+                      <span>Подробнее</span>
+                      <span></span>
+                    </a>
+                    <div class="services-item__space"></div>
+                  </div>
+                </div>
+              <?php endwhile; ?>
+            </div>
+          <?php endif; ?>
+          <?php wp_reset_postdata(); ?>
         </div>
       </div>
     </div>
-
-    <?php if ($productsQuery->have_posts()): ?>
-      <section class="services">
-        <div class="container">
-          <div class="services__title">
-            <span>
-              <strong>НАШИ</strong><br>
-              УСЛУГИ
-            </span>
-          </div>
-          <div class="services-grid">
-            <?php while ($productsQuery->have_posts()): $productsQuery->the_post(); ?>
-              <div class="services-grid__cell">
-                <div class="services-item">
-                  <div class="services-item__title">
-                    <?php echo (get_field("title_in_list") ?: get_the_title()); ?>
-                  </div>
-                  <a href="<?php the_permalink(); ?>" class="more-link">
-                    <span>Подробнее</span>
-                    <span></span>
-                  </a>
-                  <div class="services-item__space"></div>
-                </div>
-              </div>
-            <?php endwhile; ?>
-          </div>
-        </div>
-      </section>
-    <?php endif; ?>
-    <?php wp_reset_postdata(); ?>
 
     <?php get_template_part("partials/footer"); ?>
   </div>
