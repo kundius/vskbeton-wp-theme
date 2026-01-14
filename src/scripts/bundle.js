@@ -18,6 +18,7 @@ import { initGeographyGl } from "./geography-gl";
 import { initPartnersEmbla } from "./partners-embla";
 import { Mask, MaskInput } from "maska";
 import { initCallbackButton } from "./callback-button";
+import { initFeedbackForm } from "./feedback-form";
 
 initHeaderToggle();
 initStickyHeader();
@@ -25,6 +26,7 @@ initPhotogallery();
 initGeographyGl();
 initPartnersEmbla();
 initCallbackButton();
+initFeedbackForm();
 
 new MaskInput("[data-maska]");
 
