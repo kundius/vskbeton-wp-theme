@@ -288,15 +288,17 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   }
 }
 
-.header-menu li {
+.header-menu > li {
 }
 
-.header-menu li a {
+.header-menu > li > a {
   font-size: 18px;
   color: rgb(var(--color));
   text-decoration: none;
   line-height: 32px;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   white-space: nowrap;
   font-weight: 500;
   position: relative;
@@ -306,7 +308,7 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   }
 }
 
-.header-menu li a::before {
+.header-menu > li > a::before {
   content: "";
   height: 2px;
   width: 0;
@@ -319,12 +321,12 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   transition: 0.3s ease;
 }
 
-.header-menu li.current-menu-item a::before {
+.header-menu > li.current-menu-item > a::before {
   width: 36px;
   opacity: 1;
 }
 
-.header-menu li.menu-item-has-children a::after {
+.header-menu > li.menu-item-has-children > a::after {
   content: "";
   width: 8px;
   height: 8px;
@@ -333,12 +335,18 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   transform: rotate(45deg);
 }
 
-.header-menu li a:hover::before {
+.header-menu > li > a:hover::before {
   opacity: 1;
   width: 50px;
   background: #eb8a1c;
 }
 
-.header-menu li ul {
+.header-menu > li > ul.sub-menu {
   display: none;
+}
+
+.header-menu > li:hover > ul.sub-menu {
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
