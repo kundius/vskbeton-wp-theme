@@ -29,6 +29,10 @@ $productsQuery = new WP_Query($args);
       <div class="container">
         <div class="page-headline">
           <h1 class="page-headline__title"><?php the_title(); ?></h1>
+
+          <div class="page-content content">
+            <?php the_content(); ?>
+          </div>
         </div>
       </div>
     </div>
