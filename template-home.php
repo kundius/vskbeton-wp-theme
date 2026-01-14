@@ -57,7 +57,7 @@ $productsQuery = new WP_Query($args);
             </div>
           <?php endif; ?>
           <a href="/kontakty/" class="intro__order-btn">
-            Получить консультацию <span class="icon icon-arrow-right"></span>
+            Заказать бетон <span class="icon icon-arrow-right"></span>
           </a>
         </div>
         <div class="intro__texts">
