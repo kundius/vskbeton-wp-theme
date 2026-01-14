@@ -82,7 +82,7 @@ $productsQuery = new WP_Query($args);
           <div class="intro__text intro__text_3">
             <div class="intro__text-content">
               <!-- Измерение прочности бетонных конструкций на месте проведения строительных работ -->
-              До 200 м<sub>3</sub> продукции в час
+              До 200 м<sup>3</sup> продукции в час
             </div>
             <!-- <div class="intro__text-desc">
               Склерометр ИПС-МГ4.03
