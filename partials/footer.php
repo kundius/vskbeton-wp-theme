@@ -172,13 +172,7 @@
           </div>
 
           <div class="modal-form__rules">
-            <label class="rules-field">
-              <input type="checkbox" id="rules" name="rules" required class="rules-field__input" checked>
-              <span class="rules-field__checkmark"></span>
-              <span class="rules-field__text">
-                Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="<?php the_permalink(3); ?>" target="_blank">политикой конфиденциальности</a>
-              </span>
-            </label>
+            Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="<?php the_permalink(3); ?>" target="_blank">политикой конфиденциальности</a>
           </div>
 
           <div class="modal-form-success">
