@@ -290,6 +290,13 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
 
 .header-menu > li {
   position: relative;
+
+  @include below(lg) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
 }
 
 .header-menu > li > a {
@@ -350,7 +357,7 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.2s;
+  transition-delay: 0.3s;
 }
 
 .sub-menu {
@@ -368,7 +375,7 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   border-radius: 4px;
   background: #303437;
 
-  @include below(md) {
+  @include below(lg) {
     visibility: visible;
     width: auto;
     opacity: 1;
@@ -377,7 +384,8 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
     position: relative;
     margin-top: 0;
     background: transparent;
-    margin-bottom: 16px;
+    top: auto;
+    left: auto;
   }
 }
 
@@ -388,6 +396,10 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   top: -16px;
   right: 0;
   position: absolute;
+
+  @include below(lg) {
+    display: none;
+  }
 }
 
 .sub-menu::after {
@@ -401,7 +413,7 @@ body:has(.intro) .header[data-sticky-header="active"]::after {
   left: 24px;
   top: -20px;
 
-  @include below(md) {
+  @include below(lg) {
     display: none;
   }
 }
