@@ -24,6 +24,10 @@
   height: 1px;
   top: 100%;
   left: 0;
+
+  @include below(md) {
+    display: none;
+  }
 }
 
 .partners-header::after {
@@ -35,6 +39,10 @@
   top: 100%;
   left: 25%;
   transform: translate(-50%, -50%);
+
+  @include below(md) {
+    display: none;
+  }
 }
 
 .partners-header__more {
