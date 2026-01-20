@@ -8,6 +8,12 @@
   display: flex;
   position: relative;
   margin-bottom: 64px;
+  align-items: center;
+
+  @include below(md) {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
 }
 
 .partners-header::before {
@@ -31,6 +37,17 @@
   transform: translate(-50%, -50%);
 }
 
+.partners-header__more {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include below(md) {
+    width: 100%;
+  }
+}
+
 .partners-header__title {
   font-size: 30px;
   color: #fff;
@@ -44,7 +61,6 @@
   align-items: center;
   min-width: 50%;
   letter-spacing: -0.005em;
-  margin-left: auto;
 
   strong {
     color: #d4e0ff;

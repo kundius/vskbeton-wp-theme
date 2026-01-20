@@ -372,6 +372,12 @@ $productsQuery = new WP_Query($args);
     <section class="partners">
       <div class="container">
         <div class="partners-header">
+          <div class="partners-header__more">
+            <a href="/partnyory/" class="btn-arrow-right">
+              <span>Смотреть все</span>
+              <span></span>
+            </a>
+          </div>
           <div class="partners-header__title">
             <span>
               <?php echo $group["title"]; ?>
