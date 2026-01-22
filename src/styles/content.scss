@@ -24,16 +24,16 @@
       margin-left: 0;
     }
   }
-  a:not(.wp-element-button) {
-    background: #0035bb;
-    color: #fff;
-    padding: 0 4px;
-    text-decoration: none;
-    text-transform: uppercase;
-    &:hover {
-      background: #f18b3a;
-    }
-  }
+  // a:not(.wp-element-button) {
+  //   background: #0035bb;
+  //   color: #fff;
+  //   padding: 0 4px;
+  //   text-decoration: none;
+  //   text-transform: uppercase;
+  //   &:hover {
+  //     background: #f18b3a;
+  //   }
+  // }
   h2 {
     font-size: 28px;
     color: rgb(0, 0, 0);
