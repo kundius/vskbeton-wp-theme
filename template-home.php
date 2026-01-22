@@ -60,58 +60,6 @@ $productsQuery = new WP_Query($args);
             Заказать бетон <span class="icon icon-arrow-right"></span>
           </a>
         </div>
-        <div class="intro__texts">
-          <div class="intro__text intro__text_1">
-            <div class="intro__text-content">
-              <!-- Испытание образцов бетона на прочность -->
-              Акцент на локацию
-            </div>
-            <!-- <div class="intro__text-desc">
-              ГОСТ 12730.1
-            </div> -->
-          </div>
-          <div class="intro__text intro__text_2">
-            <div class="intro__text-content">
-              <!-- Определение морозостойкости образцов бетона -->
-              Две бетоносмесительные установки
-            </div>
-            <!-- <div class="intro__text-desc">
-              ГОСТ 10060-2012
-            </div> -->
-          </div>
-          <div class="intro__text intro__text_3">
-            <div class="intro__text-content">
-              <!-- Измерение прочности бетонных конструкций на месте проведения строительных работ -->
-              До 200 м<sup>3</sup> продукции в час
-            </div>
-            <!-- <div class="intro__text-desc">
-              Склерометр ИПС-МГ4.03
-            </div> -->
-          </div>
-          <div class="intro__text intro__text_4">
-            <div class="intro__text-content">
-              <!-- Измерение подвижности бетона<br>
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/icon-wave.svg" alt="<?php bloginfo('name') ?>"> -->
-              Соблюдение ГОСТ
-            </div>
-            <!-- <div class="intro__text-desc">
-              ГОСТ 10181
-            </div> -->
-          </div>
-          <div class="intro__text intro__text_5">
-            <div class="intro__text-content">
-              <!-- Определение пористости бетонной смеси -->
-              Собственная аккредитованная лаборатория
-            </div>
-          </div>
-          <div class="intro__text intro__text_6">
-            <div class="intro__text-content">
-              Собственный парк автобетоносмесителей
-              <!-- Измерение сохранности свойств бетонной смеси во времени<br>
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/icon-clock.svg" alt="<?php bloginfo('name') ?>"> -->
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   <?php endif; ?>
