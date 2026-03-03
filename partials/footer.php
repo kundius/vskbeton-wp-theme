@@ -71,21 +71,21 @@
             </div>
           <?php endif; ?>
           <?php if ($max_number = $data['max_number']): ?>
-            <div class="footer-contacts__item">
-              <div class="footer-contacts__item-icon">
-                <div class="icon icon-max"></div>
-              </div>
-              <div class="footer-contacts__item-body">
-                <div class="footer-contacts__item-val">
+            <a href="https://max.ru/u/f9LHodD0cOLzkwHWqGhxElcgDkqEHRoQEos9ZuUdUthU1fRWsf8aIbFoOAo" class="footer-contacts__item">
+              <span class="footer-contacts__item-icon">
+                <span class="icon icon-max"></span>
+              </span>
+              <span class="footer-contacts__item-body">
+                <span class="footer-contacts__item-val">
                   <?php echo $max_number; ?>
-                </div>
+                </span>
                 <?php if ($max_caption = $data['max_caption']): ?>
-                  <div class="footer-contacts__item-desc">
+                  <span class="footer-contacts__item-desc">
                     <?php echo $max_caption; ?>
-                  </div>
+                  </span>
                 <?php endif; ?>
-              </div>
-            </div>
+              </span>
+            </a>
           <?php endif; ?>
         </div>
 
