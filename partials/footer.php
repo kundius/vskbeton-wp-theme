@@ -71,7 +71,7 @@
             </div>
           <?php endif; ?>
           <?php if ($max_number = $data['max_number']): ?>
-            <a href="https://max.ru/u/f9LHodD0cOLzkwHWqGhxElcgDkqEHRoQEos9ZuUdUthU1fRWsf8aIbFoOAo" class="footer-contacts__item">
+            <a href="<?php echo $data['max_link']; ?>" class="footer-contacts__item">
               <span class="footer-contacts__item-icon">
                 <span class="icon icon-max"></span>
               </span>
