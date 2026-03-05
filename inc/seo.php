@@ -68,7 +68,7 @@ function sitemap_news_activation() {
 	}
 }
 
-function add_meta() {
+function theme_add_meta() {
 	$title = '';
 	$description = '';
 	$keywords = '';
@@ -121,7 +121,7 @@ function add_meta() {
 		echo '<meta name="description" content="' . $description . '">';
 	}
 }
-add_action('wp_head', 'add_meta');
+add_action('wp_head', 'theme_add_meta');
 
 add_action('sitemap_news_hourly_event', 'do_this_hourly');
 function do_this_hourly() {
