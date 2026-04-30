@@ -1,7 +1,7 @@
 <?php $data = get_field('header', 'option') ?>
 <div class="header" data-sticky-header itemscope itemtype="https://schema.org/LocalBusiness">
   <meta itemprop="name" content="ВСК Бетон">
-  <link itemprop="logo" href="https://xn----btbbowvgtn.xn--p1ai/wp-content/themes/vskbeton-wp-theme/assets/logo.png">
+  <link itemprop="logo" href="https://вск-бетон.рф/wp-content/themes/vskbeton-wp-theme/assets/logo.png">
   <link itemprop="url" href="https://вск-бетон.рф/">
 
   <div class="container">
