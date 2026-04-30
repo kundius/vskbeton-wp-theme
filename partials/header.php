@@ -1,5 +1,9 @@
 <?php $data = get_field('header', 'option') ?>
-<div class="header" data-sticky-header>
+<div class="header" data-sticky-header itemscope itemtype="https://schema.org/LocalBusiness">
+  <meta itemprop="name" content="ВСК Бетон">
+  <link itemprop="logo" href="https://xn----btbbowvgtn.xn--p1ai/wp-content/themes/vskbeton-wp-theme/assets/logo.png">
+  <link itemprop="url" href="https://вск-бетон.рф/">
+
   <div class="container">
     <div class="header-primary">
       <div class="header-contacts">
@@ -9,7 +13,7 @@
           </div>
         <?php endif; ?>
         <?php if ($address = $data['address']): ?>
-          <div class="header-contacts__address">
+          <div class="header-contacts__address" itemprop="address">
             <span class="icon icon-marker"></span>
             <?php echo nl2br($address); ?>
           </div>
@@ -28,7 +32,7 @@
           </a>
         <?php endif; ?>
         <?php if ($phone_number = $data['phone_number']): ?>
-          <a href="tel:<?php echo $phone_number; ?>" class="header-phones__item" target="_blank">
+          <a href="tel:<?php echo $phone_number; ?>" class="header-phones__item" target="_blank" itemprop="telephone">
             <span class="header-phones__item-ico">
               <span class="icon icon-phone"></span>
             </span>
