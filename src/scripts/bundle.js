@@ -80,6 +80,18 @@ new Swiper(".block-partners .swiper", {
 document.addEventListener(
   "wpcf7mailsent",
   function (event) {
+    const elYmId = document.querySelector("[data-ym-id]");
+    if (elYmId && elYmId.dataset.ymId) {
+      const pathname =
+        window.location.pathname
+          .replace(/[^a-z0-9]+/gi, "_")
+          .replace(/^_|_$/g, "")
+          .toUpperCase() || "ROOT";
+
+      ym(elYmId.dataset.ymId, "reachGoal", pathname);
+      console.log("goal", elYmId.dataset.ymId, pathname);
+    }
+
     console.log("mail sent", event);
   },
   false,
