@@ -4,7 +4,7 @@
       class="feedback-form"
       action="<?php echo admin_url('admin-ajax.php'); ?>"
       data-feedback-form
-      data-feedback-form-goal=""
+      data-feedback-form-goal="FEEDBACK"
       data-feedback-form-action="feedback_form">
       <input type="hidden" name="submitted" value="">
       <input type="hidden" name="nonce" value="<?php echo wp_create_nonce('feedback-nonce'); ?>">
@@ -149,7 +149,7 @@
           action="<?php echo admin_url('admin-ajax.php'); ?>"
           class="modal-form"
           data-feedback-form
-          data-feedback-form-goal=""
+          data-feedback-form-goal="CALLBACK"
           data-feedback-form-action="feedback_form">
           <input type="hidden" name="submitted" value="">
           <input type="hidden" name="nonce" value="<?php echo wp_create_nonce('feedback-nonce'); ?>">
