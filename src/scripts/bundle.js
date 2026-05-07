@@ -76,3 +76,11 @@ new Swiper(".block-partners .swiper", {
     },
   },
 });
+
+document.addEventListener(
+  "wpcf7mailsent",
+  function (event) {
+    console.log("mail sent", event);
+  },
+  false,
+);
